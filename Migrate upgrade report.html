@@ -1,0 +1,2884 @@
+<head class="selectNone"><style type="text/css" id="pluginCss">/* CSS file for the plugin's base styles and themes (light / dark / high contrast)
+   Light theme values are used as defaults but CSS variables are used to provide the correct value for the active theme.
+    Example:
+    border-right: 1px solid var(--plugin-background-color, #8591A2);
+    
+   The following CSS variables are available to all hosts:
+    --plugin-background-color
+    --plugin-color
+    --plugin-contextmenu-active-color
+    --plugin-contextmenu-background-color
+    --plugin-contextmenu-border-color
+    --plugin-contextmenu-color
+    --plugin-contextmenu-hover-color
+    --plugin-contextmenu-hover-text-color
+    --plugin-contextmenu-icon-checkbox
+    --plugin-contextmenu-inactive-text-color
+    --plugin-contextmenu-separator-color
+    --plugin-error-border-color
+    --plugin-font-family
+    --plugin-font-size
+    --plugin-font-weight
+    --plugin-highlight-background-color
+    --plugin-highlight-color
+    --plugin-inactive-color
+    --plugin-link-color
+    --plugin-link-active-color
+    --plugin-link-hover-color
+    --plugin-scrollbar-arrow-background-color
+    --plugin-scrollbar-arrow-background-active-color
+    --plugin-scrollbar-arrow-background-hover-color
+    --plugin-scrollbar-arrow-color
+    --plugin-scrollbar-arrow-active-color
+    --plugin-scrollbar-arrow-hover-color
+    --plugin-scrollbar-background-color
+    --plugin-scrollbar-face-color
+    --plugin-scrollbar-face-active-color
+    --plugin-scrollbar-face-hover-color
+    --plugin-select-option-background-color
+    --plugin-select-option-color
+    --plugin-select-option-checked-background-color
+    --plugin-select-option-checked-border-color
+    --plugin-select-option-checked-foreground-color
+    --plugin-select-option-hover-background-color
+    --plugin-select-option-hover-border-color
+    --plugin-select-option-hover-foreground-color
+    --plugin-select-border-color
+    --plugin-select-background-color
+    --plugin-select-foreground-color
+    --plugin-select-hover-background-color
+    --plugin-select-hover-border-color
+    --plugin-select-hover-foreground-color
+    --plugin-table-border-color
+    --plugin-table-header-background-color
+    --plugin-table-header-color
+    --plugin-textbox-border-color
+    --plugin-textbox-background-color
+    --plugin-textbox-color
+    --plugin-textbox-disabled-background-color
+    --plugin-textbox-disabled-border-color
+    --plugin-textbox-disabled-color
+    --plugin-treeview-content-background-color
+    --plugin-treeview-content-color
+    --plugin-treeview-content-inactive-selected-color
+    --plugin-treeview-content-mouseover-background-color
+    --plugin-treeview-content-mouseover-color
+    --plugin-treeview-content-inactive-selected-color
+    --plugin-treeview-content-selected-background-color
+    --plugin-treeview-content-selected-border-color
+    --plugin-treeview-content-selected-color
+
+    The following are special values used just for theming scrollbar arrows (they contain a data URL defining an SVG):
+    --plugin-scrollbar-up-arrow-url
+    --plugin-scrollbar-up-arrow-hover-url
+    --plugin-scrollbar-up-arrow-active-url
+    --plugin-scrollbar-down-arrow-url
+    --plugin-scrollbar-down-arrow-hover-url
+    --plugin-scrollbar-down-arrow-active-url
+    --plugin-scrollbar-left-arrow-url
+    --plugin-scrollbar-left-arrow-hover-url
+    --plugin-scrollbar-left-arrow-active-url
+    --plugin-scrollbar-right-arrow-url
+    --plugin-scrollbar-right-arrow-hover-url
+    --plugin-scrollbar-right-arrow-active-url
+
+    
+    VS host also has access to all VS themed color key tokens (EnvironmentColors) and category specific tokens.
+    http://msdn.microsoft.com/en-us/library/microsoft.visualstudio.platformui.environmentcolors_properties
+    Please see product documentation for instructions on how to add these tokens to the plugin manifest.
+ */
+
+/* HTML and body styles */
+html, body {
+    font-family: var(--plugin-font-family, "Segoe UI", Arial, sans-serif);
+    font-size: var(--plugin-font-size, 9pt);
+    font-weight: var(--plugin-font-weight, normal);
+    color: var(--plugin-color, #1E1E1E);
+    background-color: var(--plugin-background-color, #F6F6F6);
+}
+
+/* Scroll bars */
+
+::-webkit-scrollbar {
+    width: 19px;
+    height: 19px;
+    background-color: var(--plugin-scrollbar-background-color, #E8E8EC);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: var(--plugin-scrollbar-background-color, #E8E8EC);
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+    background-color: var(--plugin-scrollbar-face-color, #C2C3C9);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--plugin-scrollbar-face-hover-color, #686868);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--plugin-scrollbar-face-active-color, #5B5B5B);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    border-left: 4px solid var(--plugin-scrollbar-background-color, #E8E8EC);
+    border-right: 4px solid var(--plugin-scrollbar-background-color, #E8E8EC);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    border-top: 4px solid var(--plugin-scrollbar-background-color, #E8E8EC);
+    border-bottom: 4px solid var(--plugin-scrollbar-background-color, #E8E8EC);
+}
+
+/* Arrows */
+
+::-webkit-scrollbar-button {
+    background-color: var(--plugin-scrollbar-arrow-background-color, #E8E8EC);
+}
+
+::-webkit-scrollbar-button:hover {
+    background-color: var(--plugin-scrollbar-arrow-background-hover-color, #E8E8EC);
+}
+
+::-webkit-scrollbar-button:active {
+    background-color: var(--plugin-scrollbar-arrow-background-active-color, #E8E8EC);
+}
+
+::-webkit-scrollbar-button:start:decrement:vertical,
+::-webkit-scrollbar-button:end:increment:vertical {
+    display: block;
+    width: 19px;
+    height: 17px;
+}
+
+::-webkit-scrollbar-button:start:decrement:horizontal,
+::-webkit-scrollbar-button:end:increment:horizontal {
+    display: block;
+    width: 17px;
+    height: 19px;
+}
+
+/* Up arrow */
+
+::-webkit-scrollbar-button:start:decrement:vertical {
+    background-image: var(--plugin-scrollbar-up-arrow-url);
+}
+
+::-webkit-scrollbar-button:start:decrement:vertical:hover {
+    background-image: var(--plugin-scrollbar-up-arrow-hover-url);
+}
+
+::-webkit-scrollbar-button:start:decrement:vertical:active {
+    background-image: var(--plugin-scrollbar-up-arrow-active-url);
+}
+
+/* Down arrow */
+
+::-webkit-scrollbar-button:end:increment:vertical {
+    background-image: var(--plugin-scrollbar-down-arrow-url);
+}
+
+::-webkit-scrollbar-button:end:increment:vertical:hover {
+    background-image: var(--plugin-scrollbar-down-arrow-hover-url);
+}
+
+::-webkit-scrollbar-button:end:increment:vertical:active {
+    background-image: var(--plugin-scrollbar-down-arrow-active-url);
+}
+
+/* Left arrow */
+
+::-webkit-scrollbar-button:start:decrement:horizontal {
+    background-image: var(--plugin-scrollbar-left-arrow-url);
+}
+
+::-webkit-scrollbar-button:start:decrement:horizontal:hover {
+    background-image: var(--plugin-scrollbar-left-arrow-hover-url);
+}
+
+::-webkit-scrollbar-button:start:decrement:horizontal:active {
+    background-image: var(--plugin-scrollbar-left-arrow-active-url);
+}
+
+/* Right arrow */
+
+::-webkit-scrollbar-button:end:increment:horizontal {
+    background-image: var(--plugin-scrollbar-right-arrow-url);
+}
+
+::-webkit-scrollbar-button:end:increment:horizontal:hover {
+    background-image: var(--plugin-scrollbar-right-arrow-hover-url);
+}
+
+::-webkit-scrollbar-button:end:increment:horizontal:active {
+    background-image: var(--plugin-scrollbar-right-arrow-active-url);
+}
+
+/* Select styles */
+select {
+    color: var(--plugin-select-foreground-color, #1E1E1E);
+    background-color: var(--plugin-select-background-color, #FFFFFF);
+    font: var(--plugin-font-weight, normal) var(--plugin-font-size, 9pt) var(--plugin-font-family, "'Segoe UI', Arial, sans-serif");
+    border: 1px solid var(--plugin-select-border-color, #CCCEDB);
+}
+
+select:hover {
+    color: var(--plugin-select-hover-foreground-color, #1E1E1E);
+    background-color: var(--plugin-select-hover-background-color, #FFFFFF);
+    border: 1px solid var(--plugin-select-hover-border-color, #007ACC);
+}
+
+select[multiple],
+select option {
+    color: var(--plugin-select-option-color, #1E1E1E);
+    background-color: var(--plugin-select-option-background-color, #F6F6F6);
+    /* Add a transparent border so that text does not move around on hover */
+    border: 1px solid transparent;
+}
+
+select option:hover {
+    color: var(--plugin-select-option-hover-foreground-color, #1E1E1E);
+    background-color: var(--plugin-select-option-hover-background-color, #C9DEF5);
+    border: 1px solid var(--plugin-select-option-hover-border-color, #C9DEF5);
+}
+
+select option:checked {
+    color: var(--plugin-select-option-checked-foreground-color, #1E1E1E);
+    background-color: var(--plugin-select-option-checked-background-color, #C9DEF5);
+    border: 1px solid var(--plugin-select-option-checked-border-color, #C9DEF5);
+}
+
+/* Input styles */
+input {
+    font: var(--plugin-font-weight, normal) var(--plugin-font-size, 9pt) var(--plugin-font-family, "'Segoe UI', Arial, sans-serif");
+    color: var(--plugin-textbox-color, #1E1E1E);
+    background-color: var(--plugin-textbox-background-color, #FFFFFF);
+    border: 1px solid var(--plugin-textbox-border-color, #DBDDE6);
+    padding: 0 3px;
+}
+
+input:disabled {
+    color: var(--plugin-textbox-disabled-color, #A2A4A5);
+    background-color: var(--plugin-textbox-disabled-background-color, #FFFFFF);
+    border: 1px solid var(--plugin-textbox-disabled-border-color, #DBDDE6);
+}
+
+input[type="checkbox"],
+input[type="radio"]
+ { 
+    border: none;
+    background-color: inherit;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+input[type="file"],
+input[type="image"]
+ { 
+    border: none;
+    background-color: inherit;
+    padding: 0;
+}
+
+/* TextArea styles */
+textarea {
+    font-family: var(--plugin-font-family, "Segoe UI"), Arial, sans-serif;
+    font-size: var(--plugin-font-size, 9pt);
+    font-weight: var(--plugin-font-weight, normal);
+    color: var(--plugin-color, #1E1E1E);
+    background-color: var(--plugin-textbox-background-color, #F6F6F6);
+    border: 1px solid var(--plugin-textbox-border-color, #DBDDE6);
+    padding: 0 3px;
+    resize: none;
+}
+
+/* Button styles */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    color: #000000;
+    background-image: -ms-linear-gradient(top, #F0F0F0 0%, #E5E5E5 100%);
+    border: 1px solid #ACACAC;
+    font-family: var(--plugin-font-family, "Segoe UI"), Arial, sans-serif;
+    font-size: var(--plugin-font-size, 9pt);
+    font-weight: var(--plugin-font-weight, normal);
+    min-width: 73px;
+    padding: 1px 19px 2px 19px;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background-image: -ms-linear-gradient(top, #ECF4FC 0%, #DCECFC 100%); 
+    border: 1px solid #7EB4EA; 
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+    border: 1px solid #569DE5; 
+}
+
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+    background-image: -ms-linear-gradient(top, #DAECFC 0%, #C4E0FC 100%);
+    border: 1px solid #569DE5; 
+}
+
+button[disabled], 
+input[type="button"][disabled],
+input[type="reset"][disabled],
+input[type="submit"][disabled] {
+    color: #838383; 
+    background: #F4F4F4 none; 
+    border: 1px solid #B1B1B2;
+}
+
+/* Other form styles */
+fieldset {
+    border: 1px solid var(--plugin-textbox-border-color, #DBDDE6);
+}
+
+/* Link styles */
+a, a:link, a:visited, a:focus {
+    color: var(--plugin-link-color, #0E70C0);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--plugin-link-hover-color, #0E70C0);
+    text-decoration: underline;
+}
+
+a:active {
+    color: var(--plugin-link-active-color, #0E70C0);
+}
+
+/* Table styles */
+th {
+    color: var(--plugin-table-header-color, #1E1E1E);
+    background-color: var(--plugin-table-header-background-color, #EFEFE2);
+}
+
+td, th {
+    border-color: var(--plugin-table-border-color, #F0F0F0);
+}
+
+/* Disabled styles */
+:disabled {
+    color: var(--plugin-inactive-color, #A2A4A5);
+}
+
+/* Highlight styles
+   Use this class when you have a highlighted item, for example a highlighted row in a grid */
+.plugin-highlight {
+    color: var(--plugin-highlight-color, #FFFFFF);
+    background-color: var(--plugin-highlight-background-color, #3399FF);
+}
+
+/* Tooltip styles
+   This class will be included automatically on all tooltips 
+   In VS tooltips aren't, by default, themed, so we just copy
+   the WPF tooltip defaults, which is what VS uses for its tooltips.
+   The one exception is that under system high-contrast themes tooltips
+   are in fact themed, so we use the !HCOnly to indicate we only want
+   our color tokens substituted under high-contrast themes.
+   
+   We set its initial display style to none and its initial position
+   to (-500,-500) just to ensure that when we insert it into the document
+   (for measuring) it isn't visible until we have done the layout and 
+   calculated its final position. 
+*/
+#plugin-vs-tooltip {
+    display: none;
+    position: absolute;
+    top: -500px;
+    left: -500px;
+    -ms-high-contrast-adjust: none;
+    color: var(--plugin-tooltip-text-color, #575757);
+    background-color: var(--plugin-tooltip-background-color, #F1F2F7);
+    border: thin solid var(--plugin-tooltip-border-color, #767676);
+    padding: 4px 5px 3px 5px;
+    line-height: normal;
+    box-sizing: border-box;
+}
+
+#plugin-vs-tooltip > #plugin-vs-tooltip-nested-cell {
+    display: table-cell;
+    vertical-align: middle;
+    -ms-high-contrast-adjust: none;
+    color: var(--plugin-tooltip-text-color, #575757);
+    background-color: var(--plugin-tooltip-background-color, #F1F2F7);
+}
+
+#plugin-vs-tooltip > #plugin-vs-tooltip-nested-cell > #plugin-vs-tooltip-content {
+    -ms-high-contrast-adjust: none;
+    color: var(--plugin-tooltip-text-color, #575757);
+    background-color: var(--plugin-tooltip-background-color, #F1F2F7);
+}
+
+/* Selection styles */
+.selectNone {
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.selectElement {
+    -ms-user-select: element;
+    user-select: auto;
+}
+
+/* Context Menu styles */
+ul.plugin-contextmenu {
+    background-color: var(--plugin-contextmenu-background-color, #e9e8ea);
+    border: thin solid var(--plugin-contextmenu-border-color, #cdd0d6);
+    color: var(--plugin-contextmenu-color, #1E1E1E);
+    padding: 1px 2px 2px 2px;
+    margin: 0;
+    position: absolute;
+    display: none;
+    outline: none;
+    z-index: 100;
+    white-space: nowrap;
+    -ms-high-contrast-adjust: none;
+    line-height: normal;
+}
+
+.plugin-contextmenu .menuitem {
+    display: flex;
+    align-items: center;
+    /* VS context menu max width: https://devdiv.visualstudio.com/DevDiv/_git/VS?path=/src/env/shell/UIInternal/MainWindow/Controls/VsMenuItem.cs&version=GBmain&line=85&lineEnd=92&lineStartColumn=9&lineEndColumn=10&lineStyle=plain&_a=contents */
+    max-width: 660px;
+    cursor: default;
+    outline: none;
+    list-style: none;
+    margin-top: 1px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+.plugin-contextmenu .menuitem:focus {
+    background-color: var(--plugin-contextmenu-hover-color, #f9f9fa);
+    color: var(--plugin-contextmenu-hover-text-color, #1E1E1E);
+    border-color: var(--plugin-contextmenu-hover-border-color);
+}
+
+.plugin-contextmenu .menuitem:active,
+.plugin-contextmenu .active {
+    background-color: var(--plugin-contextmenu-active-color, #f9f9fa);
+    color: var(--plugin-contextmenu-hover-text-color, #1E1E1E);
+    border-color: var(--plugin-highlight-background-color);
+}
+
+.plugin-contextmenu .disabled:hover,
+.plugin-contextmenu .disabled:active,
+.plugin-contextmenu .disabled:focus,
+.plugin-contextmenu .disabled {
+    background-color: var(--plugin-contextmenu-background-color, #e9e8ea);
+    color: var(--plugin-contextmenu-inactive-text-color, #a2a4a5);
+}
+
+.plugin-contextmenu .menuitem .icon {
+    margin: 0 10px 0 6px;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+}
+
+.plugin-contextmenu .menuitem .checkbox {
+    background-image: var(--plugin-contextmenu-icon-checkbox, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/PbtGwMpgAWIfXx8iFS9ZcsWJgYSAQuctW7tejzqgoIDIQx8Nrx69QqobvKUyciC+DSsXLUSSIaHhROlAWj8/v37HB2dxMTEiNKA1Xh0DR2dHUBHvwIDrMajhBIQJCUmnTp1EmI2VuPRNQDNA5oKNBvIxmo8Fj/ATcVqPLoNEEvwxyALZlziBySnJUZSkzdAgAEAfm84vuieuk0AAAAASUVORK5CYII=));
+}
+
+.plugin-contextmenu .hidden {
+    display: none;
+}
+
+.plugin-contextmenu .disabled {
+    color: var(--plugin-contextmenu-inactive-text-color, #a2a4a5);
+}
+
+.plugin-contextmenu .menuitem .main {
+    padding: 4px 50px 5px 0;
+    margin-right: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.plugin-contextmenu .menuitem .shortcut {
+    min-width: 25px;
+    flex-shrink: 0;
+    padding-right: 25px;
+}
+
+.plugin-contextmenu .menuitem .arrow {
+    overflow: visible;
+}
+
+.plugin-contextmenu .menuitem .arrow:before,
+.plugin-contextmenu .menuitem.disabled:hover .arrow:before,
+.plugin-contextmenu .menuitem.disabled:active .arrow:before,
+.plugin-contextmenu .menuitem.disabled:focus .arrow:before,
+.plugin-contextmenu .menuitem.disabled .arrow:before {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAYAAADAp4fuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeNpiWL5i5X8gYEDGTKdOnmCYOXP2fwYkwAQibt68ztDXP+E/iiAIPHn8iGHChIn/UQSFhIQZCgryGUFsFhAhIyvHUFRYwAg3dMaMWRi2AwQYAAcRMJwq3CX+AAAAAElFTkSuQmCC); 
+}
+
+.plugin-contextmenu .menuitem:hover .arrow:before,
+.plugin-contextmenu .menuitem:active .arrow:before,
+.plugin-contextmenu .menuitem:focus .arrow:before,
+.plugin-contextmenu .active .arrow:before {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAYAAADAp4fuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFRJREFUeNpiKNzy6D8QMCBjBoaqM/+DltxGkWACCjOsu/aRwXrmDZASMGCCMY49+spgP/vmfxRBdRF2hoOp6oxwQSs5boYbhTqMMAUM6JaAMECAAQDqqjmrw1gHVwAAAABJRU5ErkJggg==); 
+}
+
+.plugin-contextmenu .menuitem[role="separator"] > * {
+    height: 0;
+}
+
+.plugin-contextmenu .menuitem .hr,
+.plugin-contextmenu .menuitem:hover .hr,
+.plugin-contextmenu .menuitem:active .hr,
+.plugin-contextmenu .menuitem:focus .hr,
+.plugin-contextmenu .active .hr {
+    height: 1px;
+    width: 100%;
+    background-color: var(--plugin-contextmenu-separator-color, #cdd0d6);
+    padding: 0;
+}
+</style>
+    <script src="http://scriptedhost.vs/plugin.js" type="text/javascript" class="selectNone"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" class="selectNone">
+    <meta charset="utf-8" class="selectNone">
+    <link rel="stylesheet" href="c:\program files\microsoft visual studio\2022\enterprise\common7\ide\commonextensions\microsoft\markdown\Preview\Dependencies\daytona-highlight-dark.css" id="CSSTheme" class="selectNone">
+    <link rel="stylesheet" href=" " id="FontSize" class="selectNone">
+    <script type="text/javascript" src="./DOMPurify/purify.min.js" id="DomPurifyTag" class="selectNone"></script>
+    <script type="text/javascript" src="./daytonaHtmlContextMenu.js" id="HTMLContextMenuScript" class="selectNone"></script>
+    <script type="text/javascript" src="./mermaidJS/mermaid.min.js" class="selectNone"></script>
+    <style class="selectNone">
+        html, body {
+        }
+    </style>
+    <title class="selectNone">Markdown Preview</title>
+    <meta http-equiv="cache-control" content="no-cache" class="selectNone">
+<base href="file://C:/Users/SonaliDeshpande/source/repos/WebApplication1/OpenSafety_NET8_Upgrade_Report.md"></head>
+<body class="selectNone">
+    <div id="___markdown-content___" class="selectNone" data-plugin-contextmenu="plugin-contextmenu-dd60af17-bfee-1473-d009-179e68a687da"><h1 id="opensafety.net-8-upgrade-report"><a id="pragma-line-0"></a>OpenSafety .NET 8 Upgrade Report</h1>
+<p id="pragma-line-2"><strong>Report Date:</strong> 2024<br>
+<strong>Project:</strong> OpenSafety Solution<br>
+<strong>Repository:</strong> <a href="https://gitlab.rd.loreal/opensafetyAdm/opensafety">https://gitlab.rd.loreal/opensafetyAdm/opensafety</a><br>
+<strong>Target Framework:</strong> .NET 8.0<br>
+<strong>Report Type:</strong> Upgrade Assessment &amp; Execution Summary</p>
+<hr id="pragma-line-8">
+<h2 id="executive-summary"><a id="pragma-line-10"></a>Executive Summary</h2>
+<p id="pragma-line-12">This report provides a comprehensive upgrade assessment for migrating the OpenSafety solution from .NET Framework 4.7.1/4.5.2 to .NET 8.0. The solution consists of 18 projects with approximately <strong>78,636 lines of code</strong> across multiple architectural layers.</p>
+<h3 id="key-statistics"><a id="pragma-line-14"></a>Key Statistics</h3>
+<table id="pragma-line-16">
+<thead>
+<tr id="pragma-line-16">
+<th id="pragma-line-16">Metric</th>
+<th id="pragma-line-16">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-18">
+<td id="pragma-line-18"><strong>Total Projects</strong></td>
+<td id="pragma-line-18">18 (10 active, 4 stub, 2 dev tools, 2 test)</td>
+</tr>
+<tr id="pragma-line-19">
+<td id="pragma-line-19"><strong>Lines of Code</strong></td>
+<td id="pragma-line-19">~78,636 total (~65,019 non-comment)</td>
+</tr>
+<tr id="pragma-line-20">
+<td id="pragma-line-20"><strong>Current Frameworks</strong></td>
+<td id="pragma-line-20">.NET Framework 4.7.1 (15 projects), 4.5.2 (2 projects), .NET Core 3.1 (1 project)</td>
+</tr>
+<tr id="pragma-line-21">
+<td id="pragma-line-21"><strong>Target Framework</strong></td>
+<td id="pragma-line-21">.NET 8.0</td>
+</tr>
+<tr id="pragma-line-22">
+<td id="pragma-line-22"><strong>Estimated Effort</strong></td>
+<td id="pragma-line-22">92 developer-days (22 weeks single dev, 12-14 weeks with 2 devs)</td>
+</tr>
+<tr id="pragma-line-23">
+<td id="pragma-line-23"><strong>Complexity Level</strong></td>
+<td id="pragma-line-23"><strong>HIGH</strong> - 225 files (39%) contain .NET 8 incompatible APIs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="upgrade-status"><a id="pragma-line-25"></a>Upgrade Status</h3>
+<table id="pragma-line-27">
+<thead>
+<tr id="pragma-line-27">
+<th id="pragma-line-27">Phase</th>
+<th id="pragma-line-27">Status</th>
+<th id="pragma-line-27">Progress</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-29">
+<td id="pragma-line-29">Phase 0: Preparation &amp; Cleanup</td>
+<td id="pragma-line-29">⏸ Not Started</td>
+<td id="pragma-line-29">0%</td>
+</tr>
+<tr id="pragma-line-30">
+<td id="pragma-line-30">Phase 1: Foundation Libraries</td>
+<td id="pragma-line-30">⏸ Not Started</td>
+<td id="pragma-line-30">0%</td>
+</tr>
+<tr id="pragma-line-31">
+<td id="pragma-line-31">Phase 2: Infrastructure &amp; Application</td>
+<td id="pragma-line-31">⏸ Not Started</td>
+<td id="pragma-line-31">0%</td>
+</tr>
+<tr id="pragma-line-32">
+<td id="pragma-line-32">Phase 3: API Migration (WCF → Web API)</td>
+<td id="pragma-line-32">⏸ Not Started</td>
+<td id="pragma-line-32">0%</td>
+</tr>
+<tr id="pragma-line-33">
+<td id="pragma-line-33">Phase 4: Frontend Migration (MVC 5 → Core)</td>
+<td id="pragma-line-33">⏸ Not Started</td>
+<td id="pragma-line-33">0%</td>
+</tr>
+<tr id="pragma-line-34">
+<td id="pragma-line-34">Phase 5: Background Services</td>
+<td id="pragma-line-34">⏸ Not Started</td>
+<td id="pragma-line-34">0%</td>
+</tr>
+<tr id="pragma-line-35">
+<td id="pragma-line-35">Phase 6: Test Modernization</td>
+<td id="pragma-line-35">⏸ Not Started</td>
+<td id="pragma-line-35">0%</td>
+</tr>
+<tr id="pragma-line-36">
+<td id="pragma-line-36">Phase 7: CI/CD &amp; Deployment</td>
+<td id="pragma-line-36">⏸ Not Started</td>
+<td id="pragma-line-36">0%</td>
+</tr>
+<tr id="pragma-line-37">
+<td id="pragma-line-37"><strong>Overall Progress</strong></td>
+<td id="pragma-line-37"><strong>⏸ Not Started</strong></td>
+<td id="pragma-line-37"><strong>0%</strong></td>
+</tr>
+</tbody>
+</table>
+<hr id="pragma-line-39">
+<h2 id="solution-architecture-overview"><a id="pragma-line-41"></a>1. Solution Architecture Overview</h2>
+<h3 id="project-distribution"><a id="pragma-line-43"></a>1.1 Project Distribution</h3>
+<pre><code id="pragma-line-45">┌─────────────────────────────────────────────────────────────┐
+│                     PRESENTATION LAYER                       │
+├─────────────────────────────────────────────────────────────┤
+│ OpenSafetyFrontend (ASP.NET MVC 5 + Web API 2)             │
+│ - 119 Razor views (14,614 lines)                            │
+│ - 14 MVC Controllers + 11 API Controllers                   │
+│ - 6 WCF Service Reference proxies                           │
+├─────────────────────────────────────────────────────────────┤
+│ OpenSafetyDistributedService (WCF REST Services)            │
+│ - 8 WCF .svc services                                       │
+│ - JSON/REST over webHttpBinding                             │
+└─────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────┐
+│                      BUSINESS LAYER                          │
+├─────────────────────────────────────────────────────────────┤
+│ OpenSafetyApplication (Application Services)                │
+│ - 41 application service classes                            │
+│ - AutoMapper 5.1.1 (static API - obsolete)                  │
+│ - 13 adapter classes                                         │
+└─────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────┐
+│                       DATA LAYER                             │
+├─────────────────────────────────────────────────────────────┤
+│ OPenSafetyInfrastructure                                    │
+│ - Entity Framework 6.1.3 (65 files)                         │
+│ - Elasticsearch NEST 6.1.0 (deprecated)                     │
+│ - 31 EntityTypeConfiguration classes                        │
+│ - 14 EF6 migrations                                          │
+└─────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────┐
+│                     FOUNDATION LAYER                         │
+├─────────────────────────────────────────────────────────────┤
+│ OpenSafetyDomainModel (Entities + Interfaces)               │
+│ OpenSafetyContract (DTOs + Service Interfaces)              │
+│ OpenSafetyCrossCutting (Utilities + Helpers)                │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│                    BACKGROUND SERVICES                       │
+├─────────────────────────────────────────────────────────────┤
+│ WsAsynchronousSilicoState (Windows Service)                 │
+│ - 30-second polling timer                                    │
+│ - Calls WCF endpoint for silico analysis                    │
+└─────────────────────────────────────────────────────────────┘
+</code></pre>
+<h3 id="key-technologies-in-use"><a id="pragma-line-95"></a>1.2 Key Technologies in Use</h3>
+<table id="pragma-line-97">
+<thead>
+<tr id="pragma-line-97">
+<th id="pragma-line-97">Category</th>
+<th id="pragma-line-97">Technology</th>
+<th id="pragma-line-97">Version</th>
+<th id="pragma-line-97">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-99">
+<td id="pragma-line-99"><strong>Web Framework</strong></td>
+<td id="pragma-line-99">ASP.NET MVC</td>
+<td id="pragma-line-99">5.2.7</td>
+<td id="pragma-line-99">⚠ Must replace</td>
+</tr>
+<tr id="pragma-line-100">
+<td id="pragma-line-100"><strong>Web API</strong></td>
+<td id="pragma-line-100">ASP.NET Web API</td>
+<td id="pragma-line-100">2.0</td>
+<td id="pragma-line-100">⚠ Must replace</td>
+</tr>
+<tr id="pragma-line-101">
+<td id="pragma-line-101"><strong>Services</strong></td>
+<td id="pragma-line-101">WCF (REST/JSON)</td>
+<td id="pragma-line-101">Full Framework</td>
+<td id="pragma-line-101">⚠ Must replace</td>
+</tr>
+<tr id="pragma-line-102">
+<td id="pragma-line-102"><strong>ORM</strong></td>
+<td id="pragma-line-102">Entity Framework</td>
+<td id="pragma-line-102">6.1.3</td>
+<td id="pragma-line-102">⚠ Must replace</td>
+</tr>
+<tr id="pragma-line-103">
+<td id="pragma-line-103"><strong>Search</strong></td>
+<td id="pragma-line-103">Elasticsearch NEST</td>
+<td id="pragma-line-103">6.1.0</td>
+<td id="pragma-line-103">⚠ Must replace</td>
+</tr>
+<tr id="pragma-line-104">
+<td id="pragma-line-104"><strong>IoC Container</strong></td>
+<td id="pragma-line-104">Unity</td>
+<td id="pragma-line-104">4.0.1 / 5.2.1 / 5.11.6</td>
+<td id="pragma-line-104">⚠ Must replace</td>
+</tr>
+<tr id="pragma-line-105">
+<td id="pragma-line-105"><strong>Logging</strong></td>
+<td id="pragma-line-105">log4net</td>
+<td id="pragma-line-105">2.0.8</td>
+<td id="pragma-line-105">⚠ Should replace</td>
+</tr>
+<tr id="pragma-line-106">
+<td id="pragma-line-106"><strong>Mapping</strong></td>
+<td id="pragma-line-106">AutoMapper</td>
+<td id="pragma-line-106">5.1.1</td>
+<td id="pragma-line-106">⚠ Must upgrade</td>
+</tr>
+<tr id="pragma-line-107">
+<td id="pragma-line-107"><strong>UI Framework</strong></td>
+<td id="pragma-line-107">Bootstrap</td>
+<td id="pragma-line-107">3.3.7</td>
+<td id="pragma-line-107">⚠ Should upgrade</td>
+</tr>
+<tr id="pragma-line-108">
+<td id="pragma-line-108"><strong>Grid Component</strong></td>
+<td id="pragma-line-108">Trirand.jqGrid</td>
+<td id="pragma-line-108">4.6.0</td>
+<td id="pragma-line-108">⚠ Must replace</td>
+</tr>
+</tbody>
+</table>
+<hr id="pragma-line-110">
+<h2 id="upgrade-complexity-analysis"><a id="pragma-line-112"></a>2. Upgrade Complexity Analysis</h2>
+<h3 id="breaking-changes-by-category"><a id="pragma-line-114"></a>2.1 Breaking Changes by Category</h3>
+<h4 id="critical-complete-replacement-required"><a id="pragma-line-116"></a>🔴 CRITICAL - Complete Replacement Required</h4>
+<table id="pragma-line-118">
+<thead>
+<tr id="pragma-line-118">
+<th id="pragma-line-118">API / Framework</th>
+<th id="pragma-line-118">Files Affected</th>
+<th id="pragma-line-118">Reason</th>
+<th id="pragma-line-118">Replacement</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-120">
+<td id="pragma-line-120"><strong>System.Web</strong></td>
+<td id="pragma-line-120">127 files</td>
+<td id="pragma-line-120">Not available in .NET Core</td>
+<td id="pragma-line-120">ASP.NET Core APIs</td>
+</tr>
+<tr id="pragma-line-121">
+<td id="pragma-line-121"><strong>System.ServiceModel (WCF)</strong></td>
+<td id="pragma-line-121">28 files</td>
+<td id="pragma-line-121">Server hosting not supported</td>
+<td id="pragma-line-121">ASP.NET Core Web API</td>
+</tr>
+<tr id="pragma-line-122">
+<td id="pragma-line-122"><strong>System.Data.Entity (EF6)</strong></td>
+<td id="pragma-line-122">65 files</td>
+<td id="pragma-line-122">Not ported to .NET Core</td>
+<td id="pragma-line-122">EF Core 8.x</td>
+</tr>
+<tr id="pragma-line-123">
+<td id="pragma-line-123"><strong>System.ServiceProcess</strong></td>
+<td id="pragma-line-123">4 files</td>
+<td id="pragma-line-123">Not available</td>
+<td id="pragma-line-123">BackgroundService</td>
+</tr>
+</tbody>
+</table>
+<h4 id="high-major-refactoring-required"><a id="pragma-line-125"></a>🟡 HIGH - Major Refactoring Required</h4>
+<table id="pragma-line-127">
+<thead>
+<tr id="pragma-line-127">
+<th id="pragma-line-127">API / Framework</th>
+<th id="pragma-line-127">Files Affected</th>
+<th id="pragma-line-127">Reason</th>
+<th id="pragma-line-127">Replacement</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-129">
+<td id="pragma-line-129"><strong>Unity IoC</strong></td>
+<td id="pragma-line-129">8 files</td>
+<td id="pragma-line-129">Unmaintained, not idiomatic</td>
+<td id="pragma-line-129">Built-in DI</td>
+</tr>
+<tr id="pragma-line-130">
+<td id="pragma-line-130"><strong>NEST 6.x</strong></td>
+<td id="pragma-line-130">2 files (2,132 lines)</td>
+<td id="pragma-line-130">Deprecated, ES 6.x EOL</td>
+<td id="pragma-line-130">Elastic.Clients.Elasticsearch 8.x</td>
+</tr>
+<tr id="pragma-line-131">
+<td id="pragma-line-131"><strong>AutoMapper 5.x</strong></td>
+<td id="pragma-line-131">18 files</td>
+<td id="pragma-line-131">Static API removed</td>
+<td id="pragma-line-131">AutoMapper 13.x</td>
+</tr>
+<tr id="pragma-line-132">
+<td id="pragma-line-132"><strong>System.Configuration</strong></td>
+<td id="pragma-line-132">27 files</td>
+<td id="pragma-line-132">Not default in .NET Core</td>
+<td id="pragma-line-132">IConfiguration / IOptions</td>
+</tr>
+</tbody>
+</table>
+<h4 id="medium-upgrademinor-changes"><a id="pragma-line-134"></a>🟢 MEDIUM - Upgrade/Minor Changes</h4>
+<table id="pragma-line-136">
+<thead>
+<tr id="pragma-line-136">
+<th id="pragma-line-136">API / Framework</th>
+<th id="pragma-line-136">Files Affected</th>
+<th id="pragma-line-136">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-138">
+<td id="pragma-line-138"><strong>log4net</strong></td>
+<td id="pragma-line-138">50 files</td>
+<td id="pragma-line-138">Replace with ILogger + Serilog</td>
+</tr>
+<tr id="pragma-line-139">
+<td id="pragma-line-139"><strong>HttpContext.Current</strong></td>
+<td id="pragma-line-139">32 files</td>
+<td id="pragma-line-139">Inject IHttpContextAccessor</td>
+</tr>
+<tr id="pragma-line-140">
+<td id="pragma-line-140"><strong>Session["key"]</strong></td>
+<td id="pragma-line-140">29 files</td>
+<td id="pragma-line-140">Use ISession.GetString/SetString</td>
+</tr>
+<tr id="pragma-line-141">
+<td id="pragma-line-141"><strong>Trirand.jqGrid</strong></td>
+<td id="pragma-line-141">7 views</td>
+<td id="pragma-line-141">Migrate to DataTables.js</td>
+</tr>
+<tr id="pragma-line-142">
+<td id="pragma-line-142"><strong>Bootstrap 3</strong></td>
+<td id="pragma-line-142">37+ views</td>
+<td id="pragma-line-142">Upgrade to Bootstrap 5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="incompatibility-summary"><a id="pragma-line-144"></a>2.2 Incompatibility Summary</h3>
+<pre><code id="pragma-line-146">Total C# Files: 578
+├─ .NET 8 Compatible: 353 files (61%)
+└─ Requires Changes: 225 files (39%)
+   ├─ System.Web dependencies: 127 files
+   ├─ EF6 dependencies: 65 files
+   ├─ WCF dependencies: 28 files
+   ├─ log4net: 50 files
+   ├─ HttpContext.Current: 32 files
+   ├─ Session access: 29 files
+   └─ ConfigurationManager: 27 files
+   
+   (Note: Files may have multiple issues)
+</code></pre>
+<h3 id="dead-code-identified-cleanup-opportunity"><a id="pragma-line-161"></a>2.3 Dead Code Identified (Cleanup Opportunity)</h3>
+<table id="pragma-line-163">
+<thead>
+<tr id="pragma-line-163">
+<th id="pragma-line-163">Category</th>
+<th id="pragma-line-163">Count</th>
+<th id="pragma-line-163">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-165">
+<td id="pragma-line-165"><strong>Stub Projects</strong></td>
+<td id="pragma-line-165">4 projects</td>
+<td id="pragma-line-165">Delete entirely</td>
+</tr>
+<tr id="pragma-line-166">
+<td id="pragma-line-166"><strong>Empty UnityConfig.cs</strong></td>
+<td id="pragma-line-166">7 copies</td>
+<td id="pragma-line-166">Delete (keep 1 real)</td>
+</tr>
+<tr id="pragma-line-167">
+<td id="pragma-line-167"><strong>Duplicate FilterConfig.cs</strong></td>
+<td id="pragma-line-167">4 copies</td>
+<td id="pragma-line-167">Delete all</td>
+</tr>
+<tr id="pragma-line-168">
+<td id="pragma-line-168"><strong>Duplicate RouteConfig.cs</strong></td>
+<td id="pragma-line-168">4 copies</td>
+<td id="pragma-line-168">Delete all</td>
+</tr>
+<tr id="pragma-line-169">
+<td id="pragma-line-169"><strong>SimpleJson.cs</strong></td>
+<td id="pragma-line-169">1 file (2,127 lines)</td>
+<td id="pragma-line-169">Delete (redundant)</td>
+</tr>
+<tr id="pragma-line-170">
+<td id="pragma-line-170"><strong>NotImplementedException</strong></td>
+<td id="pragma-line-170">16 files</td>
+<td id="pragma-line-170">Review &amp; implement or delete</td>
+</tr>
+<tr id="pragma-line-171">
+<td id="pragma-line-171"><strong>Empty stub files (&lt;20 lines)</strong></td>
+<td id="pragma-line-171">192 files</td>
+<td id="pragma-line-171">Review &amp; consolidate</td>
+</tr>
+<tr id="pragma-line-172">
+<td id="pragma-line-172"><strong>Total Removable Code</strong></td>
+<td id="pragma-line-172">~5,000-6,000 lines</td>
+<td id="pragma-line-172">Clean in Phase 0</td>
+</tr>
+</tbody>
+</table>
+<hr id="pragma-line-174">
+<h2 id="detailed-upgrade-roadmap"><a id="pragma-line-176"></a>3. Detailed Upgrade Roadmap</h2>
+<h3 id="phase-0-preparation-cleanup-week-1-5-days"><a id="pragma-line-178"></a>Phase 0: Preparation &amp; Cleanup (Week 1 - 5 days)</h3>
+<p id="pragma-line-180"><strong>Objectives:</strong></p>
+<ul id="pragma-line-181">
+<li id="pragma-line-181">✅ Establish clean migration baseline</li>
+<li id="pragma-line-182">✅ Remove dead code and security issues</li>
+<li id="pragma-line-183">✅ Fix architectural violations</li>
+</ul>
+<p id="pragma-line-185"><strong>Tasks:</strong></p>
+<ol id="pragma-line-186">
+<li id="pragma-line-186">Create migration branch: <code>feature/dotnet8-migration</code></li>
+<li id="pragma-line-187">Install tooling: .NET 8 SDK, <code>dotnet-ef</code>, <code>upgrade-assistant</code></li>
+<li id="pragma-line-188"><strong>Security</strong>: Rotate plaintext credentials in Web.config (found in WCF service)</li>
+<li id="pragma-line-189"><strong>Fix layer violation</strong>: Remove <code>OpenSafetyFrontend</code> dependency from <code>OPenSafetyInfrastructure</code></li>
+<li id="pragma-line-190">Delete 4 stub projects (WebFrontendTest, OpenSafetyFrontedApplication, Fronted.Tests, WebApiOpenSafety)</li>
+<li id="pragma-line-191">Delete 7 empty <code>UnityConfig.cs</code> stubs + 8 duplicate config files</li>
+<li id="pragma-line-192">Delete <code>SimpleJson.cs</code> (2,127 lines - superseded by Newtonsoft.Json)</li>
+<li id="pragma-line-193">Run <code>upgrade-assistant analyze OpenSafety.sln</code> and document all warnings</li>
+</ol>
+<p id="pragma-line-195"><strong>Deliverables:</strong></p>
+<ul id="pragma-line-196">
+<li id="pragma-line-196">Clean codebase with ~5,000 fewer LOC</li>
+<li id="pragma-line-197">Security issues resolved</li>
+<li id="pragma-line-198">Documented analysis report</li>
+</ul>
+<hr id="pragma-line-200">
+<h3 id="phase-1-foundation-libraries-weeks-2-3-6-days"><a id="pragma-line-202"></a>Phase 1: Foundation Libraries (Weeks 2-3 - 6 days)</h3>
+<p id="pragma-line-204"><strong>Scope:</strong> 3 projects with zero external dependencies</p>
+<h4 id="opensafetycrosscutting-2-days"><a id="pragma-line-206"></a>1.1 OpenSafetyCrossCutting (2 days)</h4>
+<ul id="pragma-line-207">
+<li id="pragma-line-207">✅ Convert to SDK-style .csproj targeting <code>net8.0</code></li>
+<li id="pragma-line-208">✅ Replace <code>System.Runtime.Caching</code> → <code>IMemoryCache</code> interface</li>
+<li id="pragma-line-209">✅ Replace <code>System.Net.Mail.SmtpClient</code> → <code>MailKit</code></li>
+<li id="pragma-line-210">✅ Fix <code>GenerateCsvFile</code> (remove <code>HttpContext.Current</code>)</li>
+<li id="pragma-line-211">✅ Upgrade: ClosedXML (0.95 → 0.102), DocumentFormat.OpenXml (2.9 → 3.1), Newtonsoft.Json (4.5-12.0 → 13.0)</li>
+<li id="pragma-line-212">✅ Remove: Unity, WebActivatorEx, System.Web references</li>
+</ul>
+<h4 id="opensafetydomainmodel-2-days"><a id="pragma-line-214"></a>1.2 OpenSafetyDomainModel (2 days)</h4>
+<ul id="pragma-line-215">
+<li id="pragma-line-215">✅ Convert to SDK-style .csproj targeting <code>net8.0</code></li>
+<li id="pragma-line-216">✅ Remove dead interfaces: <code>IRepository&lt;T&gt;</code>, <code>DicoDomainSpecification</code></li>
+<li id="pragma-line-217">✅ Add nullable reference types: <code>&lt;Nullable&gt;enable&lt;/Nullable&gt;</code></li>
+<li id="pragma-line-218">✅ Remove: Unity, Microsoft.AspNet.Mvc, Microsoft.CodeDom.Providers</li>
+</ul>
+<h4 id="opensafetycontract-2-days"><a id="pragma-line-220"></a>1.3 OpenSafetyContract (2 days)</h4>
+<ul id="pragma-line-221">
+<li id="pragma-line-221">✅ Convert to SDK-style .csproj targeting <code>net8.0</code></li>
+<li id="pragma-line-222">✅ <strong>Strip all WCF attributes</strong> from 9 service interfaces:
+<ul id="pragma-line-223">
+<li id="pragma-line-223">Remove: <code>[ServiceContract]</code>, <code>[OperationContract]</code>, <code>[WebGet]</code>, <code>[WebInvoke]</code>, <code>[FaultContract]</code></li>
+</ul>
+</li>
+<li id="pragma-line-224">✅ Remove: <code>System.ServiceModel</code>, Unity references</li>
+<li id="pragma-line-225">✅ Preserve: 93 DTO classes (remain POCO - no changes needed)</li>
+</ul>
+<p id="pragma-line-227"><strong>Success Criteria:</strong></p>
+<ul id="pragma-line-228">
+<li id="pragma-line-228">All 3 projects compile with <code>dotnet build</code></li>
+<li id="pragma-line-229">Zero .NET Framework dependencies</li>
+<li id="pragma-line-230">Zero WCF dependencies in Contract layer</li>
+</ul>
+<hr id="pragma-line-232">
+<h3 id="phase-2-infrastructure-application-weeks-4-8-17-days"><a id="pragma-line-234"></a>Phase 2: Infrastructure &amp; Application (Weeks 4-8 - 17 days)</h3>
+<h4 id="opensafetyinfrastructure-10-days"><a id="pragma-line-236"></a>2.1 OPenSafetyInfrastructure (10 days)</h4>
+<p id="pragma-line-238"><strong>EF6 → EF Core 8 Migration:</strong></p>
+<ol id="pragma-line-239">
+<li id="pragma-line-239">✅ Convert 31 <code>EntityTypeConfiguration&lt;T&gt;</code> → <code>IEntityTypeConfiguration&lt;T&gt;</code></li>
+<li id="pragma-line-240">✅ Update <code>OpenSafetyDBContext</code>:
+<ul id="pragma-line-241">
+<li id="pragma-line-241">Add constructor: <code>public OpenSafetyDBContext(DbContextOptions&lt;OpenSafetyDBContext&gt; options) : base(options)</code></li>
+<li id="pragma-line-242">Update <code>OnModelCreating()</code> to apply configurations</li>
+</ul>
+</li>
+<li id="pragma-line-243">✅ Delete all 14 EF6 migration files (<code>.cs</code>, <code>.Designer.cs</code>, <code>Configuration.cs</code>)</li>
+<li id="pragma-line-244">✅ Create new baseline migration: <code>dotnet ef migrations add InitialCreate</code></li>
+<li id="pragma-line-245">✅ Fix 4 instances of <code>new OpenSafetyDBContext()</code> → inject via DI</li>
+<li id="pragma-line-246">✅ Update raw SQL queries: use <code>FromSqlRaw()</code> or consider Dapper</li>
+</ol>
+<p id="pragma-line-248"><strong>Elasticsearch Migration:</strong></p>
+<ol id="pragma-line-249">
+<li id="pragma-line-249">✅ Replace NEST 6.1.0 → <code>Elastic.Clients.Elasticsearch</code> 8.x</li>
+<li id="pragma-line-250">✅ <strong>Rewrite <code>WebApiElasticSearch.cs</code> (2,132 lines)</strong>:
+<ul id="pragma-line-251">
+<li id="pragma-line-251">Update query DSL syntax</li>
+<li id="pragma-line-252">Replace <code>SearchDescriptor&lt;T&gt;</code> → <code>SearchRequest&lt;T&gt;</code></li>
+<li id="pragma-line-253">Update aggregation builders</li>
+<li id="pragma-line-254">Test all search queries</li>
+</ul>
+</li>
+</ol>
+<p id="pragma-line-256"><strong>HTTP Clients:</strong></p>
+<ol id="pragma-line-257">
+<li id="pragma-line-257">✅ Delete ASMX Web Reference: <code>Web References/MdmWS</code></li>
+<li id="pragma-line-258">✅ Rewrite <code>WSMdmRepository</code> using <code>IHttpClientFactory</code></li>
+<li id="pragma-line-259">✅ Register typed HTTP clients in DI</li>
+</ol>
+<p id="pragma-line-261"><strong>Cross-Cutting:</strong></p>
+<ul id="pragma-line-262">
+<li id="pragma-line-262">✅ Replace <code>ConfigurationManager</code> → <code>IConfiguration</code> (inject)</li>
+<li id="pragma-line-263">✅ Replace <code>log4net</code> → <code>ILogger&lt;T&gt;</code> (inject)</li>
+</ul>
+<h4 id="opensafetyapplication-7-days"><a id="pragma-line-265"></a>2.2 OpenSafetyApplication (7 days)</h4>
+<ol id="pragma-line-267">
+<li id="pragma-line-267">✅ Convert to SDK-style .csproj targeting <code>net8.0</code></li>
+<li id="pragma-line-268">✅ Replace <code>ConfigurationManager</code> → <code>IConfiguration</code> (27 instances)</li>
+<li id="pragma-line-269">✅ Replace <code>log4net</code> → <code>ILogger&lt;T&gt;</code> (50 instances)</li>
+<li id="pragma-line-270">✅ Fix <code>SecurityService</code>: <code>HttpContext.Current.Session</code> → <code>IHttpContextAccessor</code> + <code>ISession</code></li>
+<li id="pragma-line-271">✅ <strong>AutoMapper 5.1.1 → 13.x</strong>:
+<ul id="pragma-line-272">
+<li id="pragma-line-272">Remove <code>Mapper.Initialize()</code> static API</li>
+<li id="pragma-line-273">Create <code>Profile</code> classes for all mappings</li>
+<li id="pragma-line-274">Register: <code>services.AddAutoMapper(typeof(MappingProfile).Assembly)</code></li>
+</ul>
+</li>
+<li id="pragma-line-275">✅ Remove: Unity, Unity.Mvc5, Microsoft.AspNet.Mvc</li>
+<li id="pragma-line-276">✅ Merge duplicate <code>UnauthorizedException.cs</code> (remove from Application, keep in CrossCutting)</li>
+</ol>
+<p id="pragma-line-278"><strong>Success Criteria:</strong></p>
+<ul id="pragma-line-279">
+<li id="pragma-line-279">Infrastructure and Application layers compile on <code>net8.0</code></li>
+<li id="pragma-line-280">EF Core 8 migrations successfully generated</li>
+<li id="pragma-line-281">All dependencies injected via constructor (no <code>new DbContext()</code>)</li>
+</ul>
+<hr id="pragma-line-283">
+<h3 id="phase-3-api-migration-wcf-asp.net-core-web-api-weeks-9-12-16-days"><a id="pragma-line-285"></a>Phase 3: API Migration - WCF → ASP.NET Core Web API (Weeks 9-12 - 16 days)</h3>
+<p id="pragma-line-287"><strong>Scope:</strong> Replace 8 WCF services with ASP.NET Core Web API controllers</p>
+<h4 id="dissolve-opensafetydependancyresolver-2-days"><a id="pragma-line-289"></a>3.1 Dissolve OpenSafetyDependancyResolver (2 days)</h4>
+<ul id="pragma-line-290">
+<li id="pragma-line-290">✅ Translate all Unity <code>container.RegisterType&lt;I,T&gt;()</code> → <code>services.AddScoped&lt;I,T&gt;()</code></li>
+<li id="pragma-line-291">✅ Create extension methods: <code>AddInfrastructure()</code>, <code>AddApplication()</code></li>
+<li id="pragma-line-292">✅ Delete project after migration complete</li>
+</ul>
+<h4 id="create-asp.net-core-web-api-project-3-days"><a id="pragma-line-294"></a>3.2 Create ASP.NET Core Web API Project (3 days)</h4>
+<p id="pragma-line-296"><strong>New <code>Program.cs</code>:</strong></p>
+<pre><code class="language-csharp" id="pragma-line-297">var builder = WebApplication.CreateBuilder(args);
+
+// Services
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// DI
+builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddApplication();
+
+// Windows Authentication
+builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
+    .AddNegotiate();
+builder.Services.AddAuthorization();
+
+var app = builder.Build();
+
+// Middleware
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseAuthentication();
+app.UseAuthorization();
+app.MapControllers();
+
+app.Run();
+</code></pre>
+<p id="pragma-line-330"><strong>New <code>appsettings.json</code>:</strong></p>
+<pre><code class="language-json" id="pragma-line-331">{
+  "ConnectionStrings": {
+    "OpenSafetyDB": "..."
+  },
+  "Elasticsearch": {
+    "Url": "http://elasticsearch:9200"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information"
+    }
+  }
+}
+</code></pre>
+<h4 id="create-8-api-controllers-8-days"><a id="pragma-line-347"></a>3.3 Create 8 API Controllers (8 days)</h4>
+<table id="pragma-line-349">
+<thead>
+<tr id="pragma-line-349">
+<th id="pragma-line-349">WCF Service</th>
+<th id="pragma-line-349">New Controller</th>
+<th id="pragma-line-349">Key Endpoints</th>
+<th id="pragma-line-349">LOC</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-351">
+<td id="pragma-line-351"><code>OpenSafetyDicoWCFService</code></td>
+<td id="pragma-line-351"><code>DicoController</code></td>
+<td id="pragma-line-351">GetBlocs, GetSources, GetMetas</td>
+<td id="pragma-line-351">~1,006</td>
+</tr>
+<tr id="pragma-line-352">
+<td id="pragma-line-352"><code>OpenSafetyAdminWCFService</code></td>
+<td id="pragma-line-352"><code>AdminController</code></td>
+<td id="pragma-line-352">CRUD for admin entities</td>
+<td id="pragma-line-352">~1,780</td>
+</tr>
+<tr id="pragma-line-353">
+<td id="pragma-line-353"><code>OpenSafetyAcquisitionWCFService</code></td>
+<td id="pragma-line-353"><code>AcquisitionController</code></td>
+<td id="pragma-line-353">Acquisition management</td>
+<td id="pragma-line-353">~520</td>
+</tr>
+<tr id="pragma-line-354">
+<td id="pragma-line-354"><code>OpenSafetyDataWCFService</code></td>
+<td id="pragma-line-354"><code>DataController</code></td>
+<td id="pragma-line-354">Elasticsearch queries</td>
+<td id="pragma-line-354">~880</td>
+</tr>
+<tr id="pragma-line-355">
+<td id="pragma-line-355"><code>OpenSafetyCosmetochemWCFService</code></td>
+<td id="pragma-line-355"><code>CosmetochemController</code></td>
+<td id="pragma-line-355">Cosmetochem API proxy</td>
+<td id="pragma-line-355">~450</td>
+</tr>
+<tr id="pragma-line-356">
+<td id="pragma-line-356"><code>OpenSafetyMdmWCFService</code></td>
+<td id="pragma-line-356"><code>MdmController</code></td>
+<td id="pragma-line-356">MDM integration</td>
+<td id="pragma-line-356">~310</td>
+</tr>
+<tr id="pragma-line-357">
+<td id="pragma-line-357"><code>OpenSafetyMpnetWCFService</code></td>
+<td id="pragma-line-357"><code>MpnetController</code></td>
+<td id="pragma-line-357">MPnet API proxy</td>
+<td id="pragma-line-357">~270</td>
+</tr>
+<tr id="pragma-line-358">
+<td id="pragma-line-358"><code>OpenSafetySynonymsWCFService</code></td>
+<td id="pragma-line-358"><code>SynonymsController</code></td>
+<td id="pragma-line-358">Synonym lookup</td>
+<td id="pragma-line-358">~230</td>
+</tr>
+</tbody>
+</table>
+<p id="pragma-line-360"><strong>Migration Pattern:</strong></p>
+<p id="pragma-line-362"><strong>Before (WCF):</strong></p>
+<pre><code class="language-csharp" id="pragma-line-363">[ServiceContract]
+public interface IDicoService
+{
+    [OperationContract]
+    [WebGet(UriTemplate = "GetBlocs", ResponseFormat = WebMessageFormat.Json)]
+    List&lt;BlocDTO&gt; GetBlocs();
+}
+
+public class OpenSafetyDicoWCFService : IDicoService
+{
+    public List&lt;BlocDTO&gt; GetBlocs()
+    {
+        var service = new DicoApplicationService();
+        return service.GetAllBlocs();
+    }
+}
+</code></pre>
+<p id="pragma-line-382"><strong>After (ASP.NET Core):</strong></p>
+<pre><code class="language-csharp" id="pragma-line-383">[ApiController]
+[Route("api/[controller]")]
+[Authorize]
+public class DicoController : ControllerBase
+{
+    private readonly IDicoApplicationService _dicoService;
+    private readonly ILogger&lt;DicoController&gt; _logger;
+
+    public DicoController(IDicoApplicationService dicoService, ILogger&lt;DicoController&gt; logger)
+    {
+        _dicoService = dicoService;
+        _logger = logger;
+    }
+
+    [HttpGet("blocs")]
+    [ProducesResponseType(typeof(List&lt;BlocDTO&gt;), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    public async Task&lt;ActionResult&lt;List&lt;BlocDTO&gt;&gt;&gt; GetBlocs()
+    {
+        try
+        {
+            var blocs = await _dicoService.GetAllBlocsAsync();
+            return Ok(blocs);
+        }
+        catch (UnauthorizedException ex)
+        {
+            _logger.LogWarning(ex, "Unauthorized access to GetBlocs");
+            return Unauthorized();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error retrieving blocs");
+            return StatusCode(500, new ProblemDetails 
+            { 
+                Title = "Internal Server Error",
+                Detail = ex.Message 
+            });
+        }
+    }
+}
+</code></pre>
+<h4 id="error-handling-1-day"><a id="pragma-line-426"></a>3.4 Error Handling (1 day)</h4>
+<ul id="pragma-line-427">
+<li id="pragma-line-427">✅ Replace <code>FaultException</code> → <code>ProblemDetails</code> + HTTP status codes</li>
+<li id="pragma-line-428">✅ Create global exception middleware</li>
+<li id="pragma-line-429">✅ Custom exception filter for <code>UnauthorizedException</code> → 401</li>
+</ul>
+<h4 id="delete-legacy-files-1-day"><a id="pragma-line-431"></a>3.5 Delete Legacy Files (1 day)</h4>
+<ul id="pragma-line-432">
+<li id="pragma-line-432">✅ Delete 8 <code>.svc</code> + <code>.svc.cs</code> files</li>
+<li id="pragma-line-433">✅ Delete <code>Global.asax</code></li>
+<li id="pragma-line-434">✅ Delete <code>Web.config</code> (replace with minimal IIS handler config)</li>
+<li id="pragma-line-435">✅ Delete <code>App_Start/UnityConfig.cs</code></li>
+</ul>
+<h4 id="testing-validation-1-day"><a id="pragma-line-437"></a>3.6 Testing &amp; Validation (1 day)</h4>
+<ul id="pragma-line-438">
+<li id="pragma-line-438">✅ Test all 8 controllers via Swagger UI</li>
+<li id="pragma-line-439">✅ Verify Windows Auth (Negotiate) works</li>
+<li id="pragma-line-440">✅ Compare JSON responses with legacy WCF services</li>
+<li id="pragma-line-441">✅ Load test critical endpoints</li>
+</ul>
+<p id="pragma-line-443"><strong>Success Criteria:</strong></p>
+<ul id="pragma-line-444">
+<li id="pragma-line-444">8 functional ASP.NET Core Web API controllers</li>
+<li id="pragma-line-445">Swagger/OpenAPI documentation accessible</li>
+<li id="pragma-line-446">Feature parity with WCF services</li>
+<li id="pragma-line-447">Deployed to test environment (alongside existing WCF)</li>
+</ul>
+<hr id="pragma-line-449">
+<h3 id="phase-4-frontend-migration-mvc-5-asp.net-core-8-weeks-13-19-29-days"><a id="pragma-line-451"></a>Phase 4: Frontend Migration - MVC 5 → ASP.NET Core 8 (Weeks 13-19 - 29 days)</h3>
+<p id="pragma-line-453"><strong>Scope:</strong> Migrate ASP.NET MVC 5 + Web API 2 frontend to ASP.NET Core 8 MVC</p>
+<h4 id="project-setup-2-days"><a id="pragma-line-455"></a>4.1 Project Setup (2 days)</h4>
+<ol id="pragma-line-456">
+<li id="pragma-line-456">✅ Delete: <code>Global.asax</code>, <code>Web.config</code>, all <code>App_Start/</code> files</li>
+<li id="pragma-line-457">✅ Create new <code>Program.cs</code>:</li>
+</ol>
+<pre><code class="language-csharp" id="pragma-line-458">var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllersWithViews();
+builder.Services.AddSession(options =&gt;
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+// Typed HTTP clients
+builder.Services.AddHttpClient&lt;DicoApiClient&gt;(client =&gt;
+{
+    client.BaseAddress = new Uri(builder.Configuration["ApiBaseUrl"]);
+});
+// ... register 5 more clients
+
+builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
+    .AddNegotiate();
+
+var app = builder.Build();
+
+app.UseExceptionHandler("/OpsError/Error");
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
+app.UseSession();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapControllerRoute(
+    name: "admin",
+    pattern: "{area:exists}/{controller=AdminHome}/{action=Index}/{id?}");
+
+app.Run();
+</code></pre>
+<ol id="pragma-line-498" start="3">
+<li id="pragma-line-498">✅ Create <code>appsettings.json</code> with all configuration keys</li>
+<li id="pragma-line-499">✅ Configure LibMan (<code>libman.json</code>) for static assets</li>
+</ol>
+<h4 id="replace-wcf-clients-with-typed-httpclient-5-days"><a id="pragma-line-501"></a>4.2 Replace WCF Clients with Typed HttpClient (5 days)</h4>
+<p id="pragma-line-503"><strong>6 Typed Clients to Create:</strong></p>
+<pre><code class="language-csharp" id="pragma-line-505">public class DicoApiClient
+{
+    private readonly HttpClient _httpClient;
+    private readonly ILogger&lt;DicoApiClient&gt; _logger;
+
+    public DicoApiClient(HttpClient httpClient, ILogger&lt;DicoApiClient&gt; logger)
+    {
+        _httpClient = httpClient;
+        _logger = logger;
+    }
+
+    public async Task&lt;List&lt;BlocDTO&gt;&gt; GetBlocsAsync()
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync&lt;List&lt;BlocDTO&gt;&gt;("api/dico/blocs") 
+                   ?? new List&lt;BlocDTO&gt;();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Error calling GetBlocs API");
+            throw;
+        }
+    }
+
+    // ... 30+ more methods
+}
+</code></pre>
+<p id="pragma-line-535"><strong>Clients:</strong></p>
+<ol id="pragma-line-536">
+<li id="pragma-line-536"><code>DicoApiClient</code></li>
+<li id="pragma-line-537"><code>AdminApiClient</code></li>
+<li id="pragma-line-538"><code>AcquisitionApiClient</code></li>
+<li id="pragma-line-539"><code>DataApiClient</code></li>
+<li id="pragma-line-540"><code>CosmetochemApiClient</code></li>
+<li id="pragma-line-541"><code>MdmApiClient</code></li>
+</ol>
+<h4 id="update-mvc-controllers-5-days"><a id="pragma-line-543"></a>4.3 Update MVC Controllers (5 days)</h4>
+<p id="pragma-line-545"><strong>14 MVC Controllers to Update:</strong></p>
+<p id="pragma-line-547"><strong>Changes per controller:</strong></p>
+<ul id="pragma-line-548">
+<li id="pragma-line-548">✅ Namespace: <code>System.Web.Mvc</code> → <code>Microsoft.AspNetCore.Mvc</code></li>
+<li id="pragma-line-549">✅ Replace <code>HttpContext.Current</code> → inject <code>IHttpContextAccessor</code></li>
+<li id="pragma-line-550">✅ Replace <code>Session["key"]</code> → <code>HttpContext.Session.GetString("key")</code></li>
+<li id="pragma-line-551">✅ Replace <code>ConfigurationManager</code> → inject <code>IConfiguration</code></li>
+<li id="pragma-line-552">✅ Replace WCF proxy calls → inject typed <code>HttpClient</code> (make async)</li>
+<li id="pragma-line-553">✅ Update return types: <code>ActionResult</code> remains, but use <code>IActionResult</code> where appropriate</li>
+</ul>
+<p id="pragma-line-555"><strong>Example:</strong></p>
+<p id="pragma-line-557"><strong>Before:</strong></p>
+<pre><code class="language-csharp" id="pragma-line-558">public class HomeController : BaseController
+{
+    public ActionResult Search(SearchViewModel model)
+    {
+        var client = new ServiceDico.DicoServiceClient();
+        var blocs = client.GetBlocs();
+        return View(blocs);
+    }
+}
+</code></pre>
+<p id="pragma-line-570"><strong>After:</strong></p>
+<pre><code class="language-csharp" id="pragma-line-571">public class HomeController : BaseController
+{
+    private readonly DicoApiClient _dicoClient;
+    private readonly ILogger&lt;HomeController&gt; _logger;
+
+    public HomeController(
+        DicoApiClient dicoClient,
+        ILogger&lt;HomeController&gt; logger,
+        IHttpContextAccessor httpContextAccessor,
+        IConfiguration configuration)
+        : base(httpContextAccessor, configuration)
+    {
+        _dicoClient = dicoClient;
+        _logger = logger;
+    }
+
+    public async Task&lt;IActionResult&gt; Search(SearchViewModel model)
+    {
+        try
+        {
+            var blocs = await _dicoClient.GetBlocsAsync();
+            return View(blocs);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error in Search");
+            return View("Error");
+        }
+    }
+}
+</code></pre>
+<h4 id="update-web-api-2-controllers-3-days"><a id="pragma-line-604"></a>4.4 Update Web API 2 Controllers (3 days)</h4>
+<p id="pragma-line-606"><strong>11 API Controllers to Update:</strong></p>
+<ul id="pragma-line-607">
+<li id="pragma-line-607">✅ Base class: <code>ApiController</code> → <code>ControllerBase</code></li>
+<li id="pragma-line-608">✅ Add: <code>[ApiController]</code> attribute</li>
+<li id="pragma-line-609">✅ Update: Return types to <code>ActionResult&lt;T&gt;</code></li>
+<li id="pragma-line-610">✅ Update: Routing to <code>[Route("api/[controller]")]</code></li>
+</ul>
+<h4 id="update-119-razor-views-5-days"><a id="pragma-line-612"></a>4.5 Update 119 Razor Views (5 days)</h4>
+<p id="pragma-line-614"><strong>Changes per view:</strong></p>
+<ol id="pragma-line-615">
+<li id="pragma-line-615">✅ Update <code>@model</code> directives:
+<ul id="pragma-line-616">
+<li id="pragma-line-616"><code>@model OpenSafetyFrontend.ServiceAdmin.BlocDTO</code> → <code>@model OpenSafetyContract.BlocDTO</code></li>
+</ul>
+</li>
+<li id="pragma-line-617">✅ Update <code>using</code> directives (if present):
+<ul id="pragma-line-618">
+<li id="pragma-line-618"><code>@using System.Web.Mvc.Html</code> → <code>@using Microsoft.AspNetCore.Mvc.Rendering</code></li>
+</ul>
+</li>
+<li id="pragma-line-619">✅ Keep existing <code>@Html.*</code> helpers (compatible with Core)</li>
+<li id="pragma-line-620">✅ Update <code>Ajax.BeginForm</code> views (add <code>Microsoft.jQuery.Unobtrusive.Ajax</code> package)</li>
+</ol>
+<p id="pragma-line-622"><strong>12+ views with WCF proxy namespaces to update</strong></p>
+<h4 id="static-asset-management-2-days"><a id="pragma-line-624"></a>4.6 Static Asset Management (2 days)</h4>
+<p id="pragma-line-626"><strong>Replace Bundle Config with LibMan:</strong></p>
+<p id="pragma-line-628">Create <code>libman.json</code>:</p>
+<pre><code class="language-json" id="pragma-line-629">{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "jquery@3.7.1",
+      "destination": "wwwroot/lib/jquery/",
+      "files": ["jquery.min.js", "jquery.min.map"]
+    },
+    {
+      "library": "bootstrap@5.3.3",
+      "destination": "wwwroot/lib/bootstrap/",
+      "files": ["dist/css/bootstrap.min.css", "dist/js/bootstrap.bundle.min.js"]
+    },
+    {
+      "library": "datatables@1.13.8",
+      "destination": "wwwroot/lib/datatables/"
+    }
+  ]
+}
+</code></pre>
+<h4 id="replace-jqgrid-with-datatables.js-3-days"><a id="pragma-line-652"></a>4.7 Replace jqGrid with DataTables.js (3 days)</h4>
+<p id="pragma-line-654"><strong>7 views using Trirand.jqGrid → DataTables.js:</strong></p>
+<p id="pragma-line-656"><strong>Before:</strong></p>
+<pre><code class="language-csharp" id="pragma-line-657">@Html.Trirand().JQGrid(Model.BlocsGrid, "grid")
+    .Columns(cols =&gt; {
+        cols.Add(c =&gt; c.Id).SetLabel("ID");
+        cols.Add(c =&gt; c.Name).SetLabel("Name");
+    })
+</code></pre>
+<p id="pragma-line-665"><strong>After:</strong></p>
+<pre><code class="language-html" id="pragma-line-666">&lt;table id="blocsTable" class="table table-striped table-hover"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;ID&lt;/th&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;script&gt;
+$(document).ready(function() {
+    $('#blocsTable').DataTable({
+        ajax: '/api/blocs',
+        columns: [
+            { data: 'id' },
+            { data: 'name' }
+        ],
+        pageLength: 25,
+        responsive: true
+    });
+});
+&lt;/script&gt;
+</code></pre>
+<h4 id="upgrade-bootstrap-3-5-2-days"><a id="pragma-line-692"></a>4.8 Upgrade Bootstrap 3 → 5 (2 days)</h4>
+<p id="pragma-line-694"><strong>37+ views with Bootstrap 3 classes:</strong></p>
+<table id="pragma-line-696">
+<thead>
+<tr id="pragma-line-696">
+<th id="pragma-line-696">Bootstrap 3</th>
+<th id="pragma-line-696">Bootstrap 5</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-698">
+<td id="pragma-line-698"><code>.panel-default</code></td>
+<td id="pragma-line-698"><code>.card</code></td>
+</tr>
+<tr id="pragma-line-699">
+<td id="pragma-line-699"><code>.panel-heading</code></td>
+<td id="pragma-line-699"><code>.card-header</code></td>
+</tr>
+<tr id="pragma-line-700">
+<td id="pragma-line-700"><code>.panel-body</code></td>
+<td id="pragma-line-700"><code>.card-body</code></td>
+</tr>
+<tr id="pragma-line-701">
+<td id="pragma-line-701"><code>.glyphicon-*</code></td>
+<td id="pragma-line-701">Use FontAwesome 6 or Bootstrap Icons</td>
+</tr>
+<tr id="pragma-line-702">
+<td id="pragma-line-702"><code>.col-xs-*</code></td>
+<td id="pragma-line-702"><code>.col-*</code> (XS breakpoint removed)</td>
+</tr>
+<tr id="pragma-line-703">
+<td id="pragma-line-703"><code>.form-control-feedback</code></td>
+<td id="pragma-line-703"><code>.form-control</code> + validation classes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="replace-static-helpers-2-days"><a id="pragma-line-705"></a>4.9 Replace Static Helpers (2 days)</h4>
+<p id="pragma-line-707"><strong>RestHelper static class → IHttpClientFactory:</strong></p>
+<ul id="pragma-line-708">
+<li id="pragma-line-708">✅ Delete <code>RestHelper.cs</code> (527 lines)</li>
+<li id="pragma-line-709">✅ Replace all <code>RestHelper.Get()</code> / <code>RestHelper.Post()</code> calls with typed <code>HttpClient</code></li>
+</ul>
+<p id="pragma-line-711"><strong>OPSConfigHelper → IConfiguration:</strong></p>
+<ul id="pragma-line-712">
+<li id="pragma-line-712">✅ Delete static <code>OPSConfigHelper.GetWcfEndpoint()</code></li>
+<li id="pragma-line-713">✅ Use <code>IConfiguration["ApiBaseUrl"]</code> instead</li>
+</ul>
+<p id="pragma-line-715"><strong>Success Criteria:</strong></p>
+<ul id="pragma-line-716">
+<li id="pragma-line-716">All 14 MVC controllers functional</li>
+<li id="pragma-line-717">All 119 views rendering correctly</li>
+<li id="pragma-line-718">All 11 API controllers working</li>
+<li id="pragma-line-719">Windows Authentication functional</li>
+<li id="pragma-line-720">Session state working</li>
+<li id="pragma-line-721">No WCF proxy dependencies remain</li>
+</ul>
+<hr id="pragma-line-723">
+<h3 id="phase-5-background-services-utilities-week-20-6-days"><a id="pragma-line-725"></a>Phase 5: Background Services &amp; Utilities (Week 20 - 6 days)</h3>
+<h4 id="wsasynchronoussilicostate-worker-service-3-days"><a id="pragma-line-727"></a>5.1 WsAsynchronousSilicoState → Worker Service (3 days)</h4>
+<p id="pragma-line-729"><strong>Before (Windows Service):</strong></p>
+<pre><code class="language-csharp" id="pragma-line-730">public partial class WsAsynchronousSilicoState : ServiceBase
+{
+    private System.Timers.Timer timer;
+
+    protected override void OnStart(string[] args)
+    {
+        timer = new System.Timers.Timer(30000);
+        timer.Elapsed += (s, e) =&gt;
+        {
+            var client = new ServiceSilicoClient();
+            client.AnalyzeSilicoResult().Wait();
+        };
+        timer.Start();
+    }
+}
+</code></pre>
+<p id="pragma-line-748"><strong>After (.NET 8 Worker Service):</strong></p>
+<pre><code class="language-csharp" id="pragma-line-749">public class SilicoStateWorker : BackgroundService
+{
+    private readonly IHttpClientFactory _httpClientFactory;
+    private readonly ILogger&lt;SilicoStateWorker&gt; _logger;
+    private readonly IConfiguration _configuration;
+
+    public SilicoStateWorker(
+        IHttpClientFactory httpClientFactory,
+        ILogger&lt;SilicoStateWorker&gt; logger,
+        IConfiguration configuration)
+    {
+        _httpClientFactory = httpClientFactory;
+        _logger = logger;
+        _configuration = configuration;
+    }
+
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        _logger.LogInformation("Silico State Worker starting");
+
+        using var timer = new PeriodicTimer(TimeSpan.FromSeconds(30));
+
+        while (await timer.WaitForNextTickAsync(stoppingToken))
+        {
+            try
+            {
+                await AnalyzeSilicoStateAsync(stoppingToken);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error analyzing silico state");
+            }
+        }
+    }
+
+    private async Task AnalyzeSilicoStateAsync(CancellationToken cancellationToken)
+    {
+        var httpClient = _httpClientFactory.CreateClient();
+        var apiUrl = _configuration["ApiBaseUrl"];
+        
+        await httpClient.PostAsync(
+            $"{apiUrl}/api/silico/analyze",
+            null,
+            cancellationToken);
+        
+        _logger.LogInformation("Silico state analysis triggered");
+    }
+}
+
+// Program.cs:
+var builder = Host.CreateApplicationBuilder(args);
+
+builder.Services.AddWindowsService(options =&gt;
+{
+    options.ServiceName = "OpenSafety Silico State Worker";
+});
+
+builder.Services.AddHttpClient();
+builder.Services.AddHostedService&lt;SilicoStateWorker&gt;();
+
+var host = builder.Build();
+await host.RunAsync();
+</code></pre>
+<p id="pragma-line-814"><strong>Changes:</strong></p>
+<ol id="pragma-line-815">
+<li id="pragma-line-815">✅ Replace <code>ServiceBase</code> → <code>BackgroundService</code></li>
+<li id="pragma-line-816">✅ Replace <code>System.Timers.Timer</code> → <code>PeriodicTimer</code></li>
+<li id="pragma-line-817">✅ Convert all blocking <code>.Result</code> / <code>.Wait()</code> → <code>async</code>/<code>await</code></li>
+<li id="pragma-line-818">✅ Inject <code>IHttpClientFactory</code> for HTTP calls</li>
+<li id="pragma-line-819">✅ Delete <code>ProjectInstaller.Designer.cs</code>, <code>.resx</code> files</li>
+</ol>
+<h4 id="opensafetystatechecker-1-day"><a id="pragma-line-821"></a>5.2 OpenSafetyStateChecker (1 day)</h4>
+<ul id="pragma-line-822">
+<li id="pragma-line-822">✅ Same pattern as 5.1</li>
+<li id="pragma-line-823">⚠ <strong>Decision Required:</strong> Currently an empty stub (OnStart/OnStop have no logic)
+<ul id="pragma-line-824">
+<li id="pragma-line-824">Option A: Implement actual health-check logic</li>
+<li id="pragma-line-825">Option B: Retire the project</li>
+</ul>
+</li>
+</ul>
+<h4 id="jsontosql-utility-1-day"><a id="pragma-line-827"></a>5.3 JsonToSql Utility (1 day)</h4>
+<ul id="pragma-line-828">
+<li id="pragma-line-828">✅ Bump <code>netcoreapp3.1</code> → <code>net8.0</code> in .csproj</li>
+<li id="pragma-line-829">✅ Update dependencies</li>
+<li id="pragma-line-830">✅ Test functionality</li>
+</ul>
+<h4 id="consoletest-1-day"><a id="pragma-line-832"></a>5.4 ConsoleTest (1 day)</h4>
+<ul id="pragma-line-833">
+<li id="pragma-line-833">✅ Remove obsolete APIs: <code>System.Runtime.Remoting</code>, <code>JavaScriptSerializer</code></li>
+<li id="pragma-line-834">✅ Replace <code>WebRequest</code> → <code>HttpClient</code></li>
+<li id="pragma-line-835">⚠ <strong>Decision Required:</strong>
+<ul id="pragma-line-836">
+<li id="pragma-line-836">Option A: Keep as internal dev tool</li>
+<li id="pragma-line-837">Option B: Retire (rarely used)</li>
+</ul>
+</li>
+</ul>
+<p id="pragma-line-839"><strong>Success Criteria:</strong></p>
+<ul id="pragma-line-840">
+<li id="pragma-line-840">Windows Services deploy and run as .NET 8 Worker Services</li>
+<li id="pragma-line-841">Services restart correctly after crashes</li>
+<li id="pragma-line-842">Logging works correctly</li>
+</ul>
+<hr id="pragma-line-844">
+<h3 id="phase-6-test-modernization-week-21-9-days"><a id="pragma-line-846"></a>Phase 6: Test Modernization (Week 21 - 9 days)</h3>
+<h4 id="test-infrastructure-setup-2-days"><a id="pragma-line-848"></a>6.1 Test Infrastructure Setup (2 days)</h4>
+<ol id="pragma-line-849">
+<li id="pragma-line-849">✅ Convert test projects to xUnit</li>
+<li id="pragma-line-850">✅ Add <code>Microsoft.AspNetCore.Mvc.Testing</code> (WebApplicationFactory)</li>
+<li id="pragma-line-851">✅ Add <code>Moq</code> 4.20+ for mocking</li>
+<li id="pragma-line-852">✅ Add <code>FluentAssertions</code> 6.12+ for readable assertions</li>
+<li id="pragma-line-853">✅ Add <code>AutoFixture</code> for test data generation</li>
+</ol>
+<h4 id="api-integration-tests-3-days"><a id="pragma-line-855"></a>6.2 API Integration Tests (3 days)</h4>
+<p id="pragma-line-857"><strong>Example Test Class:</strong></p>
+<pre><code class="language-csharp" id="pragma-line-858">public class DicoControllerIntegrationTests : IClassFixture&lt;WebApplicationFactory&lt;Program&gt;&gt;
+{
+    private readonly HttpClient _client;
+
+    public DicoControllerIntegrationTests(WebApplicationFactory&lt;Program&gt; factory)
+    {
+        _client = factory.CreateClient();
+    }
+
+    [Fact]
+    public async Task GetBlocs_ReturnsSuccessStatusCode()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/dico/blocs");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var blocs = await response.Content.ReadFromJsonAsync&lt;List&lt;BlocDTO&gt;&gt;();
+        blocs.Should().NotBeNull();
+        blocs.Should().NotBeEmpty();
+    }
+
+    [Fact]
+    public async Task GetBlocs_WithInvalidAuth_Returns401()
+    {
+        // Arrange
+        _client.DefaultRequestHeaders.Clear(); // Remove auth
+
+        // Act
+        var response = await _client.GetAsync("/api/dico/blocs");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
+    }
+}
+</code></pre>
+<p id="pragma-line-897"><strong>Coverage:</strong></p>
+<ul id="pragma-line-898">
+<li id="pragma-line-898">✅ Integration tests for all 8 API controllers (success + error paths)</li>
+<li id="pragma-line-899">✅ Test authentication/authorization</li>
+<li id="pragma-line-900">✅ Test error handling (4xx, 5xx responses)</li>
+</ul>
+<h4 id="unit-tests-3-days"><a id="pragma-line-902"></a>6.3 Unit Tests (3 days)</h4>
+<p id="pragma-line-904"><strong>Classes to Test:</strong></p>
+<ol id="pragma-line-906">
+<li id="pragma-line-906"><strong>Application Services:</strong></li>
+</ol>
+<pre><code class="language-csharp" id="pragma-line-907">public class DicoApplicationServiceTests
+{
+    [Fact]
+    public async Task GetAllBlocs_ReturnsAllBlocs()
+    {
+        // Arrange
+        var mockRepo = new Mock&lt;IDicoRepository&gt;();
+        var fixture = new Fixture();
+        var expectedBlocs = fixture.CreateMany&lt;BlocEntity&gt;(5).ToList();
+        
+        mockRepo.Setup(r =&gt; r.GetAllBlocsAsync())
+            .ReturnsAsync(expectedBlocs);
+
+        var service = new DicoApplicationService(
+            mockRepo.Object,
+            Mock.Of&lt;ILogger&lt;DicoApplicationService&gt;&gt;(),
+            Mock.Of&lt;IMapper&gt;());
+
+        // Act
+        var result = await service.GetAllBlocsAsync();
+
+        // Assert
+        result.Should().HaveCount(5);
+        mockRepo.Verify(r =&gt; r.GetAllBlocsAsync(), Times.Once);
+    }
+}
+</code></pre>
+<ol id="pragma-line-936" start="2">
+<li id="pragma-line-936"><strong>Repositories:</strong></li>
+</ol>
+<pre><code class="language-csharp" id="pragma-line-937">public class EFDicoRepositoryTests
+{
+    [Fact]
+    public async Task GetAllBlocs_ReturnsActiveBlocs()
+    {
+        // Arrange (use in-memory EF Core)
+        var options = new DbContextOptionsBuilder&lt;OpenSafetyDBContext&gt;()
+            .UseInMemoryDatabase(databaseName: "TestDb")
+            .Options;
+
+        await using var context = new OpenSafetyDBContext(options);
+        await context.Blocs.AddAsync(new BlocEntity { Id = 1, Name = "Test" });
+        await context.SaveChangesAsync();
+
+        var repository = new EFDicoRepository(context);
+
+        // Act
+        var result = await repository.GetAllBlocsAsync();
+
+        // Assert
+        result.Should().HaveCount(1);
+        result.First().Name.Should().Be("Test");
+    }
+}
+</code></pre>
+<ol id="pragma-line-964" start="3">
+<li id="pragma-line-964"><strong>AutoMapper Profiles:</strong></li>
+</ol>
+<pre><code class="language-csharp" id="pragma-line-965">public class MappingProfileTests
+{
+    [Fact]
+    public void AutoMapper_Configuration_IsValid()
+    {
+        // Arrange
+        var config = new MapperConfiguration(cfg =&gt;
+        {
+            cfg.AddProfile&lt;DicoDomainProfile&gt;();
+            cfg.AddProfile&lt;AcquisitionDomainProfile&gt;();
+        });
+
+        // Act &amp; Assert
+        config.AssertConfigurationIsValid();
+    }
+}
+</code></pre>
+<h4 id="code-coverage-configuration-1-day"><a id="pragma-line-984"></a>6.4 Code Coverage Configuration (1 day)</h4>
+<p id="pragma-line-986"><strong>Update Jenkins Pipeline:</strong></p>
+<pre><code class="language-groovy" id="pragma-line-987">stage('Test') {
+    steps {
+        bat '''
+        dotnet test OpenSafety.sln ^
+          -c Release ^
+          --no-build ^
+          --logger trx ^
+          /p:CollectCoverage=true ^
+          /p:CoverletOutputFormat=cobertura ^
+          /p:CoverletOutput=./TestResults/Coverage/ ^
+          /p:Threshold=60
+        '''
+    }
+}
+
+stage('Publish Coverage') {
+    steps {
+        cobertura coberturaReportFile: '**/TestResults/Coverage/coverage.cobertura.xml'
+    }
+}
+</code></pre>
+<p id="pragma-line-1010"><strong>Success Criteria:</strong></p>
+<ul id="pragma-line-1011">
+<li id="pragma-line-1011">✅ ≥60% code coverage across solution</li>
+<li id="pragma-line-1012">✅ All critical paths have integration tests</li>
+<li id="pragma-line-1013">✅ Unit tests for all application services</li>
+<li id="pragma-line-1014">✅ CI build fails if coverage drops below threshold</li>
+</ul>
+<hr id="pragma-line-1016">
+<h3 id="phase-7-cicd-deployment-week-22-4-days"><a id="pragma-line-1018"></a>Phase 7: CI/CD &amp; Deployment (Week 22 - 4 days)</h3>
+<h4 id="update-jenkins-pipelines-2-days"><a id="pragma-line-1020"></a>7.1 Update Jenkins Pipelines (2 days)</h4>
+<p id="pragma-line-1022"><strong>Jenkinsfile-Api (ASP.NET Core Web API):</strong></p>
+<pre><code class="language-groovy" id="pragma-line-1023">pipeline {
+    agent any
+    
+    environment {
+        DOTNET_CLI_HOME = "/tmp/dotnet_cli"
+    }
+    
+    stages {
+        stage('Restore') {
+            steps {
+                bat 'dotnet restore OpenSafety.sln'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                bat 'dotnet build OpenSafety.sln -c Release --no-restore'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                bat 'dotnet test OpenSafety.sln -c Release --no-build --logger trx /p:CollectCoverage=true'
+            }
+            post {
+                always {
+                    mstest testResultsFile: '**/*.trx'
+                }
+            }
+        }
+        
+        stage('Publish') {
+            steps {
+                bat '''
+                dotnet publish OpenSafetyDistributedService\\OpenSafetyDistributedService.csproj ^
+                  -c Release ^
+                  -o ./publish/api ^
+                  --no-build
+                '''
+            }
+        }
+        
+        stage('Database Migration') {
+            steps {
+                bat '''
+                dotnet ef database update ^
+                  --project OPenSafetyInfrastructure ^
+                  --startup-project OpenSafetyDistributedService ^
+                  --connection "%CONNECTION_STRING%"
+                '''
+            }
+        }
+        
+        stage('Deploy to IIS') {
+            steps {
+                // Use Web Deploy or xcopy
+                bat '''
+                net stop "OpenSafety API AppPool"
+                xcopy /Y /E /I ./publish/api "C:\\inetpub\\wwwroot\\opensafety-api"
+                net start "OpenSafety API AppPool"
+                '''
+            }
+        }
+    }
+}
+</code></pre>
+<p id="pragma-line-1091"><strong>Jenkinsfile-Frontend:</strong></p>
+<pre><code class="language-groovy" id="pragma-line-1092">pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                bat 'dotnet build OpenSafetyFrontend\\OpenSafetyFrontend.csproj -c Release'
+            }
+        }
+        
+        stage('Publish') {
+            steps {
+                bat '''
+                dotnet publish OpenSafetyFrontend\\OpenSafetyFrontend.csproj ^
+                  -c Release ^
+                  -o ./publish/frontend
+                '''
+            }
+        }
+        
+        stage('Deploy to IIS') {
+            steps {
+                bat '''
+                net stop "OpenSafety Frontend AppPool"
+                xcopy /Y /E /I ./publish/frontend "C:\\inetpub\\wwwroot\\opensafety-frontend"
+                net start "OpenSafety Frontend AppPool"
+                '''
+            }
+        }
+    }
+}
+</code></pre>
+<h4 id="iis-server-configuration-1-day"><a id="pragma-line-1126"></a>7.2 IIS Server Configuration (1 day)</h4>
+<p id="pragma-line-1128"><strong>Prerequisites on ALL IIS servers (dev, pit, int, prod):</strong></p>
+<ol id="pragma-line-1130">
+<li id="pragma-line-1130"><p id="pragma-line-1130">✅ Install <strong>.NET 8 Windows Hosting Bundle</strong>:</p>
+<ul id="pragma-line-1131">
+<li id="pragma-line-1131">Download: <a href="https://dotnet.microsoft.com/download/dotnet/8.0">https://dotnet.microsoft.com/download/dotnet/8.0</a></li>
+<li id="pragma-line-1132">Reboot server after installation</li>
+</ul>
+</li>
+<li id="pragma-line-1134"><p id="pragma-line-1134">✅ Create Application Pools:</p>
+<pre><code id="pragma-line-1135">Name: OpenSafety API AppPool
+.NET CLR Version: No Managed Code
+Managed Pipeline Mode: Integrated
+Identity: ApplicationPoolIdentity (or custom service account)
+
+Name: OpenSafety Frontend AppPool
+.NET CLR Version: No Managed Code
+Managed Pipeline Mode: Integrated
+Identity: ApplicationPoolIdentity (or custom service account)
+</code></pre>
+</li>
+<li id="pragma-line-1147"><p id="pragma-line-1147">✅ Create IIS Applications:</p>
+<pre><code id="pragma-line-1148">API:
+- Physical Path: C:\inetpub\wwwroot\opensafety-api
+- Application Pool: OpenSafety API AppPool
+- Binding: https://opensafety-api.company.com:443
+
+Frontend:
+- Physical Path: C:\inetpub\wwwroot\opensafety-frontend
+- Application Pool: OpenSafety Frontend AppPool
+- Binding: https://opensafety.company.com:443
+</code></pre>
+</li>
+<li id="pragma-line-1160"><p id="pragma-line-1160">✅ Configure Windows Authentication:</p>
+<ul id="pragma-line-1161">
+<li id="pragma-line-1161">Enable Windows Authentication in IIS</li>
+<li id="pragma-line-1162">Disable Anonymous Authentication (if required)</li>
+<li id="pragma-line-1163">Configure Negotiate provider (Kerberos first, NTLM fallback)</li>
+</ul>
+</li>
+</ol>
+<p id="pragma-line-1165"><strong>web.config for ASP.NET Core (auto-generated by publish):</strong></p>
+<pre><code class="language-xml" id="pragma-line-1166">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;configuration&gt;
+  &lt;location path="." inheritInChildApplications="false"&gt;
+    &lt;system.webServer&gt;
+      &lt;handlers&gt;
+        &lt;add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModuleV2" resourceType="Unspecified" /&gt;
+      &lt;/handlers&gt;
+      &lt;aspNetCore processPath="dotnet"
+                  arguments=".\OpenSafetyDistributedService.dll"
+                  stdoutLogEnabled="true"
+                  stdoutLogFile=".\logs\stdout"
+                  hostingModel="inprocess" /&gt;
+    &lt;/system.webServer&gt;
+  &lt;/location&gt;
+&lt;/configuration&gt;
+</code></pre>
+<h4 id="deployment-strategy-strangler-fig-pattern-1-day"><a id="pragma-line-1184"></a>7.3 Deployment Strategy - Strangler Fig Pattern (1 day)</h4>
+<p id="pragma-line-1186"><strong>Week 1-2: Parallel Deployment</strong></p>
+<ol id="pragma-line-1187">
+<li id="pragma-line-1187">✅ Deploy new .NET 8 API to <code>/api-v2</code> endpoint</li>
+<li id="pragma-line-1188">✅ Keep existing WCF services running at <code>/services/</code></li>
+<li id="pragma-line-1189">✅ Frontend uses feature flag to route to WCF or new API:</li>
+</ol>
+<pre><code class="language-csharp" id="pragma-line-1190">public class ApiClientFactory
+{
+    public IApiClient CreateClient(string serviceName)
+    {
+        if (_configuration["UseNewApi:Dico"] == "true")
+            return new DicoApiClient(_httpClientFactory);
+        else
+            return new DicoWcfClient(); // Legacy
+    }
+}
+</code></pre>
+<p id="pragma-line-1203"><strong>Week 3-4: Gradual Migration</strong></p>
+<ol id="pragma-line-1204">
+<li id="pragma-line-1204">✅ Enable new API for internal users (feature flag)</li>
+<li id="pragma-line-1205">✅ Monitor both systems (metrics, logs, errors)</li>
+<li id="pragma-line-1206">✅ Compare response times and error rates</li>
+<li id="pragma-line-1207">✅ Gradually increase % of traffic to new API</li>
+</ol>
+<p id="pragma-line-1209"><strong>Week 5-6: External Consumer Migration</strong></p>
+<ol id="pragma-line-1210">
+<li id="pragma-line-1210">✅ Audit all external systems calling WCF endpoints</li>
+<li id="pragma-line-1211">✅ Contact each team with migration guide</li>
+<li id="pragma-line-1212">✅ Provide new API documentation (Swagger)</li>
+<li id="pragma-line-1213">✅ Set WCF deprecation date (e.g., +3 months)</li>
+</ol>
+<p id="pragma-line-1215"><strong>Week 7+: Decommission WCF</strong></p>
+<ol id="pragma-line-1216">
+<li id="pragma-line-1216">✅ Set feature flags to 100% new API</li>
+<li id="pragma-line-1217">✅ Add warning headers to WCF responses: <code>X-Deprecated: true</code></li>
+<li id="pragma-line-1218">✅ Monitor for any remaining WCF traffic</li>
+<li id="pragma-line-1219">✅ Turn off WCF services after deprecation period</li>
+</ol>
+<p id="pragma-line-1221"><strong>Rollback Plan:</strong></p>
+<ul id="pragma-line-1222">
+<li id="pragma-line-1222">✅ Keep WCF services running for 3 months</li>
+<li id="pragma-line-1223">✅ Feature flags allow instant rollback</li>
+<li id="pragma-line-1224">✅ Database schema supports both systems (no breaking changes)</li>
+<li id="pragma-line-1225">✅ Documented rollback procedure for each environment</li>
+</ul>
+<p id="pragma-line-1227"><strong>Success Criteria:</strong></p>
+<ul id="pragma-line-1228">
+<li id="pragma-line-1228">✅ CI/CD pipeline successfully builds and deploys .NET 8 apps</li>
+<li id="pragma-line-1229">✅ IIS hosting configured correctly (No Managed Code)</li>
+<li id="pragma-line-1230">✅ Strangler Fig pattern implemented with feature flags</li>
+<li id="pragma-line-1231">✅ Monitoring and alerting configured</li>
+<li id="pragma-line-1232">✅ Rollback procedure tested</li>
+</ul>
+<hr id="pragma-line-1234">
+<h2 id="risk-management"><a id="pragma-line-1236"></a>4. Risk Management</h2>
+<h3 id="critical-risks-red"><a id="pragma-line-1238"></a>4.1 Critical Risks (RED)</h3>
+<table id="pragma-line-1240">
+<thead>
+<tr id="pragma-line-1240">
+<th id="pragma-line-1240">#</th>
+<th id="pragma-line-1240">Risk</th>
+<th id="pragma-line-1240">Probability</th>
+<th id="pragma-line-1240">Impact</th>
+<th id="pragma-line-1240">Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-1242">
+<td id="pragma-line-1242"><strong>R1</strong></td>
+<td id="pragma-line-1242"><strong>External WCF consumers break during cutover</strong></td>
+<td id="pragma-line-1242">🔴 HIGH</td>
+<td id="pragma-line-1242">🔴 CRITICAL</td>
+<td id="pragma-line-1242"><strong>Strangler Fig Pattern</strong>: Deploy new API alongside WCF; maintain both for 3 months; audit all external consumers; provide migration guide; set explicit deprecation timeline</td>
+</tr>
+<tr id="pragma-line-1243">
+<td id="pragma-line-1243"><strong>R2</strong></td>
+<td id="pragma-line-1243"><strong>Elasticsearch cluster version mismatch</strong> (cluster on 6.x, client requires 8.x)</td>
+<td id="pragma-line-1243">🟡 MEDIUM</td>
+<td id="pragma-line-1243">🔴 HIGH</td>
+<td id="pragma-line-1243"><strong>Pre-Migration</strong>: Upgrade ES cluster to 8.x before .NET upgrade; OR use NEST 7.x as intermediate step; test all queries on new cluster before deployment</td>
+</tr>
+<tr id="pragma-line-1244">
+<td id="pragma-line-1244"><strong>R3</strong></td>
+<td id="pragma-line-1244"><strong>EF Core migration generates incorrect schema</strong></td>
+<td id="pragma-line-1244">🟡 MEDIUM</td>
+<td id="pragma-line-1244">🔴 HIGH</td>
+<td id="pragma-line-1244"><strong>Validation</strong>: Run <code>dotnet ef dbcontext scaffold</code> on production DB to reverse-engineer current schema; compare with EF6 model; test migrations on production copy; use <code>dotnet ef migrations script</code> to review SQL before execution</td>
+</tr>
+<tr id="pragma-line-1245">
+<td id="pragma-line-1245"><strong>R4</strong></td>
+<td id="pragma-line-1245"><strong>Production data loss during EF Core migration</strong></td>
+<td id="pragma-line-1245">🟢 LOW</td>
+<td id="pragma-line-1245">🔴 CRITICAL</td>
+<td id="pragma-line-1245"><strong>Safety</strong>: Full database backup before migration; test migrations on production copy; use transaction scopes; implement rollback scripts</td>
+</tr>
+</tbody>
+</table>
+<h3 id="high-risks-orange"><a id="pragma-line-1247"></a>4.2 High Risks (ORANGE)</h3>
+<table id="pragma-line-1249">
+<thead>
+<tr id="pragma-line-1249">
+<th id="pragma-line-1249">#</th>
+<th id="pragma-line-1249">Risk</th>
+<th id="pragma-line-1249">Probability</th>
+<th id="pragma-line-1249">Impact</th>
+<th id="pragma-line-1249">Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-1251">
+<td id="pragma-line-1251"><strong>R5</strong></td>
+<td id="pragma-line-1251"><strong>Trirand.jqGrid replacement breaks grid functionality</strong> (no drop-in replacement)</td>
+<td id="pragma-line-1251">🔴 HIGH</td>
+<td id="pragma-line-1251">🟡 MEDIUM</td>
+<td id="pragma-line-1251"><strong>Planning</strong>: Define feature parity requirements upfront (pagination, sorting, filtering, export); allocate 3 dedicated days for 7 grid views; test with real data; get user acceptance before deployment</td>
+</tr>
+<tr id="pragma-line-1252">
+<td id="pragma-line-1252"><strong>R6</strong></td>
+<td id="pragma-line-1252"><strong>AutoMapper 5→13 upgrade breaks unmapped properties</strong></td>
+<td id="pragma-line-1252">🟡 MEDIUM</td>
+<td id="pragma-line-1252">🟡 MEDIUM</td>
+<td id="pragma-line-1252"><strong>Validation</strong>: Run <code>cfg.AssertConfigurationIsValid()</code> in startup integration tests; fix all mapping errors before deployment; add unit tests for all mapping profiles</td>
+</tr>
+<tr id="pragma-line-1253">
+<td id="pragma-line-1253"><strong>R7</strong></td>
+<td id="pragma-line-1253"><strong>Session state incompatibility</strong> (ASP.NET → ASP.NET Core)</td>
+<td id="pragma-line-1253">🟡 MEDIUM</td>
+<td id="pragma-line-1253">🟡 MEDIUM</td>
+<td id="pragma-line-1253"><strong>Solution</strong>: Use distributed cache (Redis/SQL Server) for session state; test session behavior during app pool recycling; convert session objects to JSON strings if needed</td>
+</tr>
+<tr id="pragma-line-1254">
+<td id="pragma-line-1254"><strong>R8</strong></td>
+<td id="pragma-line-1254"><strong>Windows Auth (Kerberos/NTLM) configuration issues</strong></td>
+<td id="pragma-line-1254">🟡 MEDIUM</td>
+<td id="pragma-line-1254">🟡 MEDIUM</td>
+<td id="pragma-line-1254"><strong>Testing</strong>: Validate Negotiate auth in all environments; verify SPNs configured for service accounts; test with different browsers; check IIS authentication settings</td>
+</tr>
+<tr id="pragma-line-1255">
+<td id="pragma-line-1255"><strong>R9</strong></td>
+<td id="pragma-line-1255"><strong>Large controllers (1,500+ lines) introduce bugs during refactoring</strong></td>
+<td id="pragma-line-1255">🟡 MEDIUM</td>
+<td id="pragma-line-1255">🟡 MEDIUM</td>
+<td id="pragma-line-1255"><strong>Process</strong>: Write characterization tests before refactoring; decompose incrementally; thorough code reviews; compare outputs with legacy system</td>
+</tr>
+</tbody>
+</table>
+<h3 id="medium-risks-yellow"><a id="pragma-line-1257"></a>4.3 Medium Risks (YELLOW)</h3>
+<table id="pragma-line-1259">
+<thead>
+<tr id="pragma-line-1259">
+<th id="pragma-line-1259">#</th>
+<th id="pragma-line-1259">Risk</th>
+<th id="pragma-line-1259">Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-1261">
+<td id="pragma-line-1261"><strong>R10</strong></td>
+<td id="pragma-line-1261"><strong>Bootstrap 3→5 CSS breaking changes affect UI</strong></td>
+<td id="pragma-line-1261">Allocate 2 dedicated days for CSS updates; test all 119 views in browser matrix; maintain visual regression test suite</td>
+</tr>
+<tr id="pragma-line-1262">
+<td id="pragma-line-1262"><strong>R11</strong></td>
+<td id="pragma-line-1262"><strong>Async/await introduction causes deadlocks</strong></td>
+<td id="pragma-line-1262">Avoid <code>.Result</code>/<code>.Wait()</code> entirely; use <code>ConfigureAwait(false)</code> in library code; load test all async endpoints</td>
+</tr>
+<tr id="pragma-line-1263">
+<td id="pragma-line-1263"><strong>R12</strong></td>
+<td id="pragma-line-1263"><strong>Third-party package breaking changes</strong> (ClosedXML, DocumentFormat.OpenXml)</td>
+<td id="pragma-line-1263">Review changelog for each package upgrade; test Excel export functionality; allocate buffer time for fixes</td>
+</tr>
+<tr id="pragma-line-1264">
+<td id="pragma-line-1264"><strong>R13</strong></td>
+<td id="pragma-line-1264"><strong>Log output differences</strong> (log4net → Serilog)</td>
+<td id="pragma-line-1264">Configure Serilog sinks to match existing log format; test structured logging; verify log aggregation tools still work</td>
+</tr>
+<tr id="pragma-line-1265">
+<td id="pragma-line-1265"><strong>R14</strong></td>
+<td id="pragma-line-1265"><strong>Configuration secrets exposed</strong></td>
+<td id="pragma-line-1265">Use Azure Key Vault for all secrets; never commit <code>appsettings.Production.json</code>; rotate all credentials in Phase 0; implement secret scanning in CI/CD</td>
+</tr>
+</tbody>
+</table>
+<h3 id="risk-response-plan"><a id="pragma-line-1267"></a>4.4 Risk Response Plan</h3>
+<p id="pragma-line-1269"><strong>If WCF consumers break (R1):</strong></p>
+<ol id="pragma-line-1270">
+<li id="pragma-line-1270">Immediately revert feature flag to route traffic back to WCF</li>
+<li id="pragma-line-1271">Identify broken endpoints via monitoring</li>
+<li id="pragma-line-1272">Contact affected external teams</li>
+<li id="pragma-line-1273">Fix issues in new API</li>
+<li id="pragma-line-1274">Re-test before re-enabling</li>
+</ol>
+<p id="pragma-line-1276"><strong>If EF Core migration fails (R3, R4):</strong></p>
+<ol id="pragma-line-1277">
+<li id="pragma-line-1277">Restore database from backup</li>
+<li id="pragma-line-1278">Review migration SQL scripts for errors</li>
+<li id="pragma-line-1279">Test on production copy again</li>
+<li id="pragma-line-1280">Consider manual schema migration if necessary</li>
+<li id="pragma-line-1281">Do not proceed to next phase until resolved</li>
+</ol>
+<p id="pragma-line-1283"><strong>If critical dependency upgrade fails (R6, R12):</strong></p>
+<ol id="pragma-line-1284">
+<li id="pragma-line-1284">Roll back to previous package version</li>
+<li id="pragma-line-1285">Investigate breaking changes in package changelog</li>
+<li id="pragma-line-1286">Implement adapter/wrapper layer if necessary</li>
+<li id="pragma-line-1287">Consider alternative package if issues persist</li>
+</ol>
+<hr id="pragma-line-1289">
+<h2 id="success-metrics-kpis"><a id="pragma-line-1291"></a>5. Success Metrics &amp; KPIs</h2>
+<h3 id="technical-metrics"><a id="pragma-line-1293"></a>5.1 Technical Metrics</h3>
+<table id="pragma-line-1295">
+<thead>
+<tr id="pragma-line-1295">
+<th id="pragma-line-1295">Metric</th>
+<th id="pragma-line-1295">Baseline</th>
+<th id="pragma-line-1295">Target</th>
+<th id="pragma-line-1295">Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-1297">
+<td id="pragma-line-1297"><strong>Framework Version</strong></td>
+<td id="pragma-line-1297">.NET Framework 4.7.1</td>
+<td id="pragma-line-1297">.NET 8.0</td>
+<td id="pragma-line-1297">All projects targeting <code>net8.0</code></td>
+</tr>
+<tr id="pragma-line-1298">
+<td id="pragma-line-1298"><strong>Incompatible API Usage</strong></td>
+<td id="pragma-line-1298">225 files (39%)</td>
+<td id="pragma-line-1298">0 files</td>
+<td id="pragma-line-1298">Static code analysis</td>
+</tr>
+<tr id="pragma-line-1299">
+<td id="pragma-line-1299"><strong>Code Coverage</strong></td>
+<td id="pragma-line-1299">~0%</td>
+<td id="pragma-line-1299">≥60%</td>
+<td id="pragma-line-1299">Coverlet + Cobertura</td>
+</tr>
+<tr id="pragma-line-1300">
+<td id="pragma-line-1300"><strong>Build Time</strong></td>
+<td id="pragma-line-1300">~8 minutes (MSBuild)</td>
+<td id="pragma-line-1300">≤5 minutes</td>
+<td id="pragma-line-1300"><code>dotnet build</code></td>
+</tr>
+<tr id="pragma-line-1301">
+<td id="pragma-line-1301"><strong>Dead Code (LOC)</strong></td>
+<td id="pragma-line-1301">~5,000 lines</td>
+<td id="pragma-line-1301">0 lines</td>
+<td id="pragma-line-1301">Removed in Phase 0</td>
+</tr>
+<tr id="pragma-line-1302">
+<td id="pragma-line-1302"><strong>Nullable Reference Types</strong></td>
+<td id="pragma-line-1302">Disabled</td>
+<td id="pragma-line-1302">Enabled</td>
+<td id="pragma-line-1302"><code>&lt;Nullable&gt;enable&lt;/Nullable&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="performance-metrics"><a id="pragma-line-1304"></a>5.2 Performance Metrics</h3>
+<table id="pragma-line-1306">
+<thead>
+<tr id="pragma-line-1306">
+<th id="pragma-line-1306">Metric</th>
+<th id="pragma-line-1306">Baseline (WCF/.NET FW)</th>
+<th id="pragma-line-1306">Target (.NET 8)</th>
+<th id="pragma-line-1306">Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-1308">
+<td id="pragma-line-1308"><strong>API Response Time (p95)</strong></td>
+<td id="pragma-line-1308">TBD (measure before migration)</td>
+<td id="pragma-line-1308">≤ baseline</td>
+<td id="pragma-line-1308">Application Insights</td>
+</tr>
+<tr id="pragma-line-1309">
+<td id="pragma-line-1309"><strong>Memory Usage</strong></td>
+<td id="pragma-line-1309">TBD</td>
+<td id="pragma-line-1309">≤ 80% of baseline</td>
+<td id="pragma-line-1309">Performance Monitor</td>
+</tr>
+<tr id="pragma-line-1310">
+<td id="pragma-line-1310"><strong>Throughput (req/sec)</strong></td>
+<td id="pragma-line-1310">TBD</td>
+<td id="pragma-line-1310">≥ 120% of baseline</td>
+<td id="pragma-line-1310">Load testing</td>
+</tr>
+<tr id="pragma-line-1311">
+<td id="pragma-line-1311"><strong>Cold Start Time</strong></td>
+<td id="pragma-line-1311">~15 seconds</td>
+<td id="pragma-line-1311">≤10 seconds</td>
+<td id="pragma-line-1311">IIS logs</td>
+</tr>
+<tr id="pragma-line-1312">
+<td id="pragma-line-1312"><strong>Database Query Time</strong></td>
+<td id="pragma-line-1312">TBD</td>
+<td id="pragma-line-1312">≤ baseline</td>
+<td id="pragma-line-1312">EF Core logging</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quality-metrics"><a id="pragma-line-1314"></a>5.3 Quality Metrics</h3>
+<table id="pragma-line-1316">
+<thead>
+<tr id="pragma-line-1316">
+<th id="pragma-line-1316">Metric</th>
+<th id="pragma-line-1316">Target</th>
+<th id="pragma-line-1316">Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-1318">
+<td id="pragma-line-1318"><strong>Critical Bugs (Production)</strong></td>
+<td id="pragma-line-1318">0 in first 30 days</td>
+<td id="pragma-line-1318">Incident tracking</td>
+</tr>
+<tr id="pragma-line-1319">
+<td id="pragma-line-1319"><strong>Rollbacks Required</strong></td>
+<td id="pragma-line-1319">0</td>
+<td id="pragma-line-1319">Deployment logs</td>
+</tr>
+<tr id="pragma-line-1320">
+<td id="pragma-line-1320"><strong>External Consumer Breakage</strong></td>
+<td id="pragma-line-1320">0</td>
+<td id="pragma-line-1320">Support tickets</td>
+</tr>
+<tr id="pragma-line-1321">
+<td id="pragma-line-1321"><strong>Test Pass Rate</strong></td>
+<td id="pragma-line-1321">100%</td>
+<td id="pragma-line-1321">CI/CD dashboard</td>
+</tr>
+<tr id="pragma-line-1322">
+<td id="pragma-line-1322"><strong>Security Vulnerabilities</strong></td>
+<td id="pragma-line-1322">0 critical/high</td>
+<td id="pragma-line-1322">Dependency scanning</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operational-metrics"><a id="pragma-line-1324"></a>5.4 Operational Metrics</h3>
+<table id="pragma-line-1326">
+<thead>
+<tr id="pragma-line-1326">
+<th id="pragma-line-1326">Metric</th>
+<th id="pragma-line-1326">Target</th>
+<th id="pragma-line-1326">Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-1328">
+<td id="pragma-line-1328"><strong>Deployment Frequency</strong></td>
+<td id="pragma-line-1328">No change (maintain current cadence)</td>
+<td id="pragma-line-1328">Jenkins metrics</td>
+</tr>
+<tr id="pragma-line-1329">
+<td id="pragma-line-1329"><strong>Mean Time to Recovery (MTTR)</strong></td>
+<td id="pragma-line-1329">≤2 hours</td>
+<td id="pragma-line-1329">Incident tracking</td>
+</tr>
+<tr id="pragma-line-1330">
+<td id="pragma-line-1330"><strong>Uptime / Availability</strong></td>
+<td id="pragma-line-1330">≥99.9%</td>
+<td id="pragma-line-1330">Monitoring</td>
+</tr>
+<tr id="pragma-line-1331">
+<td id="pragma-line-1331"><strong>Developer Onboarding Time</strong></td>
+<td id="pragma-line-1331">≤5 days (new .NET 8 stack)</td>
+<td id="pragma-line-1331">Team survey</td>
+</tr>
+</tbody>
+</table>
+<hr id="pragma-line-1333">
+<h2 id="current-status-next-steps"><a id="pragma-line-1335"></a>6. Current Status &amp; Next Steps</h2>
+<h3 id="current-status-not-started"><a id="pragma-line-1337"></a>6.1 Current Status: NOT STARTED</h3>
+<p id="pragma-line-1339"><strong>Last Update:</strong> 2024<br>
+<strong>Overall Progress:</strong> 0%</p>
+<table id="pragma-line-1342">
+<thead>
+<tr id="pragma-line-1342">
+<th id="pragma-line-1342">Phase</th>
+<th id="pragma-line-1342">Status</th>
+<th id="pragma-line-1342">Completion</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-1344">
+<td id="pragma-line-1344">Phase 0: Preparation</td>
+<td id="pragma-line-1344">⏸ Not Started</td>
+<td id="pragma-line-1344">0%</td>
+</tr>
+<tr id="pragma-line-1345">
+<td id="pragma-line-1345">Phase 1: Foundation</td>
+<td id="pragma-line-1345">⏸ Not Started</td>
+<td id="pragma-line-1345">0%</td>
+</tr>
+<tr id="pragma-line-1346">
+<td id="pragma-line-1346">Phase 2: Infrastructure</td>
+<td id="pragma-line-1346">⏸ Not Started</td>
+<td id="pragma-line-1346">0%</td>
+</tr>
+<tr id="pragma-line-1347">
+<td id="pragma-line-1347">Phase 3: API Migration</td>
+<td id="pragma-line-1347">⏸ Not Started</td>
+<td id="pragma-line-1347">0%</td>
+</tr>
+<tr id="pragma-line-1348">
+<td id="pragma-line-1348">Phase 4: Frontend</td>
+<td id="pragma-line-1348">⏸ Not Started</td>
+<td id="pragma-line-1348">0%</td>
+</tr>
+<tr id="pragma-line-1349">
+<td id="pragma-line-1349">Phase 5: Services</td>
+<td id="pragma-line-1349">⏸ Not Started</td>
+<td id="pragma-line-1349">0%</td>
+</tr>
+<tr id="pragma-line-1350">
+<td id="pragma-line-1350">Phase 6: Tests</td>
+<td id="pragma-line-1350">⏸ Not Started</td>
+<td id="pragma-line-1350">0%</td>
+</tr>
+<tr id="pragma-line-1351">
+<td id="pragma-line-1351">Phase 7: Deployment</td>
+<td id="pragma-line-1351">⏸ Not Started</td>
+<td id="pragma-line-1351">0%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="immediate-next-steps-week-1"><a id="pragma-line-1353"></a>6.2 Immediate Next Steps (Week 1)</h3>
+<p id="pragma-line-1355"><strong>Before Starting Migration:</strong></p>
+<ol id="pragma-line-1357">
+<li id="pragma-line-1357"><p id="pragma-line-1357">✅ <strong>Executive Approval</strong></p>
+<ul id="pragma-line-1358">
+<li id="pragma-line-1358">Present this report to stakeholders</li>
+<li id="pragma-line-1359">Secure budget for 22-week timeline (1-2 developers)</li>
+<li id="pragma-line-1360">Get approval for Strangler Fig deployment strategy</li>
+<li id="pragma-line-1361">Approve 3-month WCF deprecation period</li>
+</ul>
+</li>
+<li id="pragma-line-1363"><p id="pragma-line-1363">✅ <strong>Pre-Migration Audit</strong></p>
+<ul id="pragma-line-1364">
+<li id="pragma-line-1364">Document all external systems calling WCF services</li>
+<li id="pragma-line-1365">Inventory all production environment configurations</li>
+<li id="pragma-line-1366">Backup all databases</li>
+<li id="pragma-line-1367">Document current performance baselines</li>
+</ul>
+</li>
+<li id="pragma-line-1369"><p id="pragma-line-1369">✅ <strong>Team Preparation</strong></p>
+<ul id="pragma-line-1370">
+<li id="pragma-line-1370">Install .NET 8 SDK on all developer machines</li>
+<li id="pragma-line-1371">Set up .NET 8 development environment (VS 2022 17.8+)</li>
+<li id="pragma-line-1372">Training: ASP.NET Core, EF Core, async/await patterns</li>
+<li id="pragma-line-1373">Assign roles (if 2 developers): Dev 1 = Backend, Dev 2 = Frontend</li>
+</ul>
+</li>
+<li id="pragma-line-1375"><p id="pragma-line-1375">✅ <strong>Infrastructure Preparation</strong></p>
+<ul id="pragma-line-1376">
+<li id="pragma-line-1376">Upgrade Elasticsearch cluster from 6.x → 8.x (if in use)</li>
+<li id="pragma-line-1377">Install .NET 8 Hosting Bundle on DEV IIS server</li>
+<li id="pragma-line-1378">Set up test environment for parallel WCF/API deployment</li>
+<li id="pragma-line-1379">Configure monitoring/alerting for new .NET 8 apps</li>
+</ul>
+</li>
+<li id="pragma-line-1381"><p id="pragma-line-1381">✅ <strong>Start Phase 0</strong> (Day 1 of migration)</p>
+<ul id="pragma-line-1382">
+<li id="pragma-line-1382">Create branch: <code>git checkout -b feature/dotnet8-migration</code></li>
+<li id="pragma-line-1383">Install tools: <code>dotnet tool install -g upgrade-assistant</code>, <code>dotnet-ef</code></li>
+<li id="pragma-line-1384">Run analysis: <code>upgrade-assistant analyze OpenSafety.sln</code></li>
+<li id="pragma-line-1385">Begin cleanup: rotate credentials, remove dead code</li>
+</ul>
+</li>
+</ol>
+<h3 id="decision-points-requiring-input"><a id="pragma-line-1387"></a>6.3 Decision Points Requiring Input</h3>
+<table id="pragma-line-1389">
+<thead>
+<tr id="pragma-line-1389">
+<th id="pragma-line-1389">#</th>
+<th id="pragma-line-1389">Decision</th>
+<th id="pragma-line-1389">Options</th>
+<th id="pragma-line-1389">Recommendation</th>
+<th id="pragma-line-1389">Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-1391">
+<td id="pragma-line-1391"><strong>D1</strong></td>
+<td id="pragma-line-1391">OpenSafetyStateChecker project (empty stub)</td>
+<td id="pragma-line-1391">A) Implement logic<br>B) Retire project</td>
+<td id="pragma-line-1391"><strong>B) Retire</strong> - No logic in 5+ years</td>
+<td id="pragma-line-1391">Tech Lead</td>
+</tr>
+<tr id="pragma-line-1392">
+<td id="pragma-line-1392"><strong>D2</strong></td>
+<td id="pragma-line-1392">ConsoleTest project (dev tool)</td>
+<td id="pragma-line-1392">A) Keep &amp; update<br>B) Retire</td>
+<td id="pragma-line-1392"><strong>B) Retire</strong> - Rarely used</td>
+<td id="pragma-line-1392">Tech Lead</td>
+</tr>
+<tr id="pragma-line-1393">
+<td id="pragma-line-1393"><strong>D3</strong></td>
+<td id="pragma-line-1393">Bootstrap version</td>
+<td id="pragma-line-1393">A) Stay on 3.x<br>B) Upgrade to 5.x</td>
+<td id="pragma-line-1393"><strong>B) Upgrade</strong> - 3.x EOL, security</td>
+<td id="pragma-line-1393">Product Owner</td>
+</tr>
+<tr id="pragma-line-1394">
+<td id="pragma-line-1394"><strong>D4</strong></td>
+<td id="pragma-line-1394">jqGrid replacement</td>
+<td id="pragma-line-1394">A) DataTables.js<br>B) AG Grid CE<br>C) Custom</td>
+<td id="pragma-line-1394"><strong>A) DataTables.js</strong> - Free, mature</td>
+<td id="pragma-line-1394">Tech Lead</td>
+</tr>
+<tr id="pragma-line-1395">
+<td id="pragma-line-1395"><strong>D5</strong></td>
+<td id="pragma-line-1395">Logging sink</td>
+<td id="pragma-line-1395">A) Serilog + Seq<br>B) Serilog + ELK<br>C) Application Insights</td>
+<td id="pragma-line-1395"><strong>C) Application Insights</strong> - Azure native</td>
+<td id="pragma-line-1395">DevOps</td>
+</tr>
+<tr id="pragma-line-1396">
+<td id="pragma-line-1396"><strong>D6</strong></td>
+<td id="pragma-line-1396">Session storage</td>
+<td id="pragma-line-1396">A) In-memory<br>B) Redis<br>C) SQL Server</td>
+<td id="pragma-line-1396"><strong>B) Redis</strong> - Scalable, fast</td>
+<td id="pragma-line-1396">Tech Lead</td>
+</tr>
+<tr id="pragma-line-1397">
+<td id="pragma-line-1397"><strong>D7</strong></td>
+<td id="pragma-line-1397">Deployment automation</td>
+<td id="pragma-line-1397">A) Jenkins + Web Deploy<br>B) Azure DevOps<br>C) GitHub Actions</td>
+<td id="pragma-line-1397"><strong>A) Jenkins</strong> - Existing pipeline</td>
+<td id="pragma-line-1397">DevOps</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resource-requirements"><a id="pragma-line-1399"></a>6.4 Resource Requirements</h3>
+<p id="pragma-line-1401"><strong>Team:</strong></p>
+<ul id="pragma-line-1402">
+<li id="pragma-line-1402"><strong>Option A</strong> (22 weeks): 1 Senior .NET Developer</li>
+<li id="pragma-line-1403"><strong>Option B</strong> (12-14 weeks): 2 Senior .NET Developers</li>
+<li id="pragma-line-1404"><strong>Shared</strong>: 1 DevOps Engineer (10% allocation for CI/CD updates)</li>
+<li id="pragma-line-1405"><strong>Shared</strong>: 1 QA Engineer (20% allocation for testing Phase 6)</li>
+</ul>
+<p id="pragma-line-1407"><strong>Recommended:</strong> <strong>Option B</strong> (2 developers, 12-14 weeks)</p>
+<p id="pragma-line-1409"><strong>Infrastructure:</strong></p>
+<ul id="pragma-line-1410">
+<li id="pragma-line-1410">.NET 8 SDK (free)</li>
+<li id="pragma-line-1411">Visual Studio 2022 Professional (2 licenses) or VS Code (free)</li>
+<li id="pragma-line-1412">Azure Key Vault (existing subscription)</li>
+<li id="pragma-line-1413">Redis Cache for session state (optional, ~$50/month for dev)</li>
+<li id="pragma-line-1414">Elasticsearch 8.x cluster upgrade (coordinate with Ops)</li>
+</ul>
+<p id="pragma-line-1416"><strong>Training:</strong></p>
+<ul id="pragma-line-1417">
+<li id="pragma-line-1417">ASP.NET Core fundamentals (40 hours total per developer)</li>
+<li id="pragma-line-1418">EF Core migration patterns (8 hours)</li>
+<li id="pragma-line-1419">Async/await best practices (4 hours)</li>
+</ul>
+<hr id="pragma-line-1421">
+<h2 id="appendix"><a id="pragma-line-1423"></a>7. Appendix</h2>
+<h3 id="key-dependencies"><a id="pragma-line-1425"></a>7.1 Key Dependencies</h3>
+<p id="pragma-line-1427"><strong>NuGet Packages - Current → Target:</strong></p>
+<table id="pragma-line-1429">
+<thead>
+<tr id="pragma-line-1429">
+<th id="pragma-line-1429">Package</th>
+<th id="pragma-line-1429">Current</th>
+<th id="pragma-line-1429">Target</th>
+<th id="pragma-line-1429">Breaking Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-1431">
+<td id="pragma-line-1431">Entity Framework</td>
+<td id="pragma-line-1431">6.1.3</td>
+<td id="pragma-line-1431">EF Core 8.0.11</td>
+<td id="pragma-line-1431">Complete API rewrite</td>
+</tr>
+<tr id="pragma-line-1432">
+<td id="pragma-line-1432">NEST / Elasticsearch.Net</td>
+<td id="pragma-line-1432">6.1.0</td>
+<td id="pragma-line-1432">Elastic.Clients.Elasticsearch 8.15.0</td>
+<td id="pragma-line-1432">Query DSL changes</td>
+</tr>
+<tr id="pragma-line-1433">
+<td id="pragma-line-1433">Unity</td>
+<td id="pragma-line-1433">4.0.1 / 5.11.6</td>
+<td id="pragma-line-1433">Remove (built-in DI)</td>
+<td id="pragma-line-1433">Complete replacement</td>
+</tr>
+<tr id="pragma-line-1434">
+<td id="pragma-line-1434">AutoMapper</td>
+<td id="pragma-line-1434">5.1.1</td>
+<td id="pragma-line-1434">13.0.1</td>
+<td id="pragma-line-1434">Static API removed</td>
+</tr>
+<tr id="pragma-line-1435">
+<td id="pragma-line-1435">log4net</td>
+<td id="pragma-line-1435">2.0.8</td>
+<td id="pragma-line-1435">Remove (Microsoft.Extensions.Logging)</td>
+<td id="pragma-line-1435">Different API</td>
+</tr>
+<tr id="pragma-line-1436">
+<td id="pragma-line-1436">Newtonsoft.Json</td>
+<td id="pragma-line-1436">4.5.11-12.0.3</td>
+<td id="pragma-line-1436">13.0.3</td>
+<td id="pragma-line-1436">Minor (backward-compatible)</td>
+</tr>
+<tr id="pragma-line-1437">
+<td id="pragma-line-1437">ClosedXML</td>
+<td id="pragma-line-1437">0.95.2</td>
+<td id="pragma-line-1437">0.102.2</td>
+<td id="pragma-line-1437">Some API changes</td>
+</tr>
+<tr id="pragma-line-1438">
+<td id="pragma-line-1438">Bootstrap</td>
+<td id="pragma-line-1438">3.3.7</td>
+<td id="pragma-line-1438">5.3.3</td>
+<td id="pragma-line-1438">CSS breaking changes</td>
+</tr>
+<tr id="pragma-line-1439">
+<td id="pragma-line-1439">jQuery</td>
+<td id="pragma-line-1439">1.10.2 / 3.3.1</td>
+<td id="pragma-line-1439">3.7.1</td>
+<td id="pragma-line-1439">Align versions</td>
+</tr>
+<tr id="pragma-line-1440">
+<td id="pragma-line-1440">Trirand.jqGrid</td>
+<td id="pragma-line-1440">4.6.0</td>
+<td id="pragma-line-1440">Remove (DataTables.js)</td>
+<td id="pragma-line-1440">Complete replacement</td>
+</tr>
+</tbody>
+</table>
+<p id="pragma-line-1442"><strong>New Packages to Add:</strong></p>
+<table id="pragma-line-1444">
+<thead>
+<tr id="pragma-line-1444">
+<th id="pragma-line-1444">Package</th>
+<th id="pragma-line-1444">Version</th>
+<th id="pragma-line-1444">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-1446">
+<td id="pragma-line-1446"><code>Microsoft.EntityFrameworkCore</code></td>
+<td id="pragma-line-1446">8.0.11</td>
+<td id="pragma-line-1446">ORM</td>
+</tr>
+<tr id="pragma-line-1447">
+<td id="pragma-line-1447"><code>Microsoft.EntityFrameworkCore.SqlServer</code></td>
+<td id="pragma-line-1447">8.0.11</td>
+<td id="pragma-line-1447">EF Core SQL Server provider</td>
+</tr>
+<tr id="pragma-line-1448">
+<td id="pragma-line-1448"><code>Microsoft.EntityFrameworkCore.Tools</code></td>
+<td id="pragma-line-1448">8.0.11</td>
+<td id="pragma-line-1448">EF Core CLI tools</td>
+</tr>
+<tr id="pragma-line-1449">
+<td id="pragma-line-1449"><code>Elastic.Clients.Elasticsearch</code></td>
+<td id="pragma-line-1449">8.15.0</td>
+<td id="pragma-line-1449">Elasticsearch client</td>
+</tr>
+<tr id="pragma-line-1450">
+<td id="pragma-line-1450"><code>Microsoft.Extensions.Logging</code></td>
+<td id="pragma-line-1450">8.0.1</td>
+<td id="pragma-line-1450">Logging abstractions</td>
+</tr>
+<tr id="pragma-line-1451">
+<td id="pragma-line-1451"><code>Serilog.AspNetCore</code></td>
+<td id="pragma-line-1451">8.0.1</td>
+<td id="pragma-line-1451">Logging implementation</td>
+</tr>
+<tr id="pragma-line-1452">
+<td id="pragma-line-1452"><code>Microsoft.AspNetCore.Authentication.Negotiate</code></td>
+<td id="pragma-line-1452">8.0.11</td>
+<td id="pragma-line-1452">Windows Auth</td>
+</tr>
+<tr id="pragma-line-1453">
+<td id="pragma-line-1453"><code>Microsoft.jQuery.Unobtrusive.Ajax</code> (Core)</td>
+<td id="pragma-line-1453">4.0.0</td>
+<td id="pragma-line-1453">Ajax helpers</td>
+</tr>
+<tr id="pragma-line-1454">
+<td id="pragma-line-1454"><code>X.PagedList.Mvc.Core</code></td>
+<td id="pragma-line-1454">9.1.2</td>
+<td id="pragma-line-1454">Pagination</td>
+</tr>
+<tr id="pragma-line-1455">
+<td id="pragma-line-1455"><code>MailKit</code></td>
+<td id="pragma-line-1455">4.7.1</td>
+<td id="pragma-line-1455">SMTP client</td>
+</tr>
+<tr id="pragma-line-1456">
+<td id="pragma-line-1456"><code>Moq</code></td>
+<td id="pragma-line-1456">4.20.72</td>
+<td id="pragma-line-1456">Mocking framework</td>
+</tr>
+<tr id="pragma-line-1457">
+<td id="pragma-line-1457"><code>FluentAssertions</code></td>
+<td id="pragma-line-1457">6.12.1</td>
+<td id="pragma-line-1457">Test assertions</td>
+</tr>
+<tr id="pragma-line-1458">
+<td id="pragma-line-1458"><code>xunit</code></td>
+<td id="pragma-line-1458">2.9.2</td>
+<td id="pragma-line-1458">Test framework</td>
+</tr>
+<tr id="pragma-line-1459">
+<td id="pragma-line-1459"><code>Microsoft.AspNetCore.Mvc.Testing</code></td>
+<td id="pragma-line-1459">8.0.11</td>
+<td id="pragma-line-1459">Integration testing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reference-documentation"><a id="pragma-line-1461"></a>7.2 Reference Documentation</h3>
+<p id="pragma-line-1463"><strong>Official Microsoft Guides:</strong></p>
+<ul id="pragma-line-1464">
+<li id="pragma-line-1464">.NET 8 Migration: <a href="https://learn.microsoft.com/en-us/aspnet/core/migration/">https://learn.microsoft.com/en-us/aspnet/core/migration/</a></li>
+<li id="pragma-line-1465">EF6 → EF Core: <a href="https://learn.microsoft.com/en-us/ef/efcore-and-ef6/porting/">https://learn.microsoft.com/en-us/ef/efcore-and-ef6/porting/</a></li>
+<li id="pragma-line-1466">WCF → ASP.NET Core: <a href="https://learn.microsoft.com/en-us/aspnet/core/grpc/wcf">https://learn.microsoft.com/en-us/aspnet/core/grpc/wcf</a></li>
+<li id="pragma-line-1467">Upgrade Assistant: <a href="https://dotnet.microsoft.com/platform/upgrade-assistant">https://dotnet.microsoft.com/platform/upgrade-assistant</a></li>
+</ul>
+<p id="pragma-line-1469"><strong>Third-Party Resources:</strong></p>
+<ul id="pragma-line-1470">
+<li id="pragma-line-1470">AutoMapper 13 Migration: <a href="https://docs.automapper.org/en/stable/">https://docs.automapper.org/en/stable/</a></li>
+<li id="pragma-line-1471">Elasticsearch .NET Client 8: <a href="https://www.elastic.co/guide/en/elasticsearch/client/net-api/current/index.html">https://www.elastic.co/guide/en/elasticsearch/client/net-api/current/index.html</a></li>
+<li id="pragma-line-1472">Serilog ASP.NET Core: <a href="https://github.com/serilog/serilog-aspnetcore">https://github.com/serilog/serilog-aspnetcore</a></li>
+<li id="pragma-line-1473">DataTables.js: <a href="https://datatables.net/">https://datatables.net/</a></li>
+</ul>
+<h3 id="contact-information"><a id="pragma-line-1475"></a>7.3 Contact Information</h3>
+<p id="pragma-line-1477"><strong>Project Team:</strong></p>
+<ul id="pragma-line-1478">
+<li id="pragma-line-1478"><strong>Technical Lead:</strong> [Name] - [Email]</li>
+<li id="pragma-line-1479"><strong>Product Owner:</strong> [Name] - [Email]</li>
+<li id="pragma-line-1480"><strong>DevOps Lead:</strong> [Name] - [Email]</li>
+<li id="pragma-line-1481"><strong>QA Lead:</strong> [Name] - [Email]</li>
+</ul>
+<p id="pragma-line-1483"><strong>Escalation Path:</strong></p>
+<ul id="pragma-line-1484">
+<li id="pragma-line-1484"><strong>Technical Issues:</strong> Tech Lead → Engineering Manager</li>
+<li id="pragma-line-1485"><strong>Schedule/Budget:</strong> Product Owner → Director</li>
+<li id="pragma-line-1486"><strong>Infrastructure:</strong> DevOps Lead → Infrastructure Manager</li>
+</ul>
+<h3 id="document-change-log"><a id="pragma-line-1488"></a>7.4 Document Change Log</h3>
+<table id="pragma-line-1490">
+<thead>
+<tr id="pragma-line-1490">
+<th id="pragma-line-1490">Version</th>
+<th id="pragma-line-1490">Date</th>
+<th id="pragma-line-1490">Author</th>
+<th id="pragma-line-1490">Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr id="pragma-line-1492">
+<td id="pragma-line-1492">1.0</td>
+<td id="pragma-line-1492">2024</td>
+<td id="pragma-line-1492">GitHub Copilot</td>
+<td id="pragma-line-1492">Initial upgrade report created from comprehensive analysis</td>
+</tr>
+</tbody>
+</table>
+<hr id="pragma-line-1494">
+<h2 id="executive-summary-recommendation"><a id="pragma-line-1496"></a>8. Executive Summary &amp; Recommendation</h2>
+<h3 id="summary"><a id="pragma-line-1498"></a>8.1 Summary</h3>
+<p id="pragma-line-1500">The OpenSafety solution upgrade from .NET Framework 4.7.1 to .NET 8.0 represents a <strong>significant but achievable modernization effort</strong>. The solution consists of 18 projects (~78,600 LOC) with 39% of files requiring updates due to API incompatibilities.</p>
+<p id="pragma-line-1502"><strong>Key Challenges:</strong></p>
+<ul id="pragma-line-1503">
+<li id="pragma-line-1503">Complete replacement of WCF services (8 services → ASP.NET Core Web API)</li>
+<li id="pragma-line-1504">Entity Framework 6 → EF Core 8 migration (65 files, 14 migrations)</li>
+<li id="pragma-line-1505">Elasticsearch client upgrade (deprecated NEST 6.x → modern client 8.x)</li>
+<li id="pragma-line-1506">Frontend modernization (119 Razor views, 25 controllers)</li>
+</ul>
+<p id="pragma-line-1508"><strong>Key Opportunities:</strong></p>
+<ul id="pragma-line-1509">
+<li id="pragma-line-1509">Remove ~5,000 lines of dead code</li>
+<li id="pragma-line-1510">Improve performance (expected 20%+ throughput increase)</li>
+<li id="pragma-line-1511">Reduce hosting costs (more efficient runtime)</li>
+<li id="pragma-line-1512">Enable modern development practices (nullable types, async/await)</li>
+<li id="pragma-line-1513">Establish comprehensive test suite (currently ~0% coverage)</li>
+</ul>
+<h3 id="recommended-approach"><a id="pragma-line-1515"></a>8.2 Recommended Approach</h3>
+<p id="pragma-line-1517"><strong>Strategy:</strong> Phased migration over <strong>12-14 weeks</strong> with <strong>2 developers</strong> using <strong>Strangler Fig pattern</strong></p>
+<p id="pragma-line-1519"><strong>Why this approach:</strong></p>
+<ol id="pragma-line-1520">
+<li id="pragma-line-1520"><strong>Risk Mitigation:</strong> Parallel deployment (WCF + new API) allows safe rollback</li>
+<li id="pragma-line-1521"><strong>Predictable Timeline:</strong> Bottom-up migration with clear phase gates</li>
+<li id="pragma-line-1522"><strong>Quality Focus:</strong> Dedicated test modernization phase (Phase 6)</li>
+<li id="pragma-line-1523"><strong>Minimal Disruption:</strong> External consumers have 3-month migration window</li>
+</ol>
+<p id="pragma-line-1525"><strong>Not Recommended:</strong></p>
+<ul id="pragma-line-1526">
+<li id="pragma-line-1526">❌ Big bang migration (too risky)</li>
+<li id="pragma-line-1527">❌ Partial migration (creates technical debt)</li>
+<li id="pragma-line-1528">❌ Rewrite from scratch (too expensive, loses domain knowledge)</li>
+</ul>
+<h3 id="gono-go-recommendation"><a id="pragma-line-1530"></a>8.3 Go/No-Go Recommendation</h3>
+<p id="pragma-line-1532"><strong>✅ RECOMMENDED: PROCEED WITH MIGRATION</strong></p>
+<p id="pragma-line-1534"><strong>Justification:</strong></p>
+<ul id="pragma-line-1535">
+<li id="pragma-line-1535">.NET Framework 4.7.1 reaches end of support (no security updates)</li>
+<li id="pragma-line-1536">.NET 8 offers significant performance and cost benefits</li>
+<li id="pragma-line-1537">Manageable risk with Strangler Fig pattern</li>
+<li id="pragma-line-1538">Reasonable timeline (12-14 weeks with 2 developers)</li>
+<li id="pragma-line-1539">Solution architecture is relatively clean (good layering)</li>
+</ul>
+<p id="pragma-line-1541"><strong>Prerequisites Before Starting:</strong></p>
+<ol id="pragma-line-1542">
+<li id="pragma-line-1542">✅ Executive approval for 12-14 week timeline</li>
+<li id="pragma-line-1543">✅ Assign 2 senior .NET developers (full-time)</li>
+<li id="pragma-line-1544">✅ Upgrade Elasticsearch cluster to 8.x</li>
+<li id="pragma-line-1545">✅ Audit all external WCF consumers</li>
+<li id="pragma-line-1546">✅ Secure budget for Redis, monitoring tools</li>
+</ol>
+<p id="pragma-line-1548"><strong>Stop Conditions (Re-evaluate if encountered):</strong></p>
+<ul id="pragma-line-1549">
+<li id="pragma-line-1549">⚠ Critical external WCF consumers cannot migrate within 3 months</li>
+<li id="pragma-line-1550">⚠ Elasticsearch upgrade fails or causes data issues</li>
+<li id="pragma-line-1551">⚠ EF Core migration generates irreconcilable schema differences</li>
+<li id="pragma-line-1552">⚠ Timeline extends beyond 20 weeks (indicating unforeseen blockers)</li>
+</ul>
+<h3 id="expected-roi"><a id="pragma-line-1554"></a>8.4 Expected ROI</h3>
+<p id="pragma-line-1556"><strong>Benefits (Year 1):</strong></p>
+<ul id="pragma-line-1557">
+<li id="pragma-line-1557"><strong>Performance:</strong> 20-30% faster response times (.NET 8 runtime optimizations)</li>
+<li id="pragma-line-1558"><strong>Hosting Costs:</strong> 15-20% reduction (more efficient memory usage)</li>
+<li id="pragma-line-1559"><strong>Developer Productivity:</strong> 25% faster build times (SDK-style projects)</li>
+<li id="pragma-line-1560"><strong>Security:</strong> Modern framework with active security support</li>
+<li id="pragma-line-1561"><strong>Maintainability:</strong> Removal of 5,000 LOC dead code, 60% test coverage</li>
+</ul>
+<p id="pragma-line-1563"><strong>Investment:</strong></p>
+<ul id="pragma-line-1564">
+<li id="pragma-line-1564"><strong>Development Effort:</strong> 92 developer-days (~$92K at $1K/day blended rate)</li>
+<li id="pragma-line-1565"><strong>Infrastructure:</strong> Negligible (mostly free tools, Azure Key Vault already exists)</li>
+<li id="pragma-line-1566"><strong>Risk Mitigation:</strong> Strangler Fig pattern adds ~10% timeline but eliminates big bang risk</li>
+</ul>
+<p id="pragma-line-1568"><strong>Payback Period:</strong> Estimated 8-12 months (cost savings + productivity gains)</p>
+<hr id="pragma-line-1570">
+<p id="pragma-line-1572"><strong>READY TO PROCEED: Awaiting executive approval to begin Phase 0</strong></p>
+<hr id="pragma-line-1574">
+<p id="pragma-line-1576"><em>End of Upgrade Report</em></p>
+</div>
+
+<div id="plugin-contextmenu-container" class="selectNone"><ul id="plugin-contextmenu-dd60af17-bfee-1473-d009-179e68a687da" class="plugin-contextmenu" data-plugin-is-contextmenu="true" style="display: none;"><li class="menuitem disabled" tabindex="1" role="menuitem" id="Copy" data-plugin-contextmenu-item-type="command" aria-disabled="true"><img class="icon" style="visibility: hidden;"><div class="main">Copy</div></li><li class="menuitem" tabindex="2" role="menuitem" id="Save" data-plugin-contextmenu-item-type="command"><img class="icon" style="visibility: hidden;"><div class="main">Save As HTML... </div></li><li class="menuitem" tabindex="3" role="menuitem" id="Print" data-plugin-contextmenu-item-type="command"><img class="icon" style="visibility: hidden;"><div class="main">Print HTML...</div></li></ul></div></body>
