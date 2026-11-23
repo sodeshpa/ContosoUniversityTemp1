@@ -1,0 +1,18 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:44.357063Z",
+  "id": "evidence:fs-contosouniversity-models-officeassignment-cs",
+  "locator": {
+    "file": "ContosoUniversity\\Models\\OfficeAssignment.cs",
+    "line_end": 16,
+    "line_start": 1
+  },
+  "method": "file-system",
+  "observed_at": "2026-11-23T17:14:37Z",
+  "record_kind": "evidence",
+  "revision": 1,
+  "source_id": "source_artifact:fs-contosouniversity-models-officeassignment-cs",
+  "source_revision": "31f017ec2f4eabde7c865e9ec3439d700de1f3c4ecbd6f8e65672a217d11919e",
+  "status": "active",
+  "updated_at": "2026-11-23T17:14:44.357063Z"
+}

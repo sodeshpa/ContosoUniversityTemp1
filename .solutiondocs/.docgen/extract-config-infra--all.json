@@ -1,0 +1,20 @@
+{
+    "shard":  {
+                  "id":  "all"
+              },
+    "completed_at":  "2026-11-23T22:45:46.7986876+05:30",
+    "status":  "completed",
+    "agentName":  "extract-config-infra",
+    "deliverables":  [
+                         "configuration:contosouniversity-config",
+                         "config_item:contosouniversity-web-config",
+                         "config_item:contosouniversity-views-web-config",
+                         "config_item:contosouniversity-conn-defaultconnection",
+                         "build_pipeline:contosouniversity-msbuild",
+                         "platform_service:contosouniversity-sql-server-localdb",
+                         "platform_service:contosouniversity-msmq",
+                         "platform_service:contosouniversity-iis-express",
+                         "gap:cci-environment-transforms-missing",
+                         "claim:cci-containerisation-readiness"
+                     ]
+}

@@ -1,0 +1,21 @@
+{
+  "applicability": {
+    "source_revision": "c4243e97f0ba8a8546887812069699a9a85301f8"
+  },
+  "application_id": "application:sodeshpa-animated-spoon",
+  "confidence": 0.95,
+  "created_at": "2026-11-23T17:14:51.375484Z",
+  "derivation": "observation",
+  "evidence_ids": [
+    "evidence:fs-contosouniversity-views-departments-index-cshtml"
+  ],
+  "id": "claim:fs-contosouniversity-views-departments-index-cshtml-language",
+  "predicate": "language",
+  "record_kind": "claim",
+  "revision": 1,
+  "scope_id": "component:contosouniversity",
+  "status": "candidate",
+  "subject": "code_unit:contosouniversity-contosouniversity-views-departments-index-cshtml",
+  "updated_at": "2026-11-23T17:14:51.375484Z",
+  "value": "Razor/HTML"
+}

@@ -1,0 +1,18 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:51.375484Z",
+  "id": "evidence:fs-contosouniversity-views-shared-error-cshtml",
+  "locator": {
+    "file": "ContosoUniversity\\Views\\Shared\\Error.cshtml",
+    "line_end": 21,
+    "line_start": 1
+  },
+  "method": "file-system",
+  "observed_at": "2026-11-23T17:14:37Z",
+  "record_kind": "evidence",
+  "revision": 1,
+  "source_id": "source_artifact:fs-contosouniversity-views-shared-error-cshtml",
+  "source_revision": "eeda5280249a1084f0203124e0175a189a4b5e65680eb527c00b35cb03b2d876",
+  "status": "active",
+  "updated_at": "2026-11-23T17:14:51.375484Z"
+}

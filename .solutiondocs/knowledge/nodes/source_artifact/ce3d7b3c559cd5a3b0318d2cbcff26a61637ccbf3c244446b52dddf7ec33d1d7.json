@@ -1,0 +1,16 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:44.357063Z",
+  "id": "source_artifact:fs-contosouniversity-models-schoolviewmodels-assignedcoursedata-cs",
+  "name": "AssignedCourseData.cs",
+  "properties": {
+    "location": "ContosoUniversity\\Models\\SchoolViewModels\\AssignedCourseData.cs",
+    "revision": "bd1975cf9b944e8a1cea0812acf27434e29cf709d3659d7ad94aba7b69d747f1",
+    "source_type": "source_file"
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "source_artifact",
+  "updated_at": "2026-11-23T17:14:44.357063Z"
+}

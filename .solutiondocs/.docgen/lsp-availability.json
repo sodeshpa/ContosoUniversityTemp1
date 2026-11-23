@@ -1,0 +1,46 @@
+{
+  "schema": "lsp-availability/v1",
+  "generated_at": "2026-11-23T17:15:00Z",
+  "host": "windows",
+  "scope": "repo-level (no .github/lsp.json or lsp.json written; nothing installed)",
+  "languages": {
+    "csharp": {
+      "status": "skipped",
+      "server": "roslyn",
+      "operations": [],
+      "reason": "explicitly excluded: user-opted-out (.engagement-config.json lsp_setup.languages status=skipped); no install or configuration performed",
+      "probe": {
+        "test_file": null,
+        "operation": null,
+        "outcome": "not-attempted (user exclusion)",
+        "timestamp": "2026-11-23T17:15:00Z"
+      }
+    },
+    "javascript": {
+      "status": "skipped",
+      "server": "typescript-language-server",
+      "operations": [],
+      "reason": "explicitly excluded: user-opted-out (.engagement-config.json lsp_setup.languages status=skipped); no install or configuration performed",
+      "probe": {
+        "test_file": null,
+        "operation": null,
+        "outcome": "not-attempted (user exclusion)",
+        "timestamp": "2026-11-23T17:15:00Z"
+      }
+    },
+    "razor": {
+      "status": "unavailable",
+      "server": null,
+      "operations": [],
+      "reason": "no-server-available: no Copilot CLI LSP server mapping for .cshtml (Razor); not installed",
+      "probe": {
+        "test_file": null,
+        "operation": null,
+        "outcome": "not-attempted (no server)",
+        "timestamp": "2026-11-23T17:15:00Z"
+      }
+    }
+  },
+  "restart_required": false,
+  "fallback": "Structural workers use Tree-sitter/heuristic extraction with explicit per-file reasons."
+}

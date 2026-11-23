@@ -1,0 +1,26 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:15:06.697407Z",
+  "id": "configuration:contosouniversity-config",
+  "name": "ContosoUniversity configuration surface",
+  "properties": {
+    "secrets_management": {
+      "provider": "none (plain config file; Integrated Security connection string, no credentials)",
+      "rotation_configured": false,
+      "secrets_in_config": 0
+    },
+    "summary": {
+      "hardcoded_secrets_count": 0,
+      "total_config_files": 2,
+      "total_connection_strings": 1,
+      "total_env_vars": 0,
+      "total_feature_flags": 0,
+      "total_settings": 9
+    }
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "configuration",
+  "updated_at": "2026-11-23T17:15:06.697407Z"
+}

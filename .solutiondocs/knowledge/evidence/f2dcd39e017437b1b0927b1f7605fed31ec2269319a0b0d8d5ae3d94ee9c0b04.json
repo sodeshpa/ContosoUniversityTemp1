@@ -1,0 +1,18 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:39.285298Z",
+  "id": "evidence:fs-contosouniversity-app-start-bundleconfig-cs",
+  "locator": {
+    "file": "ContosoUniversity\\App_Start\\BundleConfig.cs",
+    "line_end": 27,
+    "line_start": 1
+  },
+  "method": "file-system",
+  "observed_at": "2026-11-23T17:14:37Z",
+  "record_kind": "evidence",
+  "revision": 1,
+  "source_id": "source_artifact:fs-contosouniversity-app-start-bundleconfig-cs",
+  "source_revision": "720eb70a178ab1ffc88d7dee558cf58c0211d7aa6a84ae617bfa35126717981f",
+  "status": "active",
+  "updated_at": "2026-11-23T17:14:39.285298Z"
+}

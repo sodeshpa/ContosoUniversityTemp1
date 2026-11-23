@@ -1,0 +1,18 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:39.285298Z",
+  "id": "evidence:fs-contosouniversity-packages-config",
+  "locator": {
+    "file": "ContosoUniversity\\packages.config",
+    "line_end": 48,
+    "line_start": 1
+  },
+  "method": "file-system",
+  "observed_at": "2026-11-23T17:14:37Z",
+  "record_kind": "evidence",
+  "revision": 1,
+  "source_id": "source_artifact:fs-contosouniversity-packages-config",
+  "source_revision": "f16ff67a9cb6b161b50be040b581ea763cfbf9a6888697044dd56fb8afc041a0",
+  "status": "active",
+  "updated_at": "2026-11-23T17:14:39.285298Z"
+}

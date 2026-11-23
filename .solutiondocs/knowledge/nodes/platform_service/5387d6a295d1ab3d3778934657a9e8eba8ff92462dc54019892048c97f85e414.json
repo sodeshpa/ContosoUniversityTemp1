@@ -1,0 +1,17 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:15:06.697407Z",
+  "id": "platform_service:contosouniversity-iis-express",
+  "name": "IIS Express",
+  "properties": {
+    "portable": false,
+    "portable_alternative": "Kestrel / containers (requires ASP.NET Core migration)",
+    "product": "Internet Information Services",
+    "service": "IIS / IIS Express"
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "platform_service",
+  "updated_at": "2026-11-23T17:15:06.697407Z"
+}

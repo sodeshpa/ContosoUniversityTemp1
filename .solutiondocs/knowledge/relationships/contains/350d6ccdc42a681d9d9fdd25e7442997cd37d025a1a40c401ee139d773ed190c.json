@@ -1,0 +1,16 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "claim_ids": [
+    "claim:ed0cb39efee631f2fa53b9d09e8d915956adb268da341ec16d7391c7b91396b8"
+  ],
+  "created_at": "2026-11-23T17:10:53.663254Z",
+  "from": "application:sodeshpa-animated-spoon",
+  "id": "relationship:3c79d5b27f155d0056730b9bef7fef44e58e06e7d40c83864e04f644c680b520",
+  "properties": {},
+  "record_kind": "relationship",
+  "revision": 1,
+  "status": "active",
+  "to": "component:contosouniversity",
+  "type": "contains",
+  "updated_at": "2026-11-23T17:10:53.663254Z"
+}

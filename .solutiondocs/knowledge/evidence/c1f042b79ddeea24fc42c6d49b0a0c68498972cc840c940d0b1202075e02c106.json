@@ -1,0 +1,18 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:41.638104Z",
+  "id": "evidence:fs-contosouniversity-controllers-notificationscontroller-cs",
+  "locator": {
+    "file": "ContosoUniversity\\Controllers\\NotificationsController.cs",
+    "line_end": 65,
+    "line_start": 1
+  },
+  "method": "file-system",
+  "observed_at": "2026-11-23T17:14:37Z",
+  "record_kind": "evidence",
+  "revision": 1,
+  "source_id": "source_artifact:fs-contosouniversity-controllers-notificationscontroller-cs",
+  "source_revision": "c7d7a8dbf4b8ae9286a63e5b3773412ca891e96d6f13d569828abe5b18e6e377",
+  "status": "active",
+  "updated_at": "2026-11-23T17:14:41.638104Z"
+}

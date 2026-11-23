@@ -1,0 +1,47 @@
+{
+    "agentName":  "extract-data-api-specs",
+    "shard":  {
+                  "id":  "all",
+                  "scope":  {
+                                "components":  [
+                                                   "component:contosouniversity"
+                                               ]
+                            }
+              },
+    "lastUpdate":  "2026-11-23T17:14:24.6925781Z",
+    "createdAt":  "2026-11-23T17:14:24.6925781Z",
+    "completedAt":  "2026-11-23T17:14:24.6925781Z",
+    "phase":  "completion",
+    "issues":  [
+                   {
+                       "message":  "No DDL, migrations, OpenAPI/proto/GraphQL/WSDL specs in source; entities left to extract-data-access. Canonical IDs: data_store:contosouniversity-sqlserver, source_artifact:contosouniversity-web-config",
+                       "timestamp":  "2026-11-23T17:14:24.6925781Z",
+                       "context":  "all",
+                       "severity":  "P3"
+                   }
+               ],
+    "status":  "completed",
+    "tasks":  [
+                  {
+                      "status":  "completed",
+                      "completedAt":  "2026-11-23T17:14:24.6925781Z",
+                      "name":  "Scan for DDL/migrations/API specs (none found)",
+                      "id":  "scan-specs",
+                      "retryCount":  0
+                  },
+                  {
+                      "status":  "completed",
+                      "completedAt":  "2026-11-23T17:14:24.6925781Z",
+                      "name":  "Publish data_store from Web.config",
+                      "id":  "publish-data-store",
+                      "retryCount":  0
+                  }
+              ],
+    "deliverables":  {
+                         "expected":  0,
+                         "actual":  0,
+                         "files":  [
+
+                                   ]
+                     }
+}

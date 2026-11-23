@@ -1,0 +1,18 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:39.285298Z",
+  "id": "evidence:fs-contosouniversity-app-start-routeconfig-cs",
+  "locator": {
+    "file": "ContosoUniversity\\App_Start\\RouteConfig.cs",
+    "line_end": 19,
+    "line_start": 1
+  },
+  "method": "file-system",
+  "observed_at": "2026-11-23T17:14:37Z",
+  "record_kind": "evidence",
+  "revision": 1,
+  "source_id": "source_artifact:fs-contosouniversity-app-start-routeconfig-cs",
+  "source_revision": "e158da3a8973fbb00654403339859f1d5f1a4f78ece16b9126796349f2a65619",
+  "status": "active",
+  "updated_at": "2026-11-23T17:14:39.285298Z"
+}

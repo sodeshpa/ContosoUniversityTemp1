@@ -1,0 +1,17 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:39.285298Z",
+  "id": "code_unit:contosouniversity-contosouniversity-contosouniversity-csproj",
+  "name": "ContosoUniversity.csproj",
+  "properties": {
+    "file_path": "ContosoUniversity\\ContosoUniversity.csproj",
+    "language": "XML Config",
+    "loc": 350,
+    "unit_type": "file"
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "code_unit",
+  "updated_at": "2026-11-23T17:14:39.285298Z"
+}

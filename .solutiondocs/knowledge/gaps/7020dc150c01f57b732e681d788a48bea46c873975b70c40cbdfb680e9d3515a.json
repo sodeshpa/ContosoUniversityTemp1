@@ -1,0 +1,20 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:32.682418Z",
+  "domain": "organisation",
+  "evidence_ids": [
+    "evidence:git-history-log-c4243e9"
+  ],
+  "gap_type": "elicitable",
+  "id": "gap:git-ownership-and-rationale-history",
+  "knowledge_gap_type": "rationale",
+  "owner_ids": [],
+  "priority": "P2",
+  "prompt": "Git history is a 6-commit import (initial bulk commit by Weiping Pan, repackaged upload by sodeshpa); it carries no evolution, bug-fix history or current ownership. Who currently owns and maintains ContosoUniversity and where is the original development history?",
+  "record_kind": "gap",
+  "revision": 1,
+  "scope_id": "component:contosouniversity",
+  "status": "open",
+  "subject": "component:contosouniversity",
+  "updated_at": "2026-11-23T17:14:32.682418Z"
+}

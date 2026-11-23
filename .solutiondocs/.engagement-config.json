@@ -1,0 +1,103 @@
+{
+    "engagement_id":  "e2a2184d-768b-4599-a2a2-5d773c99617b",
+    "created_at":  "2026-11-23T17:09:01.4075654Z",
+    "updated_at":  "2026-11-23T17:09:01.4075654Z",
+    "scenario":  "knowledge-elicitation-documents",
+    "intent":  "custom",
+    "focus_area":  "full",
+    "knowledge_backend":  "file",
+    "repo_layout":  {
+                        "repos":  [
+                                      "."
+                                  ],
+                        "mode":  "single-repo"
+                    },
+    "phases":  {
+                   "elicit":  true,
+                   "part3_documentation":  true,
+                   "modernization_strategy":  false,
+                   "modernization_decision":  false,
+                   "decide":  false,
+                   "design":  false,
+                   "transform":  false,
+                   "validate":  false,
+                   "evolve":  false
+               },
+    "extract_status":  "pending",
+    "document_groups":  {
+                            "architecture":  true,
+                            "business":  true,
+                            "business_workflows":  true,
+                            "operations":  true,
+                            "quality":  true,
+                            "implementation":  true,
+                            "modernization":  true,
+                            "root_summaries":  true
+                        },
+    "external_sources":  {
+                             "github":  {
+                                            "expected":  true,
+                                            "setup_confirmed":  true
+                                        }
+                         },
+    "ast_parsing":  "available",
+    "ast_parsing_preview":  {
+                                "files_heuristic_total":  27,
+                                "python3_available":  true,
+                                "files_ast_total":  47,
+                                "languages":  [
+                                                  {
+                                                      "files":  31,
+                                                      "extensions":  [
+                                                                         ".cs"
+                                                                     ],
+                                                      "language":  "csharp",
+                                                      "tier":  "full-ast"
+                                                  },
+                                                  {
+                                                      "files":  16,
+                                                      "extensions":  [
+                                                                         ".js"
+                                                                     ],
+                                                      "language":  "javascript",
+                                                      "tier":  "full-ast"
+                                                  },
+                                                  {
+                                                      "files":  27,
+                                                      "extensions":  [
+                                                                         ".cshtml"
+                                                                     ],
+                                                      "language":  "razor",
+                                                      "tier":  "unsupported-mapping"
+                                                  }
+                                              ]
+                            },
+    "lsp_setup":  {
+                      "languages":  [
+                                        {
+                                            "status":  "skipped",
+                                            "server":  "roslyn",
+                                            "language":  "csharp"
+                                        },
+                                        {
+                                            "status":  "skipped",
+                                            "server":  "typescript-language-server",
+                                            "language":  "javascript"
+                                        }
+                                    ]
+                  },
+    "additional_context":  {
+                               "free_text":  "",
+                               "stakeholder_notes":  "",
+                               "technology_notes":  "",
+                               "known_constraints":  ""
+                           },
+    "custom_templates":  {
+                             "path":  "",
+                             "mode":  "supplement",
+                             "enabled":  false
+                         },
+    "parallelism":  {
+                        "max_subagents":  8
+                    }
+}

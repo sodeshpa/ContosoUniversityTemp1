@@ -1,0 +1,16 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:39.285298Z",
+  "id": "source_artifact:fs-contosouniversity-contosouniversity-csproj",
+  "name": "ContosoUniversity.csproj",
+  "properties": {
+    "location": "ContosoUniversity\\ContosoUniversity.csproj",
+    "revision": "c71bf439f0280537b4f615eb33520bdcd13f2c201f436edb18edcf7cb52b71d1",
+    "source_type": "source_file"
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "source_artifact",
+  "updated_at": "2026-11-23T17:14:39.285298Z"
+}

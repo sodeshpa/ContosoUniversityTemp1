@@ -1,0 +1,27 @@
+{
+  "applicability": {
+    "source_revision": "c4243e97f0ba8a8546887812069699a9a85301f8"
+  },
+  "application_id": "application:sodeshpa-animated-spoon",
+  "confidence": 0.85,
+  "created_at": "2026-11-23T17:14:32.682418Z",
+  "derivation": "heuristic",
+  "evidence_ids": [
+    "evidence:git-history-log-c4243e9"
+  ],
+  "id": "claim:git-contosouniversity-bus-factor",
+  "predicate": "bus_factor",
+  "record_kind": "claim",
+  "revision": 1,
+  "scope_id": "component:contosouniversity",
+  "status": "candidate",
+  "subject": "component:contosouniversity",
+  "updated_at": "2026-11-23T17:14:32.682418Z",
+  "value": {
+    "basis": "single initial-import commit authored Weiping Pan covering 90 component files; one later README edit by Sophiaso; authors with >=3 commits: 0",
+    "bus_factor": 1,
+    "caveat": "History is an import (squashed), not organic development; bus factor from git is indicative only",
+    "knowledge_concentration_pct": 99,
+    "primary_expert": "actor:weiping-pan"
+  }
+}

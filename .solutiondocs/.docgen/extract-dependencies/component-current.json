@@ -1,0 +1,50 @@
+﻿{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:10:53.663254Z",
+  "id": "component:contosouniversity",
+  "name": "ContosoUniversity",
+  "properties": {
+    "build_files": [
+      "ContosoUniversity/ContosoUniversity.csproj"
+    ],
+    "containerisation_readiness": {
+      "blockers": [
+        {
+          "blocker": ".NET Framework 4.8 / System.Web MVC hosted on IIS (Windows-only)",
+          "effort_size": "L",
+          "remediation": "Migrate to ASP.NET Core or use Windows containers",
+          "severity": "blocking"
+        },
+        {
+          "blocker": "MSMQ dependency for notifications",
+          "effort_size": "M",
+          "remediation": "Replace with a portable broker",
+          "severity": "significant"
+        },
+        {
+          "blocker": "SQL Server LocalDB connection string in Web.config",
+          "effort_size": "S",
+          "remediation": "Externalise connection string to environment/secret store",
+          "severity": "significant"
+        }
+      ],
+      "compose_exists": false,
+      "docker_exists": false,
+      "k8s_manifests_exist": false,
+      "twelve_factor_compliance": {
+        "backing_services": "partial",
+        "config": "partial"
+      }
+    },
+    "estimated_tokens": 381844,
+    "files": 90,
+    "folder": "contosouniversity",
+    "source_files": 76,
+    "source_root": "ContosoUniversity"
+  },
+  "record_kind": "node",
+  "revision": 2,
+  "status": "active",
+  "type": "component",
+  "updated_at": "2026-11-23T17:15:14.713406Z"
+}

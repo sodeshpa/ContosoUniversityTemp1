@@ -1,0 +1,16 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:55.076814Z",
+  "id": "source_artifact:fs-contosouniversity-views-students-delete-cshtml",
+  "name": "Delete.cshtml",
+  "properties": {
+    "location": "ContosoUniversity\\Views\\Students\\Delete.cshtml",
+    "revision": "397e5500bc2a7ec79d423806b3d7268f267f7490a4704e47c9cba9560062daa0",
+    "source_type": "source_file"
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "source_artifact",
+  "updated_at": "2026-11-23T17:14:55.076814Z"
+}

@@ -1,0 +1,16 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:47.800792Z",
+  "id": "source_artifact:fs-contosouniversity-views-viewstart-cshtml",
+  "name": "_ViewStart.cshtml",
+  "properties": {
+    "location": "ContosoUniversity\\Views\\_ViewStart.cshtml",
+    "revision": "5882d03011d1d604bc64474e1360eb847fbed6cbec5793ee7c97021e6ff52d6c",
+    "source_type": "source_file"
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "source_artifact",
+  "updated_at": "2026-11-23T17:14:47.800792Z"
+}

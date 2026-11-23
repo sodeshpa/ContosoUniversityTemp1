@@ -1,0 +1,16 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:41.638104Z",
+  "id": "source_artifact:fs-contosouniversity-data-schoolcontextfactory-cs",
+  "name": "SchoolContextFactory.cs",
+  "properties": {
+    "location": "ContosoUniversity\\Data\\SchoolContextFactory.cs",
+    "revision": "9ec91764a5bcd60036c19001a672b893866f14326570811e050faeffc85d917b",
+    "source_type": "source_file"
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "source_artifact",
+  "updated_at": "2026-11-23T17:14:41.638104Z"
+}

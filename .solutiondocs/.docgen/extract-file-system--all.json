@@ -1,0 +1,58 @@
+{
+  "agentName": "extract-file-system",
+  "shard": {
+    "id": "all",
+    "scope": {
+      "components": [
+        "component:contosouniversity"
+      ]
+    }
+  },
+  "phase": "completion",
+  "status": "completed",
+  "tasks": [
+    {
+      "id": "scan-file-system",
+      "name": "Scan tree, LOC, languages",
+      "status": "completed",
+      "startedAt": "2026-11-23T17:20:00+00:00",
+      "completedAt": "2026-11-23T17:20:00+00:00",
+      "retryCount": 0
+    },
+    {
+      "id": "publish-code-units",
+      "name": "Publish file code_unit/source_artifact/evidence/claims/contains",
+      "status": "completed",
+      "startedAt": "2026-11-23T17:20:00+00:00",
+      "completedAt": "2026-11-23T17:20:00+00:00",
+      "retryCount": 0
+    },
+    {
+      "id": "enrich-component-application",
+      "name": "Enrich component and application aggregates",
+      "status": "completed",
+      "startedAt": "2026-11-23T17:20:00+00:00",
+      "completedAt": "2026-11-23T17:20:00+00:00",
+      "retryCount": 0
+    },
+    {
+      "id": "update-manifest",
+      "name": "Mark vendor files skipped",
+      "status": "completed",
+      "startedAt": "2026-11-23T17:20:00+00:00",
+      "completedAt": "2026-11-23T17:20:00+00:00",
+      "retryCount": 0
+    }
+  ],
+  "deliverables": {
+    "expected": 1,
+    "actual": 1,
+    "files": [
+      "component:contosouniversity",
+      "application:sodeshpa-animated-spoon"
+    ]
+  },
+  "issues": [],
+  "createdAt": "2026-11-23T17:20:00+00:00",
+  "updatedAt": "2026-11-23T17:20:00+00:00"
+}

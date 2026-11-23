@@ -1,0 +1,17 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:41.638104Z",
+  "id": "code_unit:contosouniversity-contosouniversity-models-department-cs",
+  "name": "Department.cs",
+  "properties": {
+    "file_path": "ContosoUniversity\\Models\\Department.cs",
+    "language": "C#",
+    "loc": 32,
+    "unit_type": "file"
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "code_unit",
+  "updated_at": "2026-11-23T17:14:41.638104Z"
+}

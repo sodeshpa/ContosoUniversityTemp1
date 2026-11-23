@@ -1,0 +1,21 @@
+{
+  "applicability": {
+    "source_revision": "c4243e97f0ba8a8546887812069699a9a85301f8"
+  },
+  "application_id": "application:sodeshpa-animated-spoon",
+  "confidence": 0.95,
+  "created_at": "2026-11-23T17:14:39.285298Z",
+  "derivation": "observation",
+  "evidence_ids": [
+    "evidence:fs-contosouniversity-web-config"
+  ],
+  "id": "claim:fs-contosouniversity-web-config-owned",
+  "predicate": "contains",
+  "record_kind": "claim",
+  "revision": 1,
+  "scope_id": "component:contosouniversity",
+  "status": "candidate",
+  "subject": "component:contosouniversity",
+  "target": "code_unit:contosouniversity-contosouniversity-web-config",
+  "updated_at": "2026-11-23T17:14:39.285298Z"
+}

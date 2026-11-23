@@ -1,0 +1,32 @@
+{
+  "applicability": {
+    "source_revision": "c4243e97f0ba8a8546887812069699a9a85301f8"
+  },
+  "application_id": "application:sodeshpa-animated-spoon",
+  "confidence": 0.85,
+  "created_at": "2026-11-23T17:14:32.682418Z",
+  "derivation": "heuristic",
+  "evidence_ids": [
+    "evidence:git-history-log-c4243e9"
+  ],
+  "id": "claim:git-contosouniversity-change-categories",
+  "predicate": "change_categories",
+  "record_kind": "claim",
+  "revision": 1,
+  "scope_id": "component:contosouniversity",
+  "status": "candidate",
+  "subject": "component:contosouniversity",
+  "updated_at": "2026-11-23T17:14:32.682418Z",
+  "value": {
+    "chore": 2,
+    "docs": 1,
+    "feature": 1,
+    "fix": 0,
+    "fix_feat_ratio": 0,
+    "merge": 1,
+    "note": "6 commits total; 'Add project...' feature import, README update, merge PR #1, 2 'Add files via upload' (non-component docs/zip), initial commit",
+    "other": 1,
+    "refactor": 0,
+    "test": 0
+  }
+}
