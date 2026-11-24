@@ -1,0 +1,20 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:15:06.697407Z",
+  "id": "config_item:contosouniversity-web-config",
+  "name": "Web.config",
+  "properties": {
+    "contains_secrets": false,
+    "environment_specific": false,
+    "file_path": "ContosoUniversity/Web.config",
+    "format": "xml",
+    "purpose": "application",
+    "setting_count": 9,
+    "version_controlled": true
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "config_item",
+  "updated_at": "2026-11-23T17:15:06.697407Z"
+}

@@ -1,0 +1,40 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:15:06.697407Z",
+  "id": "build_pipeline:contosouniversity-msbuild",
+  "name": "ContosoUniversity MSBuild build",
+  "properties": {
+    "build_system": {
+      "config_files": [
+        "ContosoUniversity/ContosoUniversity.csproj",
+        "ContosoUniversity/ContosoUniversity.sln",
+        "ContosoUniversity/packages.config"
+      ],
+      "tool": "MSBuild",
+      "tool_version": "ToolsVersion 15.0"
+    },
+    "developer_environment": {
+      "ide_recommended": "Visual Studio",
+      "local_services_required": [
+        "SQL Server LocalDB",
+        "Microsoft Message Queuing (MSMQ)",
+        "IIS Express"
+      ],
+      "setup_automated": false
+    },
+    "logging": {
+      "audit_logging": false,
+      "distributed_tracing": {
+        "enabled": false
+      },
+      "framework": "System.Diagnostics Trace/Debug (no config)",
+      "log_format": "text",
+      "structured_logging": false
+    }
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "build_pipeline",
+  "updated_at": "2026-11-23T17:15:06.697407Z"
+}

@@ -1,0 +1,212 @@
+{
+  "agentName": "automated-knowledge-extraction",
+  "phase": "execution",
+  "status": "in-progress",
+  "tasks": [
+    {
+      "id": "phase-0-init",
+      "name": "Initialisation",
+      "status": "completed",
+      "completedAt": "2026-11-23T17:10:08+00:00"
+    },
+    {
+      "id": "phase-0-repo-layout",
+      "name": "Multi-repository guard",
+      "status": "completed",
+      "completedAt": "2026-11-23T17:10:09+00:00"
+    },
+    {
+      "id": "phase-0-manifest",
+      "name": "File manifest creation",
+      "status": "completed",
+      "startedAt": "2026-11-23T17:10:19+00:00",
+      "completedAt": "2026-11-23T17:10:51+00:00"
+    },
+    {
+      "id": "phase-0-routing",
+      "name": "Size routing and adapter detection",
+      "status": "completed",
+      "startedAt": "2026-11-23T17:10:51+00:00",
+      "completedAt": "2026-11-23T17:11:25+00:00"
+    },
+    {
+      "id": "phase-0-components",
+      "name": "Component identification (registry)",
+      "status": "completed",
+      "startedAt": "2026-11-23T17:10:52+00:00",
+      "completedAt": "2026-11-23T17:11:25+00:00"
+    },
+    {
+      "id": "phase-0-grammar-setup",
+      "name": "Tree-sitter grammar availability probe",
+      "status": "completed",
+      "startedAt": "2026-11-23T17:11:38+00:00",
+      "completedAt": "2026-11-23T17:13:35+00:00"
+    },
+    {
+      "id": "phase-0-lsp-setup",
+      "name": "LSP server setup for Layer 2",
+      "status": "completed",
+      "startedAt": "2026-11-23T17:11:38+00:00",
+      "completedAt": "2026-11-23T17:13:41+00:00"
+    },
+    {
+      "id": "phase-0-external-sources",
+      "name": "External source discovery",
+      "status": "in-progress",
+      "startedAt": "2026-11-23T17:10:19+00:00"
+    },
+    {
+      "id": "phase-1-file-system",
+      "name": "Layer 1: File system extraction",
+      "status": "in-progress",
+      "startedAt": "2026-11-23T17:11:38+00:00"
+    },
+    {
+      "id": "phase-1-git-history",
+      "name": "Layer 1: Git history extraction",
+      "status": "in-progress",
+      "startedAt": "2026-11-23T17:11:39+00:00"
+    },
+    {
+      "id": "phase-1-config-infra",
+      "name": "Layer 1: Config and infrastructure",
+      "status": "in-progress",
+      "startedAt": "2026-11-23T17:11:39+00:00"
+    },
+    {
+      "id": "phase-1-dependencies",
+      "name": "Layer 1: Dependency manifests",
+      "status": "in-progress",
+      "startedAt": "2026-11-23T17:11:39+00:00"
+    },
+    {
+      "id": "phase-1-dependency-vulnerabilities",
+      "name": "Layer 1: Published dependency vulnerability assessment",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-1-data-api-specs",
+      "name": "Layer 1: Data schemas and API specs",
+      "status": "in-progress",
+      "startedAt": "2026-11-23T17:11:40+00:00"
+    },
+    {
+      "id": "phase-2-code-structure",
+      "name": "Layer 2: Code structure (AST)",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-2-data-access",
+      "name": "Layer 2: Data access patterns",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-2-integration",
+      "name": "Layer 2: Integration patterns",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-2-ui-surface",
+      "name": "Layer 2: UI surface",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-2-performance",
+      "name": "Layer 2: Performance patterns",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-3-business-semantics",
+      "name": "Layer 3: Business semantics",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-3-quality-semantics",
+      "name": "Layer 3: Quality semantics",
+      "status": "not-started"
+    },
+    {
+      "id": "coverage-validation",
+      "name": "File coverage validation",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-4-cross-cutting",
+      "name": "Cross-cutting analysis",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-5-gap-analysis",
+      "name": "Gap analysis and anomaly detection",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-6-extraction",
+      "name": "External source extraction (conditional)",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-6-merge",
+      "name": "External source cross-reference merge",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-5-completeness",
+      "name": "Checkpoint 1 completeness scoring",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-5-summary-report",
+      "name": "Extraction Summary Report generation",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-2-code-structure--all",
+      "name": "Code structure",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-2-integration--all",
+      "name": "Integration",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-2-ui-surface--all",
+      "name": "UI surface",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-2-performance--all",
+      "name": "Performance",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-3-business-semantics--all",
+      "name": "Business semantics",
+      "status": "not-started"
+    },
+    {
+      "id": "phase-3-quality-semantics--all",
+      "name": "Quality semantics",
+      "status": "not-started"
+    }
+  ],
+  "deliverables": {
+    "expected": 0,
+    "actual": 0,
+    "files": []
+  },
+  "issues": [],
+  "createdAt": "2026-11-23T17:10:00Z",
+  "lastUpdate": "2026-11-23T17:13:41+00:00",
+  "analysisMode": "standard",
+  "totalTokensEstimate": 454629,
+  "totalFiles": 100,
+  "analysableFiles": 99,
+  "shards": {
+    "all": [
+      "contosouniversity"
+    ]
+  }
+}

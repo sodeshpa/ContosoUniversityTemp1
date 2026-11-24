@@ -1,0 +1,28 @@
+{
+  "$schema": "component-registry",
+  "generated_at": "2026-11-23T17:10:52+00:00",
+  "method": "build-module",
+  "ownership_rule": "A file belongs to the component with the longest matching source_root; files under no source_root are application-scoped.",
+  "components": [
+    {
+      "id": "component:contosouniversity",
+      "name": "ContosoUniversity",
+      "folder": "contosouniversity",
+      "source_root": "ContosoUniversity",
+      "build_files": [
+        "ContosoUniversity/ContosoUniversity.csproj"
+      ],
+      "files": 90,
+      "source_files": 76,
+      "estimated_tokens": 381844
+    }
+  ],
+  "application_scope": [
+    {
+      "path": ".",
+      "kind": "other",
+      "files": 9,
+      "estimated_tokens": 72785
+    }
+  ]
+}

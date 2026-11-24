@@ -1,0 +1,20 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:15:06.697407Z",
+  "id": "setting:contosouniversity-compilation-debug",
+  "name": "compilation.debug",
+  "properties": {
+    "default_value": "true",
+    "is_connection_string": false,
+    "is_secret": false,
+    "key": "compilation.debug",
+    "purpose": "Debug compilation enabled in the committed Web.config",
+    "source_file": "ContosoUniversity/Web.config",
+    "value_type": "boolean"
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "setting",
+  "updated_at": "2026-11-23T17:15:06.697407Z"
+}

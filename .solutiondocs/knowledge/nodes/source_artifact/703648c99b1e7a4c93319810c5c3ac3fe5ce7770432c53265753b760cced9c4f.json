@@ -1,0 +1,16 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:47.800792Z",
+  "id": "source_artifact:fs-contosouniversity-views-courses-index-cshtml",
+  "name": "Index.cshtml",
+  "properties": {
+    "location": "ContosoUniversity\\Views\\Courses\\Index.cshtml",
+    "revision": "ef691d9e1f8d8da62686babd8b6ea8970006c82747d740546a669fa519c78806",
+    "source_type": "source_file"
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "source_artifact",
+  "updated_at": "2026-11-23T17:14:47.800792Z"
+}

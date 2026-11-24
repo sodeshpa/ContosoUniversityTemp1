@@ -1,0 +1,25 @@
+{
+  "applicability": {
+    "source_revision": "c4243e97f0ba8a8546887812069699a9a85301f8"
+  },
+  "application_id": "application:sodeshpa-animated-spoon",
+  "confidence": 0.85,
+  "created_at": "2026-11-23T17:14:32.682418Z",
+  "derivation": "heuristic",
+  "evidence_ids": [
+    "evidence:git-history-log-c4243e9"
+  ],
+  "id": "claim:git-contosouniversity-knowledge-silos",
+  "predicate": "knowledge_silos",
+  "record_kind": "claim",
+  "revision": 1,
+  "scope_id": "component:contosouniversity",
+  "status": "candidate",
+  "subject": "component:contosouniversity",
+  "updated_at": "2026-11-23T17:14:32.682418Z",
+  "value": {
+    "area": "all ContosoUniversity source files except README.md (single author, single commit)",
+    "risk_level": "high",
+    "sole_expert": "actor:weiping-pan"
+  }
+}

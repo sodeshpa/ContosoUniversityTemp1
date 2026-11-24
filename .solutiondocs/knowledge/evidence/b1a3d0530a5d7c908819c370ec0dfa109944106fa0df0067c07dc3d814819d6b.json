@@ -1,0 +1,18 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:39.285298Z",
+  "id": "evidence:fs-contosouniversity-content-site-css",
+  "locator": {
+    "file": "ContosoUniversity\\Content\\Site.css",
+    "line_end": 628,
+    "line_start": 1
+  },
+  "method": "file-system",
+  "observed_at": "2026-11-23T17:14:37Z",
+  "record_kind": "evidence",
+  "revision": 1,
+  "source_id": "source_artifact:fs-contosouniversity-content-site-css",
+  "source_revision": "1fef0aa2db3f90ae5b31888d1a21a969944f3945559bbb249d0814d06fe38155",
+  "status": "active",
+  "updated_at": "2026-11-23T17:14:39.285298Z"
+}

@@ -1,0 +1,87 @@
+{
+ "agentName": "extract-git-history",
+ "shard": {
+  "id": "all",
+  "scope": {
+   "components": [
+    "component:contosouniversity"
+   ]
+  }
+ },
+ "phase": "completion",
+ "status": "completed",
+ "tasks": [
+  {
+   "id": "repo-discovery",
+   "name": "repo discovery",
+   "status": "completed",
+   "startedAt": "2026-11-23T17:15:00+00:00",
+   "completedAt": "2026-11-23T17:15:00+00:00",
+   "retryCount": 0
+  },
+  {
+   "id": "author-distribution",
+   "name": "author distribution",
+   "status": "completed",
+   "startedAt": "2026-11-23T17:15:00+00:00",
+   "completedAt": "2026-11-23T17:15:00+00:00",
+   "retryCount": 0
+  },
+  {
+   "id": "bus-factor",
+   "name": "bus factor",
+   "status": "completed",
+   "startedAt": "2026-11-23T17:15:00+00:00",
+   "completedAt": "2026-11-23T17:15:00+00:00",
+   "retryCount": 0
+  },
+  {
+   "id": "change-frequency",
+   "name": "change frequency",
+   "status": "completed",
+   "startedAt": "2026-11-23T17:15:00+00:00",
+   "completedAt": "2026-11-23T17:15:00+00:00",
+   "retryCount": 0
+  },
+  {
+   "id": "commit-mining",
+   "name": "commit mining",
+   "status": "completed",
+   "startedAt": "2026-11-23T17:15:00+00:00",
+   "completedAt": "2026-11-23T17:15:00+00:00",
+   "retryCount": 0
+  },
+  {
+   "id": "publish-batch",
+   "name": "publish batch",
+   "status": "completed",
+   "startedAt": "2026-11-23T17:15:00+00:00",
+   "completedAt": "2026-11-23T17:15:00+00:00",
+   "retryCount": 0
+  },
+  {
+   "id": "validate",
+   "name": "validate",
+   "status": "completed",
+   "startedAt": "2026-11-23T17:15:00+00:00",
+   "completedAt": "2026-11-23T17:15:00+00:00",
+   "retryCount": 0
+  }
+ ],
+ "deliverables": {
+  "expected": 0,
+  "actual": 0,
+  "files": []
+ },
+ "issues": [
+  {
+   "severity": "P3",
+   "message": "No bug-fix commits or co-change data; no risk nodes or co-change edges published. Published 21 canonical records (batch).",
+   "timestamp": "2026-11-23T17:15:00+00:00",
+   "context": "git history"
+  }
+ ],
+ "createdAt": "2026-11-23T17:15:00+00:00",
+ "lastUpdate": "2026-11-23T17:15:00+00:00",
+ "completedAt": "2026-11-23T17:15:00+00:00"
+}

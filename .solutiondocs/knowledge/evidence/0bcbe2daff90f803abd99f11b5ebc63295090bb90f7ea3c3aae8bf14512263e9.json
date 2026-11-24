@@ -1,0 +1,18 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:39.285298Z",
+  "id": "evidence:fs-contosouniversity-paginatedlist-cs",
+  "locator": {
+    "file": "ContosoUniversity\\PaginatedList.cs",
+    "line_end": 31,
+    "line_start": 1
+  },
+  "method": "file-system",
+  "observed_at": "2026-11-23T17:14:37Z",
+  "record_kind": "evidence",
+  "revision": 1,
+  "source_id": "source_artifact:fs-contosouniversity-paginatedlist-cs",
+  "source_revision": "c22ba4f993c6a1de61d5b23b9b5e6e4a0e42fc7d458901532b68fd404083290c",
+  "status": "active",
+  "updated_at": "2026-11-23T17:14:39.285298Z"
+}

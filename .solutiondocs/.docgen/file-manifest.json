@@ -1,0 +1,1051 @@
+{
+  "summary": {
+    "generated_at": "2026-11-23T17:10:41.148125+00:00",
+    "source_path": "C:\\Users\\sodeshpa\\.copilot\\repos\\copilot-worktrees\\ContosoUniversityTemp1\\sodeshpa-animated-spoon",
+    "total_files": 100,
+    "analyzable_files": 99,
+    "skipped_files": 1,
+    "estimated_total_tokens": 454629,
+    "domain_groups": [
+      "(root)",
+      "ContosoUniversity"
+    ],
+    "primary_language": "C#",
+    "detected_languages": [
+      "Markdown",
+      "Web/Template",
+      "Config",
+      "C#",
+      "CSS",
+      "JavaScript/TypeScript"
+    ],
+    "skip_reason_counts": {
+      "binary": 1
+    }
+  },
+  "generated_at": "2026-11-23T17:10:41.148125+00:00",
+  "source_path": "C:\\Users\\sodeshpa\\.copilot\\repos\\copilot-worktrees\\ContosoUniversityTemp1\\sodeshpa-animated-spoon",
+  "total_files": 100,
+  "analyzable_files": 82,
+  "skipped_files": 18,
+  "estimated_total_tokens": 454629,
+  "domain_groups": [
+    "(root)",
+    "ContosoUniversity"
+  ],
+  "primary_language": "C#",
+  "detected_languages": [
+    "Markdown",
+    "Web/Template",
+    "Config",
+    "C#",
+    "CSS",
+    "JavaScript/TypeScript"
+  ],
+  "skip_reason_counts": {
+    "binary": 1,
+    "vendor": 17
+  },
+  "files": [
+    {
+      "path": ".git",
+      "extension": "",
+      "size_bytes": 103,
+      "estimated_tokens": 25,
+      "language": "Other",
+      "domain_group": "(root)",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": ".gitignore",
+      "extension": "",
+      "size_bytes": 7788,
+      "estimated_tokens": 1947,
+      "language": "Other",
+      "domain_group": "(root)",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "01Upgrade.md",
+      "extension": ".md",
+      "size_bytes": 0,
+      "estimated_tokens": 0,
+      "language": "Markdown",
+      "domain_group": "(root)",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "07rep.md",
+      "extension": ".md",
+      "size_bytes": 45155,
+      "estimated_tokens": 11288,
+      "language": "Markdown",
+      "domain_group": "(root)",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "Migrate upgrade report.html",
+      "extension": ".html",
+      "size_bytes": 129040,
+      "estimated_tokens": 32260,
+      "language": "Web/Template",
+      "domain_group": "(root)",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "OpenSafety_Modernization_Report.md",
+      "extension": ".md",
+      "size_bytes": 11369,
+      "estimated_tokens": 2842,
+      "language": "Markdown",
+      "domain_group": "(root)",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "OpenSafety_NET8_Migration_Report.md",
+      "extension": ".md",
+      "size_bytes": 40323,
+      "estimated_tokens": 10080,
+      "language": "Markdown",
+      "domain_group": "(root)",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "OpenSafety_NET8_Upgrade_Report.md",
+      "extension": ".md",
+      "size_bytes": 56704,
+      "estimated_tokens": 14176,
+      "language": "Markdown",
+      "domain_group": "(root)",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "README.md",
+      "extension": ".md",
+      "size_bytes": 671,
+      "estimated_tokens": 167,
+      "language": "Markdown",
+      "domain_group": "(root)",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "RE_ report code audit - Copy.zip",
+      "extension": ".zip",
+      "size_bytes": 58128,
+      "estimated_tokens": 14532,
+      "language": "Other",
+      "domain_group": "(root)",
+      "status": "skipped",
+      "skip_reason": "binary"
+    },
+    {
+      "path": "ContosoUniversity/.gitignore",
+      "extension": "",
+      "size_bytes": 417,
+      "estimated_tokens": 104,
+      "language": "Other",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/ContosoUniversity.csproj",
+      "extension": ".csproj",
+      "size_bytes": 19946,
+      "estimated_tokens": 4986,
+      "language": "Config",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/ContosoUniversity.sln",
+      "extension": ".sln",
+      "size_bytes": 1128,
+      "estimated_tokens": 282,
+      "language": "Other",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Global.asax",
+      "extension": ".asax",
+      "size_bytes": 106,
+      "estimated_tokens": 26,
+      "language": "Other",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Global.asax.cs",
+      "extension": ".cs",
+      "size_bytes": 1261,
+      "estimated_tokens": 315,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/NOTIFICATION_SYSTEM_README.md",
+      "extension": ".md",
+      "size_bytes": 5311,
+      "estimated_tokens": 1327,
+      "language": "Markdown",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/packages.config",
+      "extension": ".config",
+      "size_bytes": 4183,
+      "estimated_tokens": 1045,
+      "language": "Config",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/PaginatedList.cs",
+      "extension": ".cs",
+      "size_bytes": 973,
+      "estimated_tokens": 243,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/README.md",
+      "extension": ".md",
+      "size_bytes": 2362,
+      "estimated_tokens": 590,
+      "language": "Markdown",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/SETUP_TESTING_GUIDE.md",
+      "extension": ".md",
+      "size_bytes": 4793,
+      "estimated_tokens": 1198,
+      "language": "Markdown",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/TEACHING_MATERIAL_UPLOAD.md",
+      "extension": ".md",
+      "size_bytes": 4494,
+      "estimated_tokens": 1123,
+      "language": "Markdown",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Web.config",
+      "extension": ".config",
+      "size_bytes": 7214,
+      "estimated_tokens": 1803,
+      "language": "Config",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/App_Start/BundleConfig.cs",
+      "extension": ".cs",
+      "size_bytes": 938,
+      "estimated_tokens": 234,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/App_Start/FilterConfig.cs",
+      "extension": ".cs",
+      "size_bytes": 469,
+      "estimated_tokens": 117,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/App_Start/RouteConfig.cs",
+      "extension": ".cs",
+      "size_bytes": 518,
+      "estimated_tokens": 129,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Content/notifications.css",
+      "extension": ".css",
+      "size_bytes": 1850,
+      "estimated_tokens": 462,
+      "language": "CSS",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Content/Site.css",
+      "extension": ".css",
+      "size_bytes": 13292,
+      "estimated_tokens": 3323,
+      "language": "CSS",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Controllers/BaseController.cs",
+      "extension": ".cs",
+      "size_bytes": 1601,
+      "estimated_tokens": 400,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Controllers/CoursesController.cs",
+      "extension": ".cs",
+      "size_bytes": 11314,
+      "estimated_tokens": 2828,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Controllers/DepartmentsController.cs",
+      "extension": ".cs",
+      "size_bytes": 6919,
+      "estimated_tokens": 1729,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Controllers/HomeController.cs",
+      "extension": ".cs",
+      "size_bytes": 1243,
+      "estimated_tokens": 310,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Controllers/InstructorsController.cs",
+      "extension": ".cs",
+      "size_bytes": 9613,
+      "estimated_tokens": 2403,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Controllers/NotificationsController.cs",
+      "extension": ".cs",
+      "size_bytes": 2223,
+      "estimated_tokens": 555,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Controllers/StudentsController.cs",
+      "extension": ".cs",
+      "size_bytes": 9116,
+      "estimated_tokens": 2279,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Data/DbInitializer.cs",
+      "extension": ".cs",
+      "size_bytes": 12095,
+      "estimated_tokens": 3023,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Data/SchoolContext.cs",
+      "extension": ".cs",
+      "size_bytes": 3313,
+      "estimated_tokens": 828,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Data/SchoolContextFactory.cs",
+      "extension": ".cs",
+      "size_bytes": 568,
+      "estimated_tokens": 142,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Models/Course.cs",
+      "extension": ".cs",
+      "size_bytes": 932,
+      "estimated_tokens": 233,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Models/CourseAssignment.cs",
+      "extension": ".cs",
+      "size_bytes": 444,
+      "estimated_tokens": 111,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Models/Department.cs",
+      "extension": ".cs",
+      "size_bytes": 968,
+      "estimated_tokens": 242,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Models/Enrollment.cs",
+      "extension": ".cs",
+      "size_bytes": 535,
+      "estimated_tokens": 133,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Models/ErrorViewModel.cs",
+      "extension": ".cs",
+      "size_bytes": 227,
+      "estimated_tokens": 56,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Models/Instructor.cs",
+      "extension": ".cs",
+      "size_bytes": 800,
+      "estimated_tokens": 200,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Models/Notification.cs",
+      "extension": ".cs",
+      "size_bytes": 1162,
+      "estimated_tokens": 290,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Models/OfficeAssignment.cs",
+      "extension": ".cs",
+      "size_bytes": 435,
+      "estimated_tokens": 108,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Models/Person.cs",
+      "extension": ".cs",
+      "size_bytes": 806,
+      "estimated_tokens": 201,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Models/Student.cs",
+      "extension": ".cs",
+      "size_bytes": 731,
+      "estimated_tokens": 182,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Models/SchoolViewModels/AssignedCourseData.cs",
+      "extension": ".cs",
+      "size_bytes": 240,
+      "estimated_tokens": 60,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Models/SchoolViewModels/EnrollmentDateGroup.cs",
+      "extension": ".cs",
+      "size_bytes": 313,
+      "estimated_tokens": 78,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Models/SchoolViewModels/InstructorIndexData.cs",
+      "extension": ".cs",
+      "size_bytes": 338,
+      "estimated_tokens": 84,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Properties/AssemblyInfo.cs",
+      "extension": ".cs",
+      "size_bytes": 614,
+      "estimated_tokens": 153,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Scripts/bootstrap.js",
+      "extension": ".js",
+      "size_bytes": 1370,
+      "estimated_tokens": 342,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/bootstrap.min.js",
+      "extension": ".js",
+      "size_bytes": 1370,
+      "estimated_tokens": 342,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/jquery-3.4.1-vsdoc.js",
+      "extension": ".js",
+      "size_bytes": 254827,
+      "estimated_tokens": 63706,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/jquery-3.4.1.js",
+      "extension": ".js",
+      "size_bytes": 290962,
+      "estimated_tokens": 72740,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/jquery-3.4.1.min.js",
+      "extension": ".js",
+      "size_bytes": 88147,
+      "estimated_tokens": 22036,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/jquery-3.4.1.min.map",
+      "extension": ".map",
+      "size_bytes": 136409,
+      "estimated_tokens": 34102,
+      "language": "Other",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/jquery-3.4.1.slim.js",
+      "extension": ".js",
+      "size_bytes": 235517,
+      "estimated_tokens": 58879,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/jquery-3.4.1.slim.min.js",
+      "extension": ".js",
+      "size_bytes": 71039,
+      "estimated_tokens": 17759,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/jquery-3.4.1.slim.min.map",
+      "extension": ".map",
+      "size_bytes": 108769,
+      "estimated_tokens": 27192,
+      "language": "Other",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/jquery.validate-vsdoc.js",
+      "extension": ".js",
+      "size_bytes": 43876,
+      "estimated_tokens": 10969,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/jquery.validate.js",
+      "extension": ".js",
+      "size_bytes": 50276,
+      "estimated_tokens": 12569,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/jquery.validate.min.js",
+      "extension": ".js",
+      "size_bytes": 23264,
+      "estimated_tokens": 5816,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/jquery.validate.unobtrusive.js",
+      "extension": ".js",
+      "size_bytes": 2497,
+      "estimated_tokens": 624,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/jquery.validate.unobtrusive.min.js",
+      "extension": ".js",
+      "size_bytes": 387,
+      "estimated_tokens": 96,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/modernizr-2.6.2.js",
+      "extension": ".js",
+      "size_bytes": 10117,
+      "estimated_tokens": 2529,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/notifications.js",
+      "extension": ".js",
+      "size_bytes": 5871,
+      "estimated_tokens": 1467,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Scripts/respond.js",
+      "extension": ".js",
+      "size_bytes": 5224,
+      "estimated_tokens": 1306,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Scripts/respond.min.js",
+      "extension": ".js",
+      "size_bytes": 663,
+      "estimated_tokens": 165,
+      "language": "JavaScript/TypeScript",
+      "domain_group": "ContosoUniversity",
+      "status": "skipped",
+      "skip_reason": "vendor"
+    },
+    {
+      "path": "ContosoUniversity/Services/LoggingService.cs",
+      "extension": ".cs",
+      "size_bytes": 0,
+      "estimated_tokens": 0,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Services/NotificationService.cs",
+      "extension": ".cs",
+      "size_bytes": 4488,
+      "estimated_tokens": 1122,
+      "language": "C#",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Uploads/TeachingMaterials/.gitkeep",
+      "extension": "",
+      "size_bytes": 316,
+      "estimated_tokens": 79,
+      "language": "Other",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Web.config",
+      "extension": ".config",
+      "size_bytes": 2591,
+      "estimated_tokens": 647,
+      "language": "Config",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/_ViewStart.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 54,
+      "estimated_tokens": 13,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Courses/Create.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 3127,
+      "estimated_tokens": 781,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Courses/Delete.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 1204,
+      "estimated_tokens": 301,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Courses/Details.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 1529,
+      "estimated_tokens": 382,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Courses/Edit.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 3720,
+      "estimated_tokens": 930,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Courses/Index.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 1945,
+      "estimated_tokens": 486,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Departments/Create.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 2227,
+      "estimated_tokens": 556,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Departments/Delete.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 1397,
+      "estimated_tokens": 349,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Departments/Details.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 1043,
+      "estimated_tokens": 260,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Departments/Edit.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 2336,
+      "estimated_tokens": 584,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Departments/Index.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 1848,
+      "estimated_tokens": 462,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Home/About.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 547,
+      "estimated_tokens": 136,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Home/Contact.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 457,
+      "estimated_tokens": 114,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Home/Index.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 1126,
+      "estimated_tokens": 281,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Instructors/Create.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 3730,
+      "estimated_tokens": 932,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Instructors/Delete.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 1046,
+      "estimated_tokens": 261,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Instructors/Details.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 851,
+      "estimated_tokens": 212,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Instructors/Edit.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 3765,
+      "estimated_tokens": 941,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Instructors/Index.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 3819,
+      "estimated_tokens": 954,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Notifications/Index.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 5520,
+      "estimated_tokens": 1380,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Shared/Error.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 506,
+      "estimated_tokens": 126,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Shared/_Layout.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 2168,
+      "estimated_tokens": 542,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Students/Create.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 2028,
+      "estimated_tokens": 507,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Students/Delete.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 1161,
+      "estimated_tokens": 290,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Students/Details.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 1842,
+      "estimated_tokens": 460,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Students/Edit.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 2067,
+      "estimated_tokens": 516,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    },
+    {
+      "path": "ContosoUniversity/Views/Students/Index.cshtml",
+      "extension": ".cshtml",
+      "size_bytes": 2664,
+      "estimated_tokens": 666,
+      "language": "Web/Template",
+      "domain_group": "ContosoUniversity",
+      "status": "not-analyzed",
+      "skip_reason": null
+    }
+  ]
+}

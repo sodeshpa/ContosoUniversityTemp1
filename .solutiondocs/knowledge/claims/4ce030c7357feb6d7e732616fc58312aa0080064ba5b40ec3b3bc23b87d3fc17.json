@@ -1,0 +1,28 @@
+{
+  "applicability": {
+    "source_revision": "c4243e97f0ba8a8546887812069699a9a85301f8"
+  },
+  "application_id": "application:sodeshpa-animated-spoon",
+  "confidence": 0.85,
+  "created_at": "2026-11-23T17:14:32.682418Z",
+  "derivation": "observation",
+  "evidence_ids": [
+    "evidence:git-history-log-c4243e9"
+  ],
+  "id": "claim:git-contosouniversity-change-frequency",
+  "predicate": "change_frequency",
+  "record_kind": "claim",
+  "revision": 1,
+  "scope_id": "component:contosouniversity",
+  "status": "candidate",
+  "subject": "component:contosouniversity",
+  "updated_at": "2026-11-23T17:14:32.682418Z",
+  "value": {
+    "commits_last_12_months_touching_component": 0,
+    "files_with_commits_gt_1": [
+      "ContosoUniversity/README.md"
+    ],
+    "hotspots": [],
+    "note": "Every component file has exactly one commit except README.md (2); no hotspots or co-change clusters derivable"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:51.375484Z",
+  "id": "code_unit:contosouniversity-contosouniversity-views-departments-index-cshtml",
+  "name": "Index.cshtml",
+  "properties": {
+    "file_path": "ContosoUniversity\\Views\\Departments\\Index.cshtml",
+    "language": "Razor/HTML",
+    "loc": 57,
+    "unit_type": "file"
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "code_unit",
+  "updated_at": "2026-11-23T17:14:51.375484Z"
+}

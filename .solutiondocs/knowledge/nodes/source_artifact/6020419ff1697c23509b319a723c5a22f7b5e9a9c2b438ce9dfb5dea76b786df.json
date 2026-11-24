@@ -1,0 +1,16 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:44.357063Z",
+  "id": "source_artifact:fs-contosouniversity-models-instructor-cs",
+  "name": "Instructor.cs",
+  "properties": {
+    "location": "ContosoUniversity\\Models\\Instructor.cs",
+    "revision": "e76a27cc6f7d58678a53ddb1f91fcbb50786e9587d2cf782b66e4b40bfe21900",
+    "source_type": "source_file"
+  },
+  "record_kind": "node",
+  "revision": 1,
+  "status": "active",
+  "type": "source_artifact",
+  "updated_at": "2026-11-23T17:14:44.357063Z"
+}

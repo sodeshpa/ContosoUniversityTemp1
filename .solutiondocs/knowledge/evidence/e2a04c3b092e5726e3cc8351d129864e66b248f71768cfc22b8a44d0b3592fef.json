@@ -1,0 +1,18 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:44.357063Z",
+  "id": "evidence:fs-contosouniversity-models-person-cs",
+  "locator": {
+    "file": "ContosoUniversity\\Models\\Person.cs",
+    "line_end": 30,
+    "line_start": 1
+  },
+  "method": "file-system",
+  "observed_at": "2026-11-23T17:14:37Z",
+  "record_kind": "evidence",
+  "revision": 1,
+  "source_id": "source_artifact:fs-contosouniversity-models-person-cs",
+  "source_revision": "81536e1d75890c4eb35504ce00ca36c77a02ee7fbdd5658f6eaf58b1f1bef4d6",
+  "status": "active",
+  "updated_at": "2026-11-23T17:14:44.357063Z"
+}

@@ -1,0 +1,16 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "claim_ids": [
+    "claim:cci-045"
+  ],
+  "created_at": "2026-11-23T17:15:06.697407Z",
+  "from": "config_item:contosouniversity-web-config",
+  "id": "relationship:cci-046",
+  "properties": {},
+  "record_kind": "relationship",
+  "revision": 1,
+  "status": "active",
+  "to": "setting:contosouniversity-compilation-debug",
+  "type": "contains",
+  "updated_at": "2026-11-23T17:15:06.697407Z"
+}

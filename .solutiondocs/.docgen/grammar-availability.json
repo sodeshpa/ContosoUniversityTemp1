@@ -1,0 +1,26 @@
+{
+  "schema": "grammar-availability/v1",
+  "generated_at": "2026-11-23T17:13:12.903885+00:00",
+  "runtime_dir": "C:\\Users\\sodeshpa\\.cache\\swmod\\tree-sitter-runtime",
+  "venv_python": "C:\\Users\\sodeshpa\\.cache\\swmod\\tree-sitter-runtime\\venv\\Scripts\\python.exe",
+  "pack_version": "1.25.2",
+  "languages_dir": "C:\\Users\\sodeshpa\\.copilot\\installed-plugins\\cca-appmod-gtm\\swm-understanding\\resources\\tree-sitter\\languages",
+  "languages": {
+    "csharp": {
+      "requested": "csharp",
+      "canonical": "csharp",
+      "available": true,
+      "source": "language-pack",
+      "mapped": true,
+      "reason": null
+    },
+    "javascript": {
+      "requested": "javascript",
+      "canonical": "javascript",
+      "available": true,
+      "source": "language-pack",
+      "mapped": true,
+      "reason": null
+    }
+  }
+}

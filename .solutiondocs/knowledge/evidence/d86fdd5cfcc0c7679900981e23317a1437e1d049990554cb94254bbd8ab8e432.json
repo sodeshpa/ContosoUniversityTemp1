@@ -1,0 +1,17 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:15:48.049367Z",
+  "id": "evidence:fs-scan-component",
+  "locator": {
+    "file": ".solutiondocs\\.docgen\\file-manifest.json",
+    "section": "ContosoUniversity"
+  },
+  "method": "file-system",
+  "observed_at": "2026-11-23T17:14:37Z",
+  "record_kind": "evidence",
+  "revision": 1,
+  "source_id": "source_artifact:component-file-manifest",
+  "source_revision": "a3cd01194a1faa18f9093c85b830a093fd763e55ae4af0b8a96531b44c245bb2",
+  "status": "active",
+  "updated_at": "2026-11-23T17:15:48.049367Z"
+}

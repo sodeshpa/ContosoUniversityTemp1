@@ -1,0 +1,20 @@
+{
+  "applicability": {
+    "source_revision": "a3cd01194a1faa18f9093c85b830a093fd763e55ae4af0b8a96531b44c245bb2"
+  },
+  "application_id": "application:sodeshpa-animated-spoon",
+  "confidence": 0.95,
+  "created_at": "2026-11-23T17:10:53.663254Z",
+  "derivation": "static_inference",
+  "evidence_ids": [
+    "evidence:859ca052978bce29e52e0c480076e08f731cae7bc44de2fa43e2cd248947f80a"
+  ],
+  "id": "claim:ed0cb39efee631f2fa53b9d09e8d915956adb268da341ec16d7391c7b91396b8",
+  "predicate": "source_root",
+  "record_kind": "claim",
+  "revision": 1,
+  "status": "candidate",
+  "subject": "component:contosouniversity",
+  "updated_at": "2026-11-23T17:10:53.663254Z",
+  "value": "ContosoUniversity"
+}

@@ -1,0 +1,21 @@
+{
+  "applicability": {
+    "source_revision": "c4243e97f0ba8a8546887812069699a9a85301f8"
+  },
+  "application_id": "application:sodeshpa-animated-spoon",
+  "confidence": 0.85,
+  "created_at": "2026-11-23T17:15:48.049367Z",
+  "derivation": "static_inference",
+  "evidence_ids": [
+    "evidence:fs-scan-component"
+  ],
+  "id": "claim:fs-component-architectural-layers",
+  "predicate": "architectural_patterns",
+  "record_kind": "claim",
+  "revision": 1,
+  "scope_id": "component:contosouniversity",
+  "status": "candidate",
+  "subject": "component:contosouniversity",
+  "updated_at": "2026-11-23T17:15:48.049367Z",
+  "value": "Directory-based layers: Controllers, Models, Views, Data, Services, App_Start, Content, Scripts, Properties (ASP.NET MVC convention: Controllers/Models/Views plus Data and Services)"
+}

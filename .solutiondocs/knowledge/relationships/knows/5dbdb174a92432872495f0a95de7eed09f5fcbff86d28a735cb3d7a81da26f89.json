@@ -1,0 +1,18 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "claim_ids": [
+    "claim:git-weiping-pan-knows-contosouniversity"
+  ],
+  "confidence": 0.3,
+  "created_at": "2026-11-23T17:14:32.682418Z",
+  "from": "actor:weiping-pan",
+  "id": "relationship:git-weiping-pan-knows-contosouniversity",
+  "properties": {},
+  "record_kind": "relationship",
+  "revision": 1,
+  "scope_id": "component:contosouniversity",
+  "status": "active",
+  "to": "component:contosouniversity",
+  "type": "knows",
+  "updated_at": "2026-11-23T17:14:32.682418Z"
+}

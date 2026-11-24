@@ -1,0 +1,18 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:41.638104Z",
+  "id": "evidence:fs-contosouniversity-controllers-instructorscontroller-cs",
+  "locator": {
+    "file": "ContosoUniversity\\Controllers\\InstructorsController.cs",
+    "line_end": 261,
+    "line_start": 1
+  },
+  "method": "file-system",
+  "observed_at": "2026-11-23T17:14:37Z",
+  "record_kind": "evidence",
+  "revision": 1,
+  "source_id": "source_artifact:fs-contosouniversity-controllers-instructorscontroller-cs",
+  "source_revision": "24d576a9857d55db51cce4b6c9ba3656b5c9c6753d43ce930d91beea04daa3f1",
+  "status": "active",
+  "updated_at": "2026-11-23T17:14:41.638104Z"
+}

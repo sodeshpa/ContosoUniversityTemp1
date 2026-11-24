@@ -1,0 +1,17 @@
+{
+  "application_id": "application:sodeshpa-animated-spoon",
+  "created_at": "2026-11-23T17:14:32.682418Z",
+  "id": "evidence:git-history-log-c4243e9",
+  "locator": {
+    "file": ".git",
+    "section": "git log --numstat --date=short (HEAD)"
+  },
+  "method": "git-log",
+  "observed_at": "2026-11-23T17:20:00+00:00",
+  "record_kind": "evidence",
+  "revision": 1,
+  "source_id": "source_artifact:git-history-repository",
+  "source_revision": "c4243e97f0ba8a8546887812069699a9a85301f8",
+  "status": "active",
+  "updated_at": "2026-11-23T17:14:32.682418Z"
+}
